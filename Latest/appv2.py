@@ -75,12 +75,13 @@ def linear():
 @app.route('/multireg')
 def multilinear():
     file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    model, plot, r2_score, coefficients, intercept = perform_multiple_linear_regression(file)
-    return render_template('multi_lin_reg.html', 
-                         plot=plot, 
-                         model=model, 
-                         r2_score=r2_score,
+    model, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file)
+    
+    return render_template('multilinear_reg_sample.html',
+                         plots=plots,
+                         metrics=metrics,
                          coefficients=coefficients,
+                         p_values=p_values,
                          intercept=intercept)
 
 

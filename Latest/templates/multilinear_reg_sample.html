@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Linear Regression Results</title>
+    <style>
+        .plot-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .metrics-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .coefficients-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Linear Regression Analysis</h1>
+
+    <!-- Model Metrics -->
+    <div class="metrics-container">
+        <h2>Model Performance Metrics</h2>
+        <p>Training R² Score: {{ "%.4f"|format(metrics.train_r2) }}</p>
+        <p>Testing R² Score: {{ "%.4f"|format(metrics.test_r2) }}</p>
+        <p>Training RMSE: {{ "%.4f"|format(metrics.train_rmse) }}</p>
+        <p>Testing RMSE: {{ "%.4f"|format(metrics.test_rmse) }}</p>
+    </div>
+
+    <!-- Coefficients and P-values -->
+    <div class="coefficients-container">
+        <h2>Model Coefficients</h2>
+        <p>Intercept: {{ "%.4f"|format(intercept) }}</p>
+        <table border="1">
+            <tr>
+                <th>Feature</th>
+                <th>Coefficient</th>
+                <th>P-value</th>
+            </tr>
+            {% for feature in coefficients.keys() %}
+            <tr>
+                <td>{{ feature }}</td>
+                <td>{{ "%.4f"|format(coefficients[feature]) }}</td>
+                <td>{{ "%.4f"|format(p_values[feature]) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!-- Plots -->
+    <div class="plots-container">
+        <h2>Visualization Plots</h2>
+        {% for plot in plots %}
+        <div class="plot-container">
+            <img src="data:image/png;base64,{{ plot }}" alt="Regression Plot">
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
