@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import mysql.connector
 import numpy as np
 import pandas as pd
+import ast
 import os
 from models.classification import *
 from models.regression import *
