@@ -53,6 +53,43 @@
         </table>
     </div>
 
+    <!-- Download Section -->
+    <div class="download-container">
+        <h2>Download Trained Model</h2>
+        <a href="{{ url_for('download_model') }}" class="download-button">Download Model</a>
+        
+        <h3>How to Use the Downloaded Model</h3>
+        <div class="usage-code">
+            <pre>
+import pickle
+import pandas as pd
+
+# Load the saved model
+with open('regression_model.pkl', 'rb') as f:
+    saved_data = pickle.load(f)
+
+# Extract components
+model = saved_data['model']
+metrics = saved_data['metrics']
+coefficients = saved_data['coefficients']
+p_values = saved_data['p_values']
+intercept = saved_data['intercept']
+
+# Prepare your new data (must have the same features as training data)
+# Example:
+new_data = pd.DataFrame({
+    'feature1': [value1],
+    'feature2': [value2],
+    # ... add all required features
+})
+
+# Make predictions
+predictions = model.predict(new_data)
+            </pre>
+        </div>
+    </div>
+
+
     <!-- Plots -->
     <div class="plots-container">
         <h2>Visualization Plots</h2>
