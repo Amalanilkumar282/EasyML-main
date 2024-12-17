@@ -241,8 +241,8 @@
   
       // Create an array of models based on the selected model type
       if (modelType === 'regression') {
-        models = ['Linear Regression',''];
-        links = ["{{ url_for('linear') }}"]
+        models = ['Linear Regression','Multiple Linear Regression'];
+        links = ["{{ url_for('linear') }}", "{{ url_for('multilinear') }}"]
         // Add more regression models as needed
       } else if (modelType === 'classification') {
         models = ['Logistic Regression','KNN','Decision Tree','Naive Bayes Classifier','SVM','Analysis'];

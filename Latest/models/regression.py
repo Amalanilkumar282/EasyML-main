@@ -48,13 +48,14 @@ def perform_linear_regression(file):
 #############################################################################################
 #############################################################################################
 
-def perform_multiple_linear_regression(file,target):
+def perform_multiple_linear_regression(file, target):
     df = pd.read_csv(file,index_col=False)
-    y=df[target]
-    target=[target]
+    y=df[target].values.reshape(-1, 1)
+
+    drop_columns = [target]
     if 'id' in df.columns:
-        target.append('id')
-    X=df.drop(columns=target)
+        drop_columns.append('id')
+    X=df.drop(columns=drop_columns)
 
     X_train, X_test, y_train, y_test = train_test_split(X,y, train_size=0.7, random_state=2529)
 
