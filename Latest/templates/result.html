@@ -1,0 +1,37 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression Result</title>
+    <!-- Include CSS -->
+    <link rel="stylesheet" href="../static/style.css">
+
+<!-- Include JavaScript -->
+    <script src="../static/script.js"></script>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    {% if plot %}
+        <h2>Data Distribution and Regression Line</h2>
+        <img src="data:image/png;base64,{{ plot }}" alt="Scatter Plot">
+    {% endif %}
+
+        <h2>Prediction Result</h2>
+        <p>Predicted Value: {{ prediction }}</p>
+
+        <!-- Add a form for predicting with a new value -->
+        <form action="/predict" method="post">
+            <label for="new_value">Insert a new value:</label>
+            <input type="number" step="any" name="new_value" required>
+            <input type="hidden" name="model" value="{{ model }}">
+            <button type="submit">Predict</button>
+        </form>
+</body>
+</html>
