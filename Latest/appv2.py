@@ -74,13 +74,13 @@ def linear():
 @app.route('/multireg')
 def multilinear():
     file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    try:
-        df = pd.read_csv(file.stream)
-    except pd.errors.EmptyDataError:
-        return render_template('error.html', error='The uploaded file is empty or invalid.')
-    target = df.columns[-1]  # Assuming target is the last column
-    model, plot = perform_multiple_linear_regression(file, target)
-    return render_template('multi_lin_reg.html', plot=plot, model=model)
+    model, plot, r2_score, coefficients, intercept = perform_multiple_linear_regression(file)
+    return render_template('multi_lin_reg.html', 
+                         plot=plot, 
+                         model=model, 
+                         r2_score=r2_score,
+                         coefficients=coefficients,
+                         intercept=intercept)
 
 
 
