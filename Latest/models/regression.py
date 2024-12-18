@@ -106,28 +106,41 @@ def perform_multiple_linear_regression(file):
     # Create plots list to store all plot images
     plots = []
     
-    # 1. Feature scatter plots with regression lines
+     # 1. Feature scatter plots with regression lines
     n_features = X.shape[1]
-    fig, axes = plt.subplots(2, (n_features + 1) // 2, figsize=(15, 10))
-    if n_features == 1:
-        axes = np.array([axes])
-    axes = axes.ravel()
+    # Calculate the number of rows and columns needed
+    n_cols = 2
+    n_rows = (n_features + n_cols - 1) // n_cols
+    
+    # Create subplots with exact number of features
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(15, 5*n_rows))
+    
+    # Flatten axes for easier iteration if multiple rows
+    if n_rows > 1:
+        axes = axes.ravel()
+    
+    # Hide any extra subplots
+    if n_features < len(axes):
+        for j in range(n_features, len(axes)):
+            fig.delaxes(axes[j])
     
     for i, feature in enumerate(feature_names):
-        if i < len(axes):  # Ensure we don't exceed the number of subplot axes
-            axes[i].scatter(X_train[:, i], y_train, alpha=0.5, label='Training')
-            axes[i].scatter(X_test[:, i], y_test, alpha=0.5, label='Testing')
-            
-            # Plot regression line
-            x_range = np.linspace(X[:, i].min(), X[:, i].max(), 100)
-            X_plot = np.zeros((100, X.shape[1]))
-            X_plot[:, i] = x_range
-            y_plot = model.predict(X_plot)
-            axes[i].plot(x_range, y_plot, color='red', label='Regression Line')
-            
-            axes[i].set_xlabel(str(feature))
-            axes[i].set_ylabel(target)
-            axes[i].legend()
+        # Select the correct subplot
+        ax = axes[i] if n_rows > 1 or n_features > 1 else axes
+        
+        ax.scatter(X_train[:, i], y_train, alpha=0.5, label='Training')
+        ax.scatter(X_test[:, i], y_test, alpha=0.5, label='Testing')
+        
+        # Plot regression line
+        x_range = np.linspace(X[:, i].min(), X[:, i].max(), 100)
+        X_plot = np.zeros((100, X.shape[1]))
+        X_plot[:, i] = x_range
+        y_plot = model.predict(X_plot)
+        ax.plot(x_range, y_plot, color='red', label='Regression Line')
+        
+        ax.set_xlabel(str(feature))
+        ax.set_ylabel(target)
+        ax.legend()
     
     plt.tight_layout()
     plots.append(get_plot_as_base64())
