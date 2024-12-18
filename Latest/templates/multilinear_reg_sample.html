@@ -53,13 +53,29 @@
         </table>
     </div>
 
-    <!-- Download Section -->
-    <div class="download-container">
-        <h2>Download Trained Model</h2>
-        <a href="{{ url_for('download_model') }}" class="download-button">Download Model</a>
-        
-        <h3>How to Use the Downloaded Model</h3>
-        <div class="usage-code">
+   <!-- Download Model Button -->
+   <div class="metrics-container">
+    <h2>Download Trained Model</h2>
+    <a href="{{ url_for('download_model', filename=model_path) }}" class="download-button">
+        Download Model
+    </a>
+</div>
+
+<!-- Add this CSS in the style section -->
+<style>
+    .download-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    .download-button:hover {
+        background-color: #45a049;
+    }
+</style>
             <pre>
 import pickle
 import pandas as pd

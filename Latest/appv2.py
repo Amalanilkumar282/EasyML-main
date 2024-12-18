@@ -10,7 +10,10 @@ import os
 from models.classification import *
 from models.regression import *
 from werkzeug.datastructures import FileStorage
+
 app = Flask(__name__)
+app.config['MODEL_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models')
+
 
 # Database Credentials
 db_credentials = {
@@ -77,110 +80,32 @@ def linear():
 @app.route('/multireg')
 def multilinear():
     file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    model, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file)
+    model_path, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file)
     
     return render_template('multilinear_reg_sample.html',
                          plots=plots,
                          metrics=metrics,
                          coefficients=coefficients,
                          p_values=p_values,
-                         intercept=intercept)
+                         intercept=intercept,
+                         model_path=os.path.basename(model_path))
 
-
-
-
-@app.route('/download_model')
-def download_model():
+@app.route('/download_model/<filename>')
+def download_model(filename):
     try:
-        # Send the saved model file
-        return send_file(
-            'temp_model.pkl',
-            as_attachment=True,
-            download_name='regression_model.pkl',
-            mimetype='application/octet-stream'
-        )
+        model_path = os.path.join(app.config['MODEL_FOLDER'], filename)
+        if not os.path.exists(model_path):
+            return f"Model file not found: {filename}", 404
+        return send_file(model_path,
+                        mimetype='application/octet-stream',
+                        as_attachment=True,
+                        download_name=filename)
     except Exception as e:
-        return str(e)
+        return f"Error downloading model: {str(e)}", 400
 
-# Clean up function to remove temporary files
-@app.after_request
-def cleanup(response):
-    try:
-        if os.path.exists('temp_model.pkl'):
-            os.remove('temp_model.pkl')
-    except:
-        pass
-    return response
-
-
-
-
-
-#Trying to add download functionality to multiregression model!
-# # Define the path for temporary files
-# TEMP_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'temp')
-# MODEL_PATH = os.path.join(TEMP_DIR, 'temp_model.pkl')
-
-# # Create temp directory if it doesn't exist
-# if not os.path.exists(TEMP_DIR):
-#     os.makedirs(TEMP_DIR)
-
-# @app.route('/multireg')
-# def multilinear():
-#     file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-#     model, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file)
-    
-#     # Save the model to the temporary directory
-#     try:
-#         with open(MODEL_PATH, 'wb') as f:
-#             pickle.dump({
-#                 'model': model,
-#                 'metrics': metrics,
-#                 'coefficients': coefficients,
-#                 'p_values': p_values,
-#                 'intercept': intercept
-#             }, f)
-#     except Exception as e:
-#         print(f"Error saving model: {str(e)}")
-    
-#     return render_template('multilinear_reg_sample.html',
-#                          plots=plots,
-#                          metrics=metrics,
-#                          coefficients=coefficients,
-#                          p_values=p_values,
-#                          intercept=intercept)
-
-# @app.route('/download_model')
-# def download_model():
-#     try:
-#         if os.path.exists(MODEL_PATH):
-#             return send_file(
-#                 MODEL_PATH,
-#                 as_attachment=True,
-#                 download_name='regression_model.pkl',
-#                 mimetype='application/octet-stream'
-#             )
-#         else:
-#             return "Model file not found. Please generate the model first.", 404
-#     except Exception as e:
-#         return f"Error downloading model: {str(e)}", 500
-
-# # Clean up function to remove temporary files
-# @app.after_request
-# def cleanup(response):
-#     try:
-#         if os.path.exists(MODEL_PATH):
-#             os.remove(MODEL_PATH)
-#     except Exception as e:
-#         print(f"Error cleaning up: {str(e)}")
-#     return response
-
-# # Optional: Add error handling for the main route
-# @app.errorhandler(Exception)
-# def handle_error(e):
-#     return f"An error occurred: {str(e)}", 500
-
-
+# Add this to create the models directory when the app starts
+if not os.path.exists(app.config['MODEL_FOLDER']):
+    os.makedirs(app.config['MODEL_FOLDER'])
 
 
 

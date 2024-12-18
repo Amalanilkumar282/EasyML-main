@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import pickle
+import os
 import seaborn as sns
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.linear_model import LinearRegression
@@ -15,6 +17,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import metrics
 from scipy import stats
+from config import MODEL_FOLDER  # Import the shared configuration
+
 
 
 #############################################################################################
@@ -55,6 +59,16 @@ def perform_linear_regression(file):
 #############################################################################################
 #############################################################################################
 #############################################################################################
+def save_model(model, model_name='temp_model.pkl'):
+    """Save the trained model to a file using shared configuration"""
+    model_path = os.path.join(MODEL_FOLDER, model_name)
+    with open(model_path, 'wb') as f:
+        pickle.dump(model, f)
+    return model_path
+
+
+
+
 
 def perform_multiple_linear_regression(file):
     # Read and prepare data
@@ -158,8 +172,10 @@ def perform_multiple_linear_regression(file):
     coefficients = dict(zip(feature_names, model.coef_))
     p_values_dict = dict(zip(feature_names, p_values))
     
+    model_path = save_model(model)
+    
     return (
-        model,
+        model_path,  # Changed from model to model_path
         plots,
         {
             'train_r2': train_r2,
