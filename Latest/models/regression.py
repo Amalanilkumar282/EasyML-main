@@ -67,9 +67,6 @@ def save_model(model, model_name='temp_model.pkl'):
     return model_path
 
 
-
-
-
 def perform_multiple_linear_regression(file):
     # Read and prepare data
     df = pd.read_csv(file, index_col=False)
@@ -106,44 +103,63 @@ def perform_multiple_linear_regression(file):
     # Create plots list to store all plot images
     plots = []
     
-     # 1. Feature scatter plots with regression lines
+    # 1. Feature scatter plots with regression lines
     n_features = X.shape[1]
-    # Calculate the number of rows and columns needed
-    n_cols = 2
-    n_rows = (n_features + n_cols - 1) // n_cols
     
-    # Create subplots with exact number of features
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(15, 5*n_rows))
-    
-    # Flatten axes for easier iteration if multiple rows
-    if n_rows > 1:
-        axes = axes.ravel()
-    
-    # Hide any extra subplots
-    if n_features < len(axes):
-        for j in range(n_features, len(axes)):
-            fig.delaxes(axes[j])
-    
-    for i, feature in enumerate(feature_names):
-        # Select the correct subplot
-        ax = axes[i] if n_rows > 1 or n_features > 1 else axes
-        
-        ax.scatter(X_train[:, i], y_train, alpha=0.5, label='Training')
-        ax.scatter(X_test[:, i], y_test, alpha=0.5, label='Testing')
+    if n_features == 1:
+        # Simple linear regression case
+        plt.figure(figsize=(10, 6))
+        plt.scatter(X_train, y_train, alpha=0.5, label='Training')
+        plt.scatter(X_test, y_test, alpha=0.5, label='Testing')
         
         # Plot regression line
-        x_range = np.linspace(X[:, i].min(), X[:, i].max(), 100)
-        X_plot = np.zeros((100, X.shape[1]))
-        X_plot[:, i] = x_range
-        y_plot = model.predict(X_plot)
-        ax.plot(x_range, y_plot, color='red', label='Regression Line')
+        x_range = np.linspace(X.min(), X.max(), 100).reshape(-1, 1)
+        y_plot = model.predict(x_range)
+        plt.plot(x_range, y_plot, color='red', label='Regression Line')
         
-        ax.set_xlabel(str(feature))
-        ax.set_ylabel(target)
-        ax.legend()
-    
-    plt.tight_layout()
-    plots.append(get_plot_as_base64())
+        plt.xlabel(str(feature_names[0]))
+        plt.ylabel(target)
+        plt.legend()
+        plt.title('Simple Linear Regression')
+        plots.append(get_plot_as_base64())
+        
+    else:
+        # Multiple linear regression case
+        n_cols = 2
+        n_rows = (n_features + n_cols - 1) // n_cols
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=(15, 5*n_rows))
+        
+        # Convert axes to array if single row
+        if n_rows == 1:
+            axes = np.array([axes])
+            
+        # Flatten axes for easier iteration
+        axes = axes.ravel()
+        
+        # Hide any extra subplots
+        if n_features < len(axes):
+            for j in range(n_features, len(axes)):
+                fig.delaxes(axes[j])
+        
+        for i, feature in enumerate(feature_names):
+            ax = axes[i]
+            
+            ax.scatter(X_train[:, i], y_train, alpha=0.5, label='Training')
+            ax.scatter(X_test[:, i], y_test, alpha=0.5, label='Testing')
+            
+            # Plot regression line
+            x_range = np.linspace(X[:, i].min(), X[:, i].max(), 100)
+            X_plot = np.zeros((100, X.shape[1]))
+            X_plot[:, i] = x_range
+            y_plot = model.predict(X_plot)
+            ax.plot(x_range, y_plot, color='red', label='Regression Line')
+            
+            ax.set_xlabel(str(feature))
+            ax.set_ylabel(target)
+            ax.legend()
+        
+        plt.tight_layout()
+        plots.append(get_plot_as_base64())
     
     # 2. Correlation heatmap
     plt.figure(figsize=(10, 8))
@@ -188,7 +204,7 @@ def perform_multiple_linear_regression(file):
     model_path = save_model(model)
     
     return (
-        model_path,  # Changed from model to model_path
+        model_path,
         plots,
         {
             'train_r2': train_r2,
@@ -200,6 +216,8 @@ def perform_multiple_linear_regression(file):
         p_values_dict,
         model.intercept_
     )
+
+
 
 def get_plot_as_base64():
     image_stream = BytesIO()
