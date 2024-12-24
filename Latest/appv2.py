@@ -115,6 +115,10 @@ def predict_multiple():
         model_path = request.form['model_path']
         features = request.form['features'].split(',')
         
+        # Verify model file exists
+        if not os.path.exists(model_path):
+            raise FileNotFoundError(f"Model file not found at {model_path}")
+        
         # Load the saved model
         with open(model_path, 'rb') as f:
             saved_data = pickle.load(f)
@@ -123,7 +127,10 @@ def predict_multiple():
         # Collect input values
         values_dict = {}
         for feature in features:
-            values_dict[feature] = float(request.form[feature])
+            try:
+                values_dict[feature] = float(request.form[feature])
+            except ValueError:
+                raise ValueError(f"Invalid value provided for feature '{feature}'")
         
         # Make prediction
         prediction = predict_new_values(model, features, values_dict)
@@ -141,25 +148,19 @@ def predict_multiple():
             input_values=values_dict
         )
         
-    except Exception as e:
-        # Create an error message to display in the template
-        error_message = f'Error making prediction: {str(e)}'
-        
-        # Load the model data again to re-render the page with the error
-        with open(model_path, 'rb') as f:
-            saved_data = pickle.load(f)
-            
+    except FileNotFoundError as e:
+        error_message = f"Model file not found. Please retrain the model."
         return render_template(
-            'multiple_regression_results.html',
-            model_path=model_path,
-            metrics=saved_data['metrics'],
-            coefficients=saved_data['coefficients'],
-            p_values=saved_data['p_values'],
-            intercept=saved_data['intercept'],
-            plots=saved_data['plots'],
+            'error.html',
             error_message=error_message
         )
-
+        
+    except Exception as e:
+        error_message = f"Error during prediction: {str(e)}"
+        return render_template(
+            'error.html',
+            error_message=error_message
+        )
 
 
 

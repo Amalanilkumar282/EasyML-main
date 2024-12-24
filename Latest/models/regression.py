@@ -59,12 +59,44 @@ def perform_linear_regression(file):
 #############################################################################################
 #############################################################################################
 #############################################################################################
-def save_model(model, model_name='temp_model.pkl'):
-    """Save the trained model to a file using shared configuration"""
-    model_path = os.path.join(MODEL_FOLDER, model_name)
-    with open(model_path, 'wb') as f:
-        pickle.dump(model, f)
-    return model_path
+# def save_model(model, model_name='temp_model.pkl'):
+#     """Save the trained model to a file using shared configuration"""
+#     model_path = os.path.join(MODEL_FOLDER, model_name)
+#     with open(model_path, 'wb') as f:
+#         pickle.dump(model, f)
+#     return model_path
+
+def save_model(model, metrics, coefficients, p_values, intercept, plots):
+    """
+    Save the model and its associated data to a file
+    """
+    import os
+    import pickle
+    
+    # Create a models directory if it doesn't exist
+    model_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models')
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+    
+    # Create a unique filename based on timestamp
+    import time
+    filename = f'model_{int(time.time())}.pkl'
+    filepath = os.path.join(model_dir, filename)
+    
+    # Save all the model data
+    model_data = {
+        'model': model,
+        'metrics': metrics,
+        'coefficients': coefficients,
+        'p_values': p_values,
+        'intercept': intercept,
+        'plots': plots
+    }
+    
+    with open(filepath, 'wb') as f:
+        pickle.dump(model_data, f)
+    
+    return filepath
 
 
 def perform_multiple_linear_regression(file):
@@ -201,7 +233,19 @@ def perform_multiple_linear_regression(file):
     coefficients = dict(zip(feature_names, model.coef_))
     p_values_dict = dict(zip(feature_names, p_values))
     
-    model_path = save_model(model)
+    model_path = save_model(
+        model=model,
+        metrics={
+            'train_r2': train_r2,
+            'test_r2': test_r2,
+            'train_rmse': train_rmse,
+            'test_rmse': test_rmse
+        },
+        coefficients=coefficients,
+        p_values=p_values_dict,
+        intercept=model.intercept_,
+        plots=plots
+    )
     
     return (
         model_path,
