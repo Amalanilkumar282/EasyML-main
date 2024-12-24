@@ -108,6 +108,57 @@ if not os.path.exists(app.config['MODEL_FOLDER']):
     os.makedirs(app.config['MODEL_FOLDER'])
 
 
+@app.route('/predict_multiple', methods=['POST'])
+def predict_multiple():
+    try:
+        # Get the model path and features from the form
+        model_path = request.form['model_path']
+        features = request.form['features'].split(',')
+        
+        # Load the saved model
+        with open(model_path, 'rb') as f:
+            saved_data = pickle.load(f)
+        model = saved_data['model']
+        
+        # Collect input values
+        values_dict = {}
+        for feature in features:
+            values_dict[feature] = float(request.form[feature])
+        
+        # Make prediction
+        prediction = predict_new_values(model, features, values_dict)
+        
+        # Re-render the results page with the prediction
+        return render_template(
+            'multilinear_reg_sample.html',
+            model_path=model_path,
+            metrics=saved_data['metrics'],
+            coefficients=saved_data['coefficients'],
+            p_values=saved_data['p_values'],
+            intercept=saved_data['intercept'],
+            plots=saved_data['plots'],
+            prediction=prediction,
+            input_values=values_dict
+        )
+        
+    except Exception as e:
+        # Create an error message to display in the template
+        error_message = f'Error making prediction: {str(e)}'
+        
+        # Load the model data again to re-render the page with the error
+        with open(model_path, 'rb') as f:
+            saved_data = pickle.load(f)
+            
+        return render_template(
+            'multiple_regression_results.html',
+            model_path=model_path,
+            metrics=saved_data['metrics'],
+            coefficients=saved_data['coefficients'],
+            p_values=saved_data['p_values'],
+            intercept=saved_data['intercept'],
+            plots=saved_data['plots'],
+            error_message=error_message
+        )
 
 
 

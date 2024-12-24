@@ -226,6 +226,35 @@ def get_plot_as_base64():
     img_str = base64.b64encode(image_stream.read()).decode('utf-8')
     plt.close()
     return img_str
+
+
+def predict_new_values(model, feature_names, values_dict):
+    """
+    Make predictions using the trained multiple linear regression model
+    
+    Parameters:
+    model: trained LinearRegression model
+    feature_names: list of feature names
+    values_dict: dictionary containing feature values
+    
+    Returns:
+    prediction: numpy array containing the predicted value
+    """
+    import numpy as np
+    import pandas as pd
+    
+    # Create a DataFrame with a single row containing the new values
+    new_data = pd.DataFrame([values_dict])
+    
+    # Ensure the features are in the correct order
+    new_data = new_data[feature_names]
+    
+    # Make prediction
+    prediction = model.predict(new_data)
+    
+    return prediction
+
+
 ##############################################################################################
 #############################################################################################
 #############################################################################################

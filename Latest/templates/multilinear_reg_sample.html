@@ -15,6 +15,48 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link id="pagestyle" href="../static/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
   <style>
+
+.prediction-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .prediction-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
     .plot-container {
       margin: 20px 0;
       text-align: center;
@@ -191,6 +233,47 @@ predictions = model.predict(new_data)
         </div>
         {% endfor %}
       </div>
+<!-- Add this after the plots-container div and before closing the container-fluid div -->
+<div class="prediction-container metrics-container">
+    <h2>Predict New Values</h2>
+    
+    {% if error_message %}
+    <div class="alert alert-danger" role="alert">
+      {{ error_message }}
+    </div>
+    {% endif %}
+    
+    <form action="{{ url_for('predict_multiple') }}" method="post">
+      {% for feature in coefficients.keys() %}
+      <div class="form-group mb-3">
+        <label for="{{ feature }}" class="form-label">{{ feature }}:</label>
+        <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
+      </div>
+      {% endfor %}
+      
+      <!-- Add hidden fields for model information -->
+      <input type="hidden" name="model_path" value="{{ model_path }}">
+      <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+      
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+  
+    {% if prediction is defined %}
+    <div class="prediction-result mt-4">
+      <h3>Prediction Result</h3>
+      <div class="alert alert-success">
+        <p class="mb-0">Predicted Value: <strong>{{ "%.4f"|format(prediction[0]) }}</strong></p>
+      </div>
+      <h4>Input Values:</h4>
+      <ul class="list-unstyled">
+        {% for feature, value in input_values.items() %}
+        <li><strong>{{ feature }}:</strong> {{ value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+
     </div>
   </main>
 
