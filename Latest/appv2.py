@@ -90,30 +90,65 @@ def multilinear():
                          intercept=intercept,
                          model_path=os.path.basename(model_path))
 
+def save_model(model, metrics, coefficients, p_values, intercept, plots):
+    """
+    Save the model and its associated data to a file
+    """
+    import os
+    import pickle
+    from datetime import datetime
+    
+    # Create a unique filename based on timestamp
+    filename = f'model_{int(datetime.now().timestamp())}.pkl'
+    
+    # Use the MODEL_FOLDER from app config
+    model_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'saved_models')
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+    
+    filepath = os.path.join(model_dir, filename)
+    
+    # Save all the model data
+    model_data = {
+        'model': model,
+        'metrics': metrics,
+        'coefficients': coefficients,
+        'p_values': p_values,
+        'intercept': intercept,
+        'plots': plots
+    }
+    
+    with open(filepath, 'wb') as f:
+        pickle.dump(model_data, f)
+    
+    return filename  # Return just the filename instead of full path
+
+# In app.py - Update the download_model and predict_multiple routes
+
 @app.route('/download_model/<filename>')
 def download_model(filename):
     try:
         model_path = os.path.join(app.config['MODEL_FOLDER'], filename)
         if not os.path.exists(model_path):
-            return f"Model file not found: {filename}", 404
+            return render_template('error.html', 
+                                error_message=f"Model file not found: {filename}. Please retrain the model.")
         return send_file(model_path,
                         mimetype='application/octet-stream',
                         as_attachment=True,
                         download_name=filename)
     except Exception as e:
-        return f"Error downloading model: {str(e)}", 400
-
-# Add this to create the models directory when the app starts
-if not os.path.exists(app.config['MODEL_FOLDER']):
-    os.makedirs(app.config['MODEL_FOLDER'])
-
+        return render_template('error.html', 
+                             error_message=f"Error downloading model: {str(e)}")
 
 @app.route('/predict_multiple', methods=['POST'])
 def predict_multiple():
     try:
-        # Get the model path and features from the form
-        model_path = request.form['model_path']
+        # Get the model filename and features from the form
+        model_filename = request.form['model_path']
         features = request.form['features'].split(',')
+        
+        # Construct full model path
+        model_path = os.path.join(app.config['MODEL_FOLDER'], model_filename)
         
         # Verify model file exists
         if not os.path.exists(model_path):
@@ -122,6 +157,7 @@ def predict_multiple():
         # Load the saved model
         with open(model_path, 'rb') as f:
             saved_data = pickle.load(f)
+            
         model = saved_data['model']
         
         # Collect input values
@@ -138,7 +174,7 @@ def predict_multiple():
         # Re-render the results page with the prediction
         return render_template(
             'multilinear_reg_sample.html',
-            model_path=model_path,
+            model_path=model_filename,  # Pass filename only
             metrics=saved_data['metrics'],
             coefficients=saved_data['coefficients'],
             p_values=saved_data['p_values'],
@@ -148,19 +184,9 @@ def predict_multiple():
             input_values=values_dict
         )
         
-    except FileNotFoundError as e:
-        error_message = f"Model file not found. Please retrain the model."
-        return render_template(
-            'error.html',
-            error_message=error_message
-        )
-        
     except Exception as e:
-        error_message = f"Error during prediction: {str(e)}"
-        return render_template(
-            'error.html',
-            error_message=error_message
-        )
+        return render_template('error.html', 
+                             error_message=f"Error during prediction: {str(e)}")
 
 
 

@@ -59,12 +59,7 @@ def perform_linear_regression(file):
 #############################################################################################
 #############################################################################################
 #############################################################################################
-# def save_model(model, model_name='temp_model.pkl'):
-#     """Save the trained model to a file using shared configuration"""
-#     model_path = os.path.join(MODEL_FOLDER, model_name)
-#     with open(model_path, 'wb') as f:
-#         pickle.dump(model, f)
-#     return model_path
+
 
 def save_model(model, metrics, coefficients, p_values, intercept, plots):
     """
@@ -72,15 +67,16 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots):
     """
     import os
     import pickle
+    from datetime import datetime
     
-    # Create a models directory if it doesn't exist
-    model_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models')
+    # Create a unique filename based on timestamp
+    filename = f'model_{int(datetime.now().timestamp())}.pkl'
+    
+    # Use the MODEL_FOLDER from app config
+    model_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'saved_models')
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
     
-    # Create a unique filename based on timestamp
-    import time
-    filename = f'model_{int(time.time())}.pkl'
     filepath = os.path.join(model_dir, filename)
     
     # Save all the model data
@@ -96,7 +92,7 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots):
     with open(filepath, 'wb') as f:
         pickle.dump(model_data, f)
     
-    return filepath
+    return filename  # Return just the filename instead of full path
 
 
 def perform_multiple_linear_regression(file):
