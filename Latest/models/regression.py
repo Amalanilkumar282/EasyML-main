@@ -95,12 +95,12 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots):
     return filename  # Return just the filename instead of full path
 
 
-def perform_multiple_linear_regression(file):
+def perform_multiple_linear_regression(file,target):
     # Read and prepare data
     df = pd.read_csv(file, index_col=False)
     
     # Get target column (last column)
-    target = df.columns[-1]
+    # target = df.columns[-1]
     y = df[target].values
     
     # Remove target and ID column (if exists) from features

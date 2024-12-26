@@ -185,78 +185,43 @@
   </main>
 
   <script>
-    function chooseValue(button,m) {
-        var row = button.closest('tr');
-        var firstCellValue = row.querySelector('td:first-child').innerText;
-        var lines = firstCellValue.split('\n');
-        var secondLine = lines.length >= 2 ? lines[1] : '';
-        console.log(secondLine);
+    function chooseValue(button) {
+    var row = button.closest('tr');
+    var firstCellValue = row.querySelector('td:first-child').innerText;
+    var lines = firstCellValue.split('\n');
+    var secondLine = lines.length >= 2 ? lines[1] : '';
 
-        var queryParams = window.location.search.substring(1); // Excluding the leading "?"
+    var queryParams = new URLSearchParams(window.location.search);
+    var m = queryParams.get('m');
     
-    // Convert the parameters into an object
-    var paramsObject = {};
-    queryParams.split('&').forEach(function (param) {
-        var pair = param.split('=');
-        paramsObject[pair[0]] = decodeURIComponent(pair[1] || '');
-    });
+    if (!m) {
+        console.error('Model type not specified');
+        return;
+    }
 
-    // Access the value of a specific parameter
-    var m = paramsObject.m;
-
-
-
-
-        var url = '/' + m;
-        console.log(url);
-        fetch(url, {
-    method: 'POST',
-    headers: {
+    var url = '/' + m;
+    
+    fetch(url, {
+        method: 'POST',
+        headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ variable: secondLine }),
     })
-    .then(response => response.text())  // Assuming the response is HTML
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
     .then(html => {
-        document.body.innerHTML = html;  // Replace the entire body content with the fetched HTML
+        document.body.innerHTML = html;
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('An error occurred while processing your request.');
     });
-    // fetch(url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ variable: secondLine }),
-    //     })
-    //     .then(response => {
-    //         if (response.redirected) {
-    //             // If the response is a redirect, navigate to the redirected URL
-    //             window.location.href = response.url;
-    //         } else {
-    //             // If not a redirect, assume it's JSON and proceed with parsing
-    //             // return response.json();
-    //         }
-    //     })
-    //     .then(data => {
-    //         // If not a redirect, handle the response data as needed
-    //         if (data) {
-    //             console.log(data);
-    //             // Handle the response data as needed
-    //         }
-    //     })
-    //     .catch(error => {
-    //         console.error('Error:', error);
-    //     });
-        // .then(response => response.text())  // Use text() instead of json()
-        // .then(data => {
-        //     document.body.innerHTML = data;
-        // })
-        // .catch(error => {
-        //     console.error('Error:', error);
-        // });
-    }
+}
 </script>
 
   <!--   Core JS Files   -->

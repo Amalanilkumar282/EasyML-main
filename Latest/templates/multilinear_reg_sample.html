@@ -235,44 +235,43 @@ predictions = model.predict(new_data)
       </div>
 <!-- Add this after the plots-container div and before closing the container-fluid div -->
 <div class="prediction-container metrics-container">
-    <h2>Predict New Values</h2>
-    
-    {% if error_message %}
-    <div class="alert alert-danger" role="alert">
-      {{ error_message }}
-    </div>
-    {% endif %}
-    
-    <form action="{{ url_for('predict_multiple') }}" method="post">
-      {% for feature in coefficients.keys() %}
-      <div class="form-group mb-3">
-        <label for="{{ feature }}" class="form-label">{{ feature }}:</label>
-        <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
-      </div>
-      {% endfor %}
-      
-      <!-- Add hidden fields for model information -->
-      <input type="hidden" name="model_path" value="{{ model_path }}">
-      <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
-      
-      <button type="submit" class="btn btn-primary">Predict</button>
-    </form>
+  <h2>Predict New Values</h2>
   
-    {% if prediction is defined %}
-    <div class="prediction-result mt-4">
-      <h3>Prediction Result</h3>
-      <div class="alert alert-success">
-        <p class="mb-0">Predicted Value: <strong>{{ "%.4f"|format(prediction[0]) }}</strong></p>
-      </div>
-      <h4>Input Values:</h4>
-      <ul class="list-unstyled">
-        {% for feature, value in input_values.items() %}
-        <li><strong>{{ feature }}:</strong> {{ value }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+  {% if error_message %}
+  <div class="alert alert-danger" role="alert">
+    {{ error_message }}
   </div>
+  {% endif %}
+  
+  <form action="{{ url_for('predict_multiple') }}" method="post">
+    {% for feature in coefficients.keys() %}
+    <div class="form-group mb-3">
+      <label for="{{ feature }}" class="form-label">{{ feature }}:</label>
+      <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
+    </div>
+    {% endfor %}
+    
+    <input type="hidden" name="model_path" value="{{ model_path }}">
+    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+    
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+
+  {% if prediction is defined %}
+  <div class="prediction-result mt-4">
+    <h3>Prediction Result</h3>
+    <div class="alert alert-success">
+      <p class="mb-0">Predicted Value: <strong>{{ "%.4f"|format(prediction[0]) }}</strong></p>
+    </div>
+    <h4>Input Values:</h4>
+    <ul class="list-unstyled">
+      {% for feature, value in input_values.items() %}
+      <li><strong>{{ feature }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
 
     </div>
   </main>

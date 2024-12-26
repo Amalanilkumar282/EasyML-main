@@ -182,23 +182,19 @@
         <div class="col-lg-4 col-md-6 mt-4 mb-4">
           <!-- <a href="{{ url_for('display_features') }}" class="card z-index-2"> -->
             <a class="card z-index-2" onclick="displayModels('classification')">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-              <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
-                <div class="chart">
-                  <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
+                  <div class="chart">
+                    <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-body">
-              <h6 class="mb-0">Classification</h6>
-              <p class="text-sm">Classify discrete data</p>
-               <hr class="dark horizontal">
-              <!--<div class="d-flex">
-                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                <p class="mb-0 text-sm"> updated 4 min ago </p>
-              </div> -->
-            </div>
-          </a>
+              <div class="card-body">
+                <h6 class="mb-0">Classification</h6>
+                <p class="text-sm">Categorize data into predefined classes</p>
+                <hr class="dark horizontal">
+              </div>
+            </a>
         </div>
       </div>
     </div>
@@ -232,38 +228,45 @@
 </script>
   <script>
     function displayModels(modelType) {
-      var modelListDiv = document.getElementById("modelList");
-      var models = [];
-      var links=[]
-  
-      // Clear existing content in modelListDiv
-      modelListDiv.innerHTML = "";
-  
-      // Create an array of models based on the selected model type
-      if (modelType === 'regression') {
-        models = ['Linear Regression','Multiple Linear Regression'];
-        links = ["{{ url_for('linear') }}", "{{ url_for('multilinear') }}"]
-        // Add more regression models as needed
-      } else if (modelType === 'classification') {
-        models = ['Logistic Regression','KNN','Decision Tree','Naive Bayes Classifier','SVM','Analysis'];
-        links = ["{{ url_for('display_features') }}?m=logreg","{{ url_for('display_features') }}?m=knn","{{ url_for('display_features') }}?m=dtree","{{ url_for('display_features') }}?m=naivebayes","{{ url_for('display_features') }}?m=svm","{{ url_for('display_features') }}?m=analysis"]
-      }
+  var modelListDiv = document.getElementById("modelList");
+  var models = [];
+  var links = [];
 
-      // Display the list of models in modelListDiv
-      var heading = document.createElement('h3');
-      heading.textContent = 'Available Models'; // Adjust heading text as needed
-      modelListDiv.appendChild(heading);
-      models.forEach(function(model, index) {
-        var modelItem = document.createElement('div');
-        modelItem.classList.add('col-lg-3', 'col-md-4', 'mt-4', 'mb-4'); // Adjusted grid classes
-        if (model === 'Analysis') {
-        modelItem.innerHTML = '<a href="' + links[index] + '" class="card z-index-2 analysis-box"><div class="card-body"><h6 class="mb-0">' + model + '</h6></div></a>';
-      } else {
-        modelItem.innerHTML = '<a href="' + links[index] + '" class="card z-index-2"><div class="card-body"><h6 class="mb-0">' + model + '</h6></div></a>';
-      }
-        modelListDiv.appendChild(modelItem);
-      });
+  // Clear existing content in modelListDiv
+  modelListDiv.innerHTML = "";
+
+  // Create an array of models based on the selected model type
+  if (modelType === 'regression') {
+    models = ['Linear Regression', 'Multiple Linear Regression'];
+    links = ["{{ url_for('linear') }}", "{{ url_for('multilinear') }}"];
+  } else if (modelType === 'classification') {
+    models = ['Logistic Regression', 'KNN', 'Decision Tree', 'Naive Bayes Classifier', 'SVM', 'Analysis'];
+    links = [
+      "{{ url_for('display_features') }}?m=logreg",
+      "{{ url_for('display_features') }}?m=knn",
+      "{{ url_for('display_features') }}?m=dtree",
+      "{{ url_for('display_features') }}?m=naivebayes",
+      "{{ url_for('display_features') }}?m=svm",
+      "{{ url_for('display_features') }}?m=analysis"
+    ];
+  }
+
+  // Display the list of models in modelListDiv
+  var heading = document.createElement('h3');
+  heading.textContent = 'Available Models';
+  modelListDiv.appendChild(heading);
+  
+  models.forEach(function(model, index) {
+    var modelItem = document.createElement('div');
+    modelItem.classList.add('col-lg-3', 'col-md-4', 'mt-4', 'mb-4');
+    if (model === 'Analysis') {
+      modelItem.innerHTML = '<a href="' + links[index] + '" class="card z-index-2 analysis-box"><div class="card-body"><h6 class="mb-0">' + model + '</h6></div></a>';
+    } else {
+      modelItem.innerHTML = '<a href="' + links[index] + '" class="card z-index-2"><div class="card-body"><h6 class="mb-0">' + model + '</h6></div></a>';
     }
+    modelListDiv.appendChild(modelItem);
+  });
+}
   </script>
 
   <script>

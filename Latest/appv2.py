@@ -11,6 +11,11 @@ from models.classification import *
 from models.regression import *
 from werkzeug.datastructures import FileStorage
 
+from flask import request, redirect, url_for, render_template
+from werkzeug.datastructures import FileStorage
+import pandas as pd
+import os
+
 app = Flask(__name__)
 app.config['MODEL_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models')
 
@@ -77,18 +82,23 @@ def linear():
 
 
 
-@app.route('/multireg')
+@app.route('/multireg', methods=['GET', 'POST'])
 def multilinear():
-    file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    model_path, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file)
-    
-    return render_template('multilinear_reg_sample.html',
-                         plots=plots,
-                         metrics=metrics,
-                         coefficients=coefficients,
-                         p_values=p_values,
-                         intercept=intercept,
-                         model_path=os.path.basename(model_path))
+    if request.method == 'POST':
+        file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+        target = request.json.get('variable', '')
+        model_path, plots, metrics, coefficients, p_values, intercept = perform_multiple_linear_regression(file, target)
+        
+        return render_template('multilinear_reg_sample.html',
+                             plots=plots,
+                             metrics=metrics,
+                             coefficients=coefficients,
+                             p_values=p_values,
+                             intercept=intercept,
+                             model_path=os.path.basename(model_path))
+    else:
+        # Handle GET request - redirect to feature selection
+        return redirect(url_for('display_features', m='multireg'))
 
 def save_model(model, metrics, coefficients, p_values, intercept, plots):
     """
@@ -324,31 +334,48 @@ def signup():
         # Return error message
         return jsonify({'success': False, 'message': str(e)})
     
+# @app.route('/features')
+# def display_features():
+#     try:
+#         # Read the CSV file
+#         file_path = 'tempsy/f'
+#         df = pd.read_csv(file_path)
+
+#         # Get column names, data types, and number of distinct values
+#         columns_info = []
+#         for column in df.columns:
+#             i=1
+#             column_info = {
+#                 'index':i,
+#                 'name': column,
+#                 'datatype': str(df[column].dtype),
+#                 'distinct_values': df[column].nunique()
+#             }
+#             i+=1
+#             columns_info.append(column_info)
+
+#         return render_template('features.html', columns_info=columns_info)
+
+#     except Exception as e:
+#         # Handle any exceptions
+#         return render_template('error.html', error=str(e))
+
 @app.route('/features')
 def display_features():
-    try:
-        # Read the CSV file
-        file_path = 'tempsy/f'
-        df = pd.read_csv(file_path)
+    # Your existing display_features route code
+    file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+    df = pd.read_csv(file)
+    columns_info = []
+    for column in df.columns:
+        info = {
+            'name': column,
+            'datatype': str(df[column].dtype),
+            'distinct_values': df[column].nunique()
+        }
+        columns_info.append(info)
+    
+    return render_template('features.html', columns_info=columns_info)
 
-        # Get column names, data types, and number of distinct values
-        columns_info = []
-        for column in df.columns:
-            i=1
-            column_info = {
-                'index':i,
-                'name': column,
-                'datatype': str(df[column].dtype),
-                'distinct_values': df[column].nunique()
-            }
-            i+=1
-            columns_info.append(column_info)
-
-        return render_template('features.html', columns_info=columns_info)
-
-    except Exception as e:
-        # Handle any exceptions
-        return render_template('error.html', error=str(e))
     
 # Main route
 @app.route('/')
