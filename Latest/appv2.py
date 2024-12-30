@@ -15,6 +15,8 @@ from flask import request, redirect, url_for, render_template
 from werkzeug.datastructures import FileStorage
 import pandas as pd
 import os
+from flask import session, flash
+from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 app.config['MODEL_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models')
@@ -67,6 +69,88 @@ def sign_up():
 @app.route('/sign-in')
 def sign_in():
     return render_template('sign-in.html')
+
+# @app.route('/profile')
+# def profile():
+#     # if 'email' not in session:
+#     #     return redirect(url_for('sign_in'))
+    
+#     # Connect to database
+#     db_connection = mysql.connector.connect(**db_credentials)
+#     cursor = db_connection.cursor(dictionary=True)
+    
+#     # Fetch user data
+#     query = "SELECT fullname, email, phone_no, dob FROM users WHERE email = %s"
+#     cursor.execute(query, (session['email'],))
+#     user_data = cursor.fetchone()
+    
+#     # Fetch user's model history
+#     query = """
+#     SELECT model_type, created_at, accuracy 
+#     FROM model_history 
+#     WHERE user_email = %s 
+#     ORDER BY created_at DESC 
+#     LIMIT 5
+#     """
+#     cursor.execute(query, (session['email'],))
+#     model_history = cursor.fetchall()
+    
+#     cursor.close()
+#     db_connection.close()
+    
+#     return render_template('profile.html', user=user_data, history=model_history)
+
+
+# @app.route('/update_profile', methods=['POST'])
+# def update_profile():
+#     if 'email' not in session:
+#         return redirect(url_for('sign_in'))
+    
+#     fullname = request.form.get('fullname')
+#     phone_no = request.form.get('phone_no')
+#     dob = request.form.get('dob')
+#     current_password = request.form.get('current_password')
+#     new_password = request.form.get('new_password')
+    
+#     try:
+#         db_connection = mysql.connector.connect(**db_credentials)
+#         cursor = db_connection.cursor(dictionary=True)
+        
+#         # Verify current password if trying to change password
+#         if new_password:
+#             cursor.execute("SELECT password FROM users WHERE email = %s", (session['email'],))
+#             stored_password = cursor.fetchone()['password']
+#             if not check_password_hash(stored_password, current_password):
+#                 flash('Current password is incorrect', 'error')
+#                 return redirect(url_for('profile'))
+        
+#         # Update user information
+#         update_query = """
+#         UPDATE users 
+#         SET fullname = %s, phone_no = %s, dob = %s
+#         WHERE email = %s
+#         """
+#         cursor.execute(update_query, (fullname, phone_no, dob, session['email']))
+        
+#         # Update password if provided
+#         if new_password:
+#             password_hash = generate_password_hash(new_password)
+#             cursor.execute(
+#                 "UPDATE users SET password = %s WHERE email = %s",
+#                 (password_hash, session['email'])
+#             )
+        
+#         db_connection.commit()
+#         flash('Profile updated successfully', 'success')
+        
+#     except Exception as e:
+#         flash('Error updating profile: ' + str(e), 'error')
+        
+#     finally:
+#         cursor.close()
+#         db_connection.close()
+        
+#     return redirect(url_for('profile'))
 
 
 @app.route('/models')

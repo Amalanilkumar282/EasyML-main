@@ -1,0 +1,110 @@
+<!-- templates/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NoCodeML</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="mb-4 p-4 rounded 
+                        {% if category == 'error' %}bg-red-100 text-red-700
+                        {% else %}bg-green-100 text-green-700{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Profile Information -->
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-2xl font-bold mb-6">Profile Information</h2>
+                    <form action="{{ url_for('update_profile') }}" method="POST">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="fullname" value="{{ user.fullname }}"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" value="{{ user.email }}" disabled
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" name="phone_no" value="{{ user.phone_no }}"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                                <input type="date" name="dob" value="{{ user.dob }}"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                            </div>
+                            
+                            <div class="border-t pt-4">
+                                <h3 class="text-lg font-medium mb-4">Change Password</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Current Password</label>
+                                        <input type="password" name="current_password"
+                                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">New Password</label>
+                                        <input type="password" name="new_password"
+                                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-end">
+                                <button type="submit"
+                                    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                                    Save Changes
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Model History -->
+            <div class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-2xl font-bold mb-6">Recent Models</h2>
+                    {% if history %}
+                        <div class="space-y-4">
+                            {% for model in history %}
+                                <div class="border-b pb-4">
+                                    <h3 class="font-medium">{{ model.model_type }}</h3>
+                                    <p class="text-sm text-gray-600">
+                                        Accuracy: {{ "%.2f"|format(model.accuracy * 100) }}%
+                                    </p>
+                                    <p class="text-xs text-gray-500">
+                                        {{ model.created_at.strftime('%Y-%m-%d %H:%M') }}
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p class="text-gray-500">No models created yet</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
