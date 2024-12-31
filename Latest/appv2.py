@@ -296,20 +296,34 @@ def predict_new():
     prediction = model.predict(new_value_reshaped)
     return render_template('linearreg.html',plot=plot, prediction=prediction, model=model, new_value=new_value)
 
-@app.route('/logreg',methods=['POST'])
+@app.route('/logreg', methods=['GET', 'POST'])
 def logistic():
-    file=FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    target = request.json.get('variable', '')
-    acc,plot,confm = perform_logistic_regression(file,target)
-    acc=round(acc*100,2)
-    correct=confm.diagonal().sum()
-    total=confm.sum()
-    wrong=total-correct
-    conf=[correct,wrong,total]
-    precision=round((confm[0][0]/(confm[0][0]+confm[0][1]))*100,2)
-    recall=round((confm[0][0]/(confm[0][0]+confm[1][0]))*100,2)
-    return render_template('logistic.html',acc=acc, plot=plot, conf=conf,precision=precision,recall=recall)
-
+    if request.method == 'POST':
+        file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+        target = request.json.get('variable', '')
+        
+        model_path, plots, metrics, coefficients, p_values, intercept = perform_logistic_regression(file, target)
+        
+        # Calculate additional metrics from the classification report
+        classification_report = metrics['classification_report']
+        
+        # Format metrics for display
+        formatted_metrics = {
+            'accuracy': f"{metrics['test_accuracy'] * 100:.2f}%",
+            'train_accuracy': f"{metrics['train_accuracy'] * 100:.2f}%",
+            'roc_auc': f"{metrics['roc_auc']:.2f}"
+        }
+        
+        return render_template('logistic.html',
+                             plots=plots,
+                             metrics=formatted_metrics,
+                             coefficients=coefficients,
+                             p_values=p_values,
+                             intercept=intercept,
+                             model_path=os.path.basename(model_path))
+    else:
+        # Handle GET request - redirect to feature selection
+        return redirect(url_for('display_features', m='logreg'))
 
 @app.route('/knn',methods=['POST'])
 def knn_f():

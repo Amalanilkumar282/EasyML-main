@@ -58,40 +58,195 @@ def perform_analysis(file,target):
 #############################################################################################
 #############################################################################################
 #############################################################################################
-def perform_logistic_regression(file,target):
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, roc_curve, auc
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from io import BytesIO
+import base64
+import os
+import pickle
+from datetime import datetime
+
+def save_model(model, metrics, coefficients, p_values, intercept, plots, feature_encoders=None, target_encoder=None):
+    """
+    Save the model and its associated data to a file, including encoders
+    """
+    filename = f'model_{int(datetime.now().timestamp())}.pkl'
+    model_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'saved_models')
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
     
-    df = pd.read_csv(file,index_col=False)
-    y=df[target]
-    target=[target]
-    if 'id' in df.columns:
-        target.append('id')
-    X=df.drop(columns=target)
-    print(target)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.35, random_state=42)
+    filepath = os.path.join(model_dir, filename)
+    
+    model_data = {
+        'model': model,
+        'metrics': metrics,
+        'coefficients': coefficients,
+        'p_values': p_values,
+        'intercept': intercept,
+        'plots': plots,
+        'feature_encoders': feature_encoders,
+        'target_encoder': target_encoder
+    }
+    
+    with open(filepath, 'wb') as f:
+        pickle.dump(model_data, f)
+    
+    return filename
 
-    # Create a logistic regression model
-    model = LogisticRegression(max_iter=10000)
-
-    # Train the model on the training set
-    model.fit(X_train, y_train)
-
-    # Make predictions on the test set
-    predictions = model.predict(X_test)
-
-    # Evaluate the model
-    accuracy = accuracy_score(y_test, predictions)
-
-    conf_matrix = confusion_matrix(y_test, predictions)
-    plt.figure(figsize=(6, 4))
-    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', cbar=False)
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-
+def get_plot_as_base64():
     image_stream = BytesIO()
-    plt.savefig(image_stream, format='png')
+    plt.savefig(image_stream, format='png', bbox_inches='tight')
     image_stream.seek(0)
     img_str = base64.b64encode(image_stream.read()).decode('utf-8')
-    return(accuracy,img_str,conf_matrix)
+    plt.close()
+    return img_str
+
+def perform_logistic_regression(file, target):
+    # Read data
+    df = pd.read_csv(file, index_col=False)
+    
+    # Initialize encoders dictionary
+    feature_encoders = {}
+    
+    # Handle categorical features
+    X = df.drop(columns=[target])
+    if 'id' in X.columns:
+        X = X.drop(columns=['id'])
+    
+    # Convert categorical columns to numeric
+    for column in X.columns:
+        if X[column].dtype == 'object' or X[column].dtype.name == 'category':
+            encoder = LabelEncoder()
+            X[column] = encoder.fit_transform(X[column].astype(str))
+            feature_encoders[column] = encoder
+    
+    # Handle categorical target variable
+    target_encoder = None
+    y = df[target].values
+    if df[target].dtype == 'object' or df[target].dtype.name == 'category':
+        target_encoder = LabelEncoder()
+        y = target_encoder.fit_transform(y.astype(str))
+    
+    # Store feature names
+    feature_names = X.columns
+    
+    # Convert to numpy array
+    X = X.values
+    
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    # Scale features
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    
+    # Fit model
+    model = LogisticRegression(max_iter=10000)
+    model.fit(X_train_scaled, y_train)
+    
+    # Predictions
+    y_pred_train = model.predict(X_train_scaled)
+    y_pred_test = model.predict(X_test_scaled)
+    y_pred_proba = model.predict_proba(X_test_scaled)[:, 1]
+    
+    # Calculate metrics
+    train_accuracy = accuracy_score(y_train, y_pred_train)
+    test_accuracy = accuracy_score(y_test, y_pred_test)
+    conf_matrix = confusion_matrix(y_test, y_pred_test)
+    classification_rep = classification_report(y_test, y_pred_test)
+    
+    # Initialize plots list
+    plots = []
+    
+    # 1. Feature importance plot
+    plt.figure(figsize=(10, 6))
+    feature_importance = pd.DataFrame({
+        'feature': feature_names,
+        'importance': abs(model.coef_[0])
+    }).sort_values('importance', ascending=True)
+    
+    plt.barh(range(len(feature_importance)), feature_importance['importance'])
+    plt.yticks(range(len(feature_importance)), feature_importance['feature'])
+    plt.xlabel('Absolute Coefficient Value')
+    plt.title('Feature Importance')
+    plots.append(get_plot_as_base64())
+    
+    # 2. Correlation heatmap for numeric features only
+    numeric_df = df.select_dtypes(include=[np.number])
+    if not numeric_df.empty:
+        plt.figure(figsize=(10, 8))
+        correlation_matrix = numeric_df.corr()
+        sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
+        plt.title('Correlation Heatmap (Numeric Features Only)')
+        plots.append(get_plot_as_base64())
+    
+    # 3. Confusion Matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
+    plt.xlabel('Predicted Label')
+    plt.ylabel('True Label')
+    plt.title('Confusion Matrix')
+    plots.append(get_plot_as_base64())
+    
+    # 4. ROC Curve
+    plt.figure(figsize=(8, 6))
+    fpr, tpr, _ = roc_curve(y_test, y_pred_proba)
+    roc_auc = auc(fpr, tpr)
+    plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (AUC = {roc_auc:.2f})')
+    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operating Characteristic (ROC) Curve')
+    plt.legend()
+    plots.append(get_plot_as_base64())
+    
+    # Calculate p-values
+    logit_model = sm.Logit(y_train, sm.add_constant(X_train_scaled))
+    results = logit_model.fit(disp=0)
+    p_values = results.pvalues[1:]
+    
+    # Create dictionaries
+    coefficients = dict(zip(feature_names, model.coef_[0]))
+    p_values_dict = dict(zip(feature_names, p_values))
+    
+    # Save model with encoders
+    model_path = save_model(
+        model=model,
+        metrics={
+            'train_accuracy': train_accuracy,
+            'test_accuracy': test_accuracy,
+            'roc_auc': roc_auc,
+            'classification_report': classification_report
+        },
+        coefficients=coefficients,
+        p_values=p_values_dict,
+        intercept=model.intercept_[0],
+        plots=plots,
+        feature_encoders=feature_encoders,
+        target_encoder=target_encoder
+    )
+    
+    return (
+        model_path,
+        plots,
+        {
+            'train_accuracy': train_accuracy,
+            'test_accuracy': test_accuracy,
+            'roc_auc': roc_auc,
+            'classification_report': classification_report
+        },
+        coefficients,
+        p_values_dict,
+        model.intercept_[0]
+    )
 
 #############################################################################################
 #############################################################################################
