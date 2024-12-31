@@ -302,28 +302,110 @@ def logistic():
         file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
         target = request.json.get('variable', '')
         
-        model_path, plots, metrics, coefficients, p_values, intercept = perform_logistic_regression(file, target)
-        
-        # Calculate additional metrics from the classification report
-        classification_report = metrics['classification_report']
-        
-        # Format metrics for display
-        formatted_metrics = {
-            'accuracy': f"{metrics['test_accuracy'] * 100:.2f}%",
-            'train_accuracy': f"{metrics['train_accuracy'] * 100:.2f}%",
-            'roc_auc': f"{metrics['roc_auc']:.2f}"
-        }
-        
-        return render_template('logistic.html',
-                             plots=plots,
-                             metrics=formatted_metrics,
-                             coefficients=coefficients,
-                             p_values=p_values,
-                             intercept=intercept,
-                             model_path=os.path.basename(model_path))
+        try:
+            # Get model path and other results
+            model_path, plots, metrics, coefficients, p_values, intercept = perform_logistic_regression(file, target)
+            
+            # Wait until the model file is actually saved
+            model_full_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models', model_path)
+            
+            # Ensure the saved_models directory exists
+            os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models'), exist_ok=True)
+            
+            # Check if file exists
+            if not os.path.exists(model_full_path):
+                raise FileNotFoundError(f"Model file not found at {model_full_path}")
+            
+            # Get feature names from the saved model
+            with open(model_full_path, 'rb') as f:
+                saved_data = pickle.load(f)
+                feature_names = list(saved_data['coefficients'].keys())
+            
+            # Format metrics for display
+            formatted_metrics = {
+                'accuracy': f"{metrics['test_accuracy'] * 100:.2f}%",
+                'train_accuracy': f"{metrics['train_accuracy'] * 100:.2f}%",
+                'roc_auc': f"{metrics['roc_auc']:.2f}"
+            }
+            
+            return render_template('logistic.html',
+                                 plots=plots,
+                                 metrics=formatted_metrics,
+                                 coefficients=coefficients,
+                                 p_values=p_values,
+                                 intercept=intercept,
+                                 model_path=model_path,
+                                 feature_names=feature_names)
+                                 
+        except Exception as e:
+            # Log the error (you should set up proper logging)
+            print(f"Error in logistic regression: {str(e)}")
+            return f"An error occurred: {str(e)}", 500
+            
     else:
-        # Handle GET request - redirect to feature selection
+        # Handle GET request
         return redirect(url_for('display_features', m='logreg'))
+    
+@app.route('/predict_logistic/<model_filename>', methods=['POST'])
+def predict_logistic(model_filename):
+    try:
+        # Get the absolute path to the app directory
+        app_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.join(app_dir, 'saved_models', model_filename)
+        
+        # Load the saved model
+        with open(model_path, 'rb') as f:
+            saved_data = pickle.load(f)
+        
+        model = saved_data['model']
+        feature_encoders = saved_data.get('feature_encoders', {})
+        target_encoder = saved_data.get('target_encoder')
+        
+        # Get form data
+        input_data = {}
+        for key, value in request.form.items():
+            try:
+                # Try to convert to float if possible
+                input_data[key] = float(value)
+            except ValueError:
+                # If not numeric, keep as string
+                input_data[key] = value
+        
+        # Create DataFrame with single row of input data
+        input_df = pd.DataFrame([input_data])
+        
+        # Encode categorical features
+        for column, encoder in feature_encoders.items():
+            if column in input_df.columns:
+                input_df[column] = encoder.transform(input_df[column].astype(str))
+        
+        # Make prediction
+        prediction_proba = model.predict_proba(input_df)[0]
+        prediction = model.predict(input_df)[0]
+        
+        # Decode prediction if target encoder exists
+        prediction_label = prediction
+        if target_encoder is not None:
+            prediction_label = target_encoder.inverse_transform([prediction])[0]
+        
+        # Get all possible classes
+        classes = []
+        if target_encoder is not None:
+            classes = target_encoder.classes_.tolist()
+        else:
+            classes = ['0', '1']  # Binary case without encoder
+        
+        # Format probabilities with class labels
+        probabilities = dict(zip(classes, prediction_proba.tolist()))
+        
+        return jsonify({
+            'prediction': str(prediction_label),
+            'probabilities': probabilities
+        })
+        
+    except Exception as e:
+        print(f"Prediction error: {str(e)}")  # For debugging
+        return jsonify({'error': str(e)}), 400
 
 @app.route('/knn',methods=['POST'])
 def knn_f():

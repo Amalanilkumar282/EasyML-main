@@ -77,13 +77,20 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots, feature
     """
     Save the model and its associated data to a file, including encoders
     """
+    # Create unique filename
     filename = f'model_{int(datetime.now().timestamp())}.pkl'
-    model_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'saved_models')
-    if not os.path.exists(model_dir):
-        os.makedirs(model_dir)
     
+    # Get the absolute path to the app directory
+    app_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    # Create saved_models directory in the app directory
+    model_dir = os.path.join(app_dir, 'saved_models')
+    os.makedirs(model_dir, exist_ok=True)
+    
+    # Full path for the model file
     filepath = os.path.join(model_dir, filename)
     
+    # Prepare model data
     model_data = {
         'model': model,
         'metrics': metrics,
@@ -95,10 +102,15 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots, feature
         'target_encoder': target_encoder
     }
     
-    with open(filepath, 'wb') as f:
-        pickle.dump(model_data, f)
+    # Save the model
+    try:
+        with open(filepath, 'wb') as f:
+            pickle.dump(model_data, f)
+    except Exception as e:
+        print(f"Error saving model: {str(e)}")
+        raise
     
-    return filename
+    return filename 
 
 def get_plot_as_base64():
     image_stream = BytesIO()

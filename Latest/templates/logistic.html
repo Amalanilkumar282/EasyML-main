@@ -198,6 +198,27 @@ predictions_proba = model.predict_proba(new_data)  # Get probability scores
         </pre>
       </div>
     </div>
+    <div class="metrics-container">
+      <h2>Make New Prediction</h2>
+      <form id="predictionForm" class="mb-4" onsubmit="return handlePrediction(event)">
+        {% for feature in feature_names %}
+        <div class="form-group mb-3">
+          <label for="{{ feature }}">{{ feature }}:</label>
+          <input type="text" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+      
+      <!-- Prediction Results -->
+      <div id="predictionResult" style="display: none;">
+        <h3>Prediction Result</h3>
+        <div class="alert alert-info">
+          <p><strong>Predicted Class: </strong><span id="predictedClass"></span></p>
+          <p><strong>Probability: </strong><span id="probability"></span></p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!--   Core JS Files   -->
@@ -209,6 +230,54 @@ predictions_proba = model.predict_proba(new_data)  # Get probability scores
   <script src="../static/js/script.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="../static/js/material-dashboard.min.js?v=3.1.0"></script>
+
+  <script>
+    function handlePrediction(event) {
+        event.preventDefault();  // Prevent form from submitting normally
+        
+        const form = document.getElementById('predictionForm');
+        const formData = new FormData(form);
+        
+        // Send prediction request
+        fetch('/predict_logistic/{{ model_path }}', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) {
+                alert('Error: ' + data.error);
+                return;
+            }
+            
+            // Show prediction results
+            const resultDiv = document.getElementById('predictionResult');
+            resultDiv.style.display = 'block';
+            
+            // Update prediction class
+            document.getElementById('predictedClass').textContent = data.prediction;
+            
+            // Format and display probabilities
+            let probText = '';
+            for (const [className, prob] of Object.entries(data.probabilities)) {
+                probText += `${className}: ${(prob * 100).toFixed(2)}% `;
+            }
+            document.getElementById('probability').textContent = probText;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error making prediction: ' + error.message);
+        });
+        
+        return false;  // Prevent form submission
+    }
+    </script>
+
 </body>
 
 </html>
