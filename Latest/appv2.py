@@ -17,9 +17,33 @@ import pandas as pd
 import os
 from flask import session, flash
 from werkzeug.security import check_password_hash, generate_password_hash
+import logging
 
 app = Flask(__name__)
 app.config['MODEL_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saved_models')
+
+
+# Create a logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # Set the log level for the logger
+
+# Create a file handler to log messages to a file
+file_handler = logging.FileHandler('app.log')
+file_handler.setLevel(logging.INFO)
+
+# Create a stream handler to log messages to the terminal
+stream_handler = logging.StreamHandler()
+stream_handler.setLevel(logging.INFO)
+
+# Define a log message format
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+stream_handler.setFormatter(formatter)
+
+# Add the handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
+
 
 
 # Database Credentials

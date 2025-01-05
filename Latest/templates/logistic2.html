@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logistic Regression Results</title>
+</head>
+<body>
+    <h1>Logistic Regression Results</h1>
+    <h2>Model Metrics</h2>
+    <ul>
+        <li>Accuracy: {{ metrics.accuracy }}</li>
+        <li>Train Accuracy: {{ metrics.train_accuracy }}</li>
+        <li>ROC AUC: {{ metrics.roc_auc }}</li>
+    </ul>
+    
+    <h2>Model Coefficients</h2>
+    <ul>
+        {% for feature, coef in coefficients.items() %}
+            <li>{{ feature }}: {{ coef }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Model Intercept</h2>
+    <p>{{ intercept }}</p>
+    
+    <h2>Model Plots</h2>
+    {% for plot in plots %}
+        <img src="data:image/png;base64,{{ plot }}" alt="Plot">
+    {% endfor %}
+    
+    <h2>Prediction</h2>
+    <form id="predict-form">
+        {% for feature in feature_names %}
+            <label for="{{ feature }}">{{ feature }}</label>
+            <input type="text" id="{{ feature }}" name="{{ feature }}">
+        {% endfor %}
+        <input type="hidden" id="model_path" name="model_path" value="{{ model_path }}">
+        <button type="button" onclick="submitPrediction()">Predict</button>
+    </form>
+    
+    <div id="prediction-result" style="display: none;">
+        <h3>Prediction Result</h3>
+        <p>Prediction: <span id="prediction"></span></p>
+        <p>Probability: <span id="probability"></span></p>
+    </div>
+    
+    <script>
+        function submitPrediction() {
+            const form = document.getElementById('predict-form');
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            fetch('/predict_logreg', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.error) {
+                    alert(result.error);
+                } else {
+                    document.getElementById('prediction').innerText = result.prediction;
+                    document.getElementById('probability').innerText = result.probability;
+                    document.getElementById('prediction-result').style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
