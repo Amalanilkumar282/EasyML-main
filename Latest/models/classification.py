@@ -73,7 +73,8 @@ import os
 import pickle
 from datetime import datetime
 
-def save_model(model, metrics, coefficients, p_values, intercept, plots, feature_encoders=None, target_encoder=None):
+def save_model(model, metrics, coefficients, p_values, intercept, plots, 
+               feature_encoders=None, target_encoder=None, original_target_values=None):
     """
     Save the model and its associated data to a file, including encoders
     """
@@ -90,7 +91,7 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots, feature
     # Full path for the model file
     filepath = os.path.join(model_dir, filename)
     
-    # Prepare model data
+    # Prepare model data with original target values
     model_data = {
         'model': model,
         'metrics': metrics,
@@ -99,7 +100,8 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots, feature
         'intercept': intercept,
         'plots': plots,
         'feature_encoders': feature_encoders,
-        'target_encoder': target_encoder
+        'target_encoder': target_encoder,
+        'original_target_values': original_target_values  # Add this line
     }
     
     # Save the model
@@ -110,7 +112,7 @@ def save_model(model, metrics, coefficients, p_values, intercept, plots, feature
         print(f"Error saving model: {str(e)}")
         raise
     
-    return filename 
+    return filename
 
 def get_plot_as_base64():
     image_stream = BytesIO()
@@ -139,11 +141,14 @@ def perform_logistic_regression(file, target):
             X[column] = encoder.fit_transform(X[column].astype(str))
             feature_encoders[column] = encoder
     
-    # Handle categorical target variable
+     # Handle categorical target variable
     target_encoder = None
     y = df[target].values
+    original_target_values = None
     if df[target].dtype == 'object' or df[target].dtype.name == 'category':
         target_encoder = LabelEncoder()
+        # Store original unique values before encoding
+        original_target_values = df[target].unique()
         y = target_encoder.fit_transform(y.astype(str))
     
     # Store feature names
@@ -243,7 +248,8 @@ def perform_logistic_regression(file, target):
         intercept=model.intercept_[0],
         plots=plots,
         feature_encoders=feature_encoders,
-        target_encoder=target_encoder
+        target_encoder=target_encoder,
+        original_target_values=original_target_values  # Add this line
     )
     
     return (

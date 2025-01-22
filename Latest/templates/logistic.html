@@ -108,34 +108,41 @@
                 </button>
             </form>
             
-            {% if prediction is defined %}
-<div class="prediction-result animate-fade-in">
-    <h3>Prediction Result</h3>
-    <div class="metric-item">
-        <div class="metric-label">Final Prediction</div>
-        <div class="metric-value">
-            <strong>{{ final_class_name }}</strong>
-            <span class="text-sm text-gray-600">(Confidence: {{ "%.2f"|format(probability) }}%)</span>
-        </div>
+            {% if prediction %}
+<div class="prediction-results">
+    <h3>Prediction Results</h3>
+    <div class="result-item">
+        <strong>Predicted Class:</strong> {{ prediction }}
     </div>
-    
-    <h4 class="mt-4">Class Probabilities:</h4>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {% for class_name, prob in probabilities.items() %}
-        <div class="p-3 bg-gray-50 rounded-lg">
-            <div class="font-medium">{{ class_name }}</div>
-            <div class="text-lg">{{ "%.2f"|format(prob) }}%</div>
-        </div>
-        {% endfor %}
+    <div class="result-item">
+        <strong>Prediction Probabilities:</strong>
+        <ul>
+            {% for class_label, prob in probabilities.items() %}
+            <li>{{ class_label }}: {{ prob }}</li>
+            {% endfor %}
+        </ul>
     </div>
-
-    <h4 class="mt-4">Input Values:</h4>
-    <ul class="list-unstyled">
-        {% for feature, value in input_values.items() %}
-        <li><strong>{{ feature }}:</strong> {{ value }}</li>
-        {% endfor %}
-    </ul>
+    <div class="result-item">
+        <strong>Input Values:</strong>
+        <ul>
+            {% for feature, value in input_values.items() %}
+            <li>{{ feature }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
+
+<style>
+.prediction-results {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.result-item {
+    margin: 10px 0;
+}
+</style>
 {% endif %}
         </div>
     </div>

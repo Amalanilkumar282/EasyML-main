@@ -1,4 +1,5 @@
 # app.py
+import traceback
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 import mysql.connector
 import numpy as np
@@ -391,6 +392,10 @@ def predict_logistic():
             saved_data = pickle.load(f)
             
         model = saved_data['model']
+        original_target_values = saved_data['original_target_values']
+        
+        # Create mapping from numeric to original labels
+        class_mapping = {i: str(val) for i, val in enumerate(original_target_values)}
         
         # Collect input values
         values_dict = {}
@@ -403,21 +408,17 @@ def predict_logistic():
         # Make prediction
         prediction, prediction_proba = predict_new_values_logistic(model, features, values_dict)
         
-        # Get class labels from the model
-        class_labels = model.classes_
+        # Get final prediction class (0 or 1) based on probability
+        final_class = 1 if prediction_proba[1] > 0.5 else 0
         
-        # Create probabilities dictionary with class names
+        # Map the numeric prediction to actual class name from original values
+        actual_class_name = class_mapping[final_class]
+        
+        # Create probabilities dictionary with actual class names
         probabilities = {
-            str(class_label): prob * 100
-            for class_label, prob in zip(class_labels, prediction_proba)
+            class_mapping[i]: f"{prob * 100:.2f}%"
+            for i, prob in enumerate(prediction_proba)
         }
-        
-        # Determine final prediction based on probability threshold
-        prob_class_1 = prediction_proba[1]  # Probability for class 1
-        final_prediction = class_labels[1] if prob_class_1 > 0.5 else class_labels[0]
-        
-        # Get the highest probability
-        max_probability = max(prediction_proba) * 100
         
         # Re-render the results page with the prediction
         return render_template(
@@ -426,15 +427,17 @@ def predict_logistic():
             metrics=saved_data['metrics'],
             coefficients=saved_data['coefficients'],
             plots=saved_data.get('plots', []),
-            prediction=prediction,
-            final_class_name=str(final_prediction),  # Convert to string in case it's not
-            probability=max_probability,
+            prediction=actual_class_name,  # Now using the actual class name from training data
+            final_class_name=actual_class_name,
+            probability=max(prediction_proba) * 100,
             probabilities=probabilities,
-            input_values=values_dict
+            input_values=values_dict,
+            class_mapping=class_mapping
         )
         
     except Exception as e:
         print(f"Debug - Error details: {str(e)}")
+        traceback.print_exc()
         return render_template('error.html', 
                              error_message=f"Error during prediction: {str(e)}")
 
