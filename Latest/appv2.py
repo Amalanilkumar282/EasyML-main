@@ -370,66 +370,92 @@ def logistic():
         # Handle GET request
         return redirect(url_for('display_features', m='logreg'))
     
-@app.route('/predict_logistic/<model_filename>', methods=['POST'])
-def predict_logistic(model_filename):
+
+    #Logistic regression new value prediction
+@app.route('/predict_logistic', methods=['POST'])
+def predict_logistic():
     try:
-        # Get the absolute path to the app directory
-        app_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path = os.path.join(app_dir, 'saved_models', model_filename)
+        # Get the model filename and features from the form
+        model_filename = request.form['model_path']
+        features = request.form['features'].split(',')
+        
+        # Construct full model path
+        model_path = os.path.join(app.config['MODEL_FOLDER'], model_filename)
+        
+        # Verify model file exists
+        if not os.path.exists(model_path):
+            raise FileNotFoundError(f"Model file not found at {model_path}")
         
         # Load the saved model
         with open(model_path, 'rb') as f:
             saved_data = pickle.load(f)
-        
+            
         model = saved_data['model']
-        feature_encoders = saved_data.get('feature_encoders', {})
-        target_encoder = saved_data.get('target_encoder')
         
-        # Get form data
-        input_data = {}
-        for key, value in request.form.items():
+        # Collect input values
+        values_dict = {}
+        for feature in features:
             try:
-                # Try to convert to float if possible
-                input_data[key] = float(value)
+                values_dict[feature] = float(request.form[feature])
             except ValueError:
-                # If not numeric, keep as string
-                input_data[key] = value
-        
-        # Create DataFrame with single row of input data
-        input_df = pd.DataFrame([input_data])
-        
-        # Encode categorical features
-        for column, encoder in feature_encoders.items():
-            if column in input_df.columns:
-                input_df[column] = encoder.transform(input_df[column].astype(str))
+                raise ValueError(f"Invalid value provided for feature '{feature}'")
         
         # Make prediction
-        prediction_proba = model.predict_proba(input_df)[0]
-        prediction = model.predict(input_df)[0]
+        prediction, prediction_proba = predict_new_values_logistic(model, features, values_dict)
         
-        # Decode prediction if target encoder exists
-        prediction_label = prediction
-        if target_encoder is not None:
-            prediction_label = target_encoder.inverse_transform([prediction])[0]
+        # Get class labels from the model
+        class_labels = model.classes_
         
-        # Get all possible classes
-        classes = []
-        if target_encoder is not None:
-            classes = target_encoder.classes_.tolist()
-        else:
-            classes = ['0', '1']  # Binary case without encoder
+        # Create probabilities dictionary with class names
+        probabilities = {
+            str(class_label): prob * 100
+            for class_label, prob in zip(class_labels, prediction_proba)
+        }
         
-        # Format probabilities with class labels
-        probabilities = dict(zip(classes, prediction_proba.tolist()))
+        # Determine final prediction based on probability threshold
+        prob_class_1 = prediction_proba[1]  # Probability for class 1
+        final_prediction = class_labels[1] if prob_class_1 > 0.5 else class_labels[0]
         
-        return jsonify({
-            'prediction': str(prediction_label),
-            'probabilities': probabilities
-        })
+        # Get the highest probability
+        max_probability = max(prediction_proba) * 100
+        
+        # Re-render the results page with the prediction
+        return render_template(
+            'logistic.html',
+            model_path=model_filename,
+            metrics=saved_data['metrics'],
+            coefficients=saved_data['coefficients'],
+            plots=saved_data.get('plots', []),
+            prediction=prediction,
+            final_class_name=str(final_prediction),  # Convert to string in case it's not
+            probability=max_probability,
+            probabilities=probabilities,
+            input_values=values_dict
+        )
         
     except Exception as e:
-        print(f"Prediction error: {str(e)}")  # For debugging
-        return jsonify({'error': str(e)}), 400
+        print(f"Debug - Error details: {str(e)}")
+        return render_template('error.html', 
+                             error_message=f"Error during prediction: {str(e)}")
+
+def predict_new_values_logistic(model, features, values_dict):
+    """Helper function to make predictions with logistic regression model"""
+    try:
+        # Create input array in the correct order
+        input_array = np.array([[values_dict[feature] for feature in features]])
+        
+        # Make prediction
+        prediction_proba = model.predict_proba(input_array)[0]
+        prediction = model.predict(input_array)[0]
+        
+        return prediction, prediction_proba
+    except Exception as e:
+        print(f"Debug - Prediction error: {str(e)}")
+        raise
+
+
+
+
 
 @app.route('/knn',methods=['POST'])
 def knn_f():

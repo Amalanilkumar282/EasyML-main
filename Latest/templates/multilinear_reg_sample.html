@@ -1,291 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicon.png">
-  <link rel="icon" type="image/png" href="../static/img/favicon.png">
-  <link rel="stylesheet" href="../static/css/results.css">
-  <title>Easy ML</title>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../static/css/nucleo-svg.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <link id="pagestyle" href="../static/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
-  <style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EasyML - Machine Learning Made Simple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --success-color: #4CAF50;
+            --error-color: #ef476f;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --text-primary: #2b2d42;
+            --text-secondary: #6c757d;
+            --border-radius: 12px;
+            --transition-speed: 0.3s;
+        }
 
-.prediction-container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-  .form-label {
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  .form-control {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  .prediction-result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-  }
-  .alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-  }
-  .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-  }
-  .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-  }
-    .plot-container {
-      margin: 20px 0;
-      text-align: center;
-    }
-    .metrics-container {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    .coefficients-container {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    .download-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-    .download-button:hover {
-      background-color: #45a049;
-    }
-  </style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Card Container Styles */
+        .card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform var(--transition-speed);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Section Headers */
+        .section-header {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        /* Metrics Display */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-item {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all var(--transition-speed);
+        }
+
+        .metric-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Table Styles */
+        .coefficients-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .coefficients-table th,
+        .coefficients-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .coefficients-table th {
+            background-color: rgba(67, 97, 238, 0.05);
+            font-weight: 600;
+        }
+
+        .coefficients-table tr:hover {
+            background-color: rgba(67, 97, 238, 0.02);
+        }
+
+        /* Form Styles */
+        .prediction-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color var(--transition-speed);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
-<body class="g-sidenav-show bg-gray-200">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href="#">
-        <img src="../static/img/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Easy ML</span>
-      </a>
-    </div>
-    <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="{{ url_for('index') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">book</i>
-            </div>
-            <span class="nav-link-text ms-1">Result</span>
-          </a>
-        </li>
-        <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../pages/profile.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">person</i>
-            </div>
-            <span class="nav-link-text ms-1">Profile</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="{{ url_for('sign_in') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">login</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign In</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="{{ url_for('sign_up') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">assignment</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign Up</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </aside>
-
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
-    <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <h6 class="font-weight-bolder mb-0">Multiple Linear Regression Results</h6>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item d-flex">
-              <a href="{{ url_for('sign_in') }}" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Profile</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <div class="container-fluid py-4">
-      <!-- Model Metrics -->
-      <div class="metrics-container">
-        <h2>Model Performance Metrics</h2>
-        <p>Training R² Score: {{ "%.4f"|format(metrics.train_r2) }}</p>
-        <p>Testing R² Score: {{ "%.4f"|format(metrics.test_r2) }}</p>
-        <p>Training RMSE: {{ "%.4f"|format(metrics.train_rmse) }}</p>
-        <p>Testing RMSE: {{ "%.4f"|format(metrics.test_rmse) }}</p>
-      </div>
-
-      <!-- Coefficients and P-values -->
-      <div class="coefficients-container">
-        <h2>Model Coefficients</h2>
-        <p>Intercept: {{ "%.4f"|format(intercept) }}</p>
-        <table border="1">
-          <tr>
-            <th>Feature</th>
-            <th>Coefficient</th>
-            <th>P-value</th>
-          </tr>
-          {% for feature in coefficients.keys() %}
-          <tr>
-            <td>{{ feature }}</td>
-            <td>{{ "%.4f"|format(coefficients[feature]) }}</td>
-            <td>{{ "%.4f"|format(p_values[feature]) }}</td>
-          </tr>
-          {% endfor %}
-        </table>
-      </div>
-
-      <!-- Download Model Button -->
-      <div class="metrics-container">
-        <h2>Download Trained Model</h2>
-        <a href="{{ url_for('download_model', filename=model_path) }}" class="download-button">
-          Download Model
+<body>
+    <nav class="navbar animate-fade-in">
+        <a href="#" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            EasyML
         </a>
-        <!-- <pre>
-          <h3>Guideline to use the downloaded model:</h3>
-import pickle
-import pandas as pd
+    </nav>
 
-# Load the saved model
-with open('regression_model.pkl', 'rb') as f:
-    saved_data = pickle.load(f)
+    <div class="container">
+        <div class="card animate-slide-up">
+            <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> What is Multiple Linear Regression?</h3>
+                <p>Multiple Linear Regression helps predict a value based on several input factors. Think of it like predicting house prices based on size, location, and number of rooms combined.</p>
+            </div>
 
-# Extract components
-model = saved_data['model']
-metrics = saved_data['metrics']
-coefficients = saved_data['coefficients']
-p_values = saved_data['p_values']
-intercept = saved_data['intercept']
+            <!-- Model Metrics Section -->
+            <h2 class="section-header">Model Performance</h2>
+            <div class="info-card">
+                <p>These numbers tell us how well our model performs. Higher R² scores (closer to 1) and lower RMSE values indicate better predictions.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-item tooltip">
+                    <div class="metric-label">Training R² Score</div>
+                    <div class="metric-value">{{ "%.4f"|format(metrics.train_r2) }}</div>
+                    <span class="tooltip-text">Shows how well the model fits training data (1.0 is perfect)</span>
+                </div>
+                <div class="metric-item tooltip">
+                    <div class="metric-label">Testing R² Score</div>
+                    <div class="metric-value">{{ "%.4f"|format(metrics.test_r2) }}</div>
+                    <span class="tooltip-text">Shows how well the model performs on new data</span>
+                </div>
+                <div class="metric-item tooltip">
+                    <div class="metric-label">Training RMSE</div>
+                    <div class="metric-value">{{ "%.4f"|format(metrics.train_rmse) }}</div>
+                    <span class="tooltip-text">Average prediction error on training data</span>
+                </div>
+                <div class="metric-item tooltip">
+                    <div class="metric-label">Testing RMSE</div>
+                    <div class="metric-value">{{ "%.4f"|format(metrics.test_rmse) }}</div>
+                    <span class="tooltip-text">Average prediction error on new data</span>
+                </div>
+            </div>
 
-# Prepare your new data (must have the same features as training data)
-# Example:
-new_data = pd.DataFrame({
-    'feature1': [value1],
-    'feature2': [value2],
-    # ... add all required features
-})
+            <!-- Coefficients Section -->
+            <h2 class="section-header">Model Coefficients</h2>
+            <div class="info-card">
+                <p>Coefficients show how much each feature affects the prediction. A positive value means the prediction increases when the feature increases.</p>
+            </div>
+            <table class="coefficients-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Coefficient</th>
+                    <th>P-value</th>
+                </tr>
+                {% for feature in coefficients.keys() %}
+                <tr class="animate-fade-in" style="animation-delay: {{ loop.index * 0.1 }}s">
+                    <td>{{ feature }}</td>
+                    <td>{{ "%.4f"|format(coefficients[feature]) }}</td>
+                    <td>{{ "%.4f"|format(p_values[feature]) }}</td>
+                </tr>
+                {% endfor %}
+            </table>
 
-# Make predictions
-predictions = model.predict(new_data)
-        </pre> -->
-      </div>
+            <!-- Download Section -->
+            <h2 class="section-header">Download Model</h2>
+            <div class="info-card">
+                <p>Download the trained model to use it in your own applications. Check the documentation for integration guidelines.</p>
+            </div>
+            <a href="{{ url_for('download_model', filename=model_path) }}" class="btn btn-primary">
+                <i class="fas fa-download"></i> Download Model
+            </a>
 
-      <!-- Plots -->
-      <div class="plots-container">
-        <h2>Visualization Plots</h2>
-        {% for plot in plots %}
-        <div class="plot-container">
-          <img src="data:image/png;base64,{{ plot }}" alt="Regression Plot">
+            <!-- Prediction Section -->
+            <h2 class="section-header">Make Predictions</h2>
+            <div class="info-card">
+                <p>Enter values for each feature to get a prediction from the model. Use real-world values that make sense for each input.</p>
+            </div>
+            
+            {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+            {% endif %}
+
+            <form action="{{ url_for('predict_multiple') }}" method="post" class="prediction-form">
+                {% for feature in coefficients.keys() %}
+                <div class="form-group">
+                    <label for="{{ feature }}" class="form-label">{{ feature }}</label>
+                    <input type="number" step="any" class="form-input" id="{{ feature }}" name="{{ feature }}" required>
+                </div>
+                {% endfor %}
+
+                <input type="hidden" name="model_path" value="{{ model_path }}">
+                <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i> Make Prediction
+                </button>
+            </form>
+
+            {% if prediction is defined %}
+            <div class="prediction-result animate-fade-in">
+                <h3>Prediction Result</h3>
+                <div class="metric-item">
+                    <div class="metric-label">Predicted Value</div>
+                    <div class="metric-value">{{ "%.4f"|format(prediction[0]) }}</div>
+                </div>
+                <h4>Input Values:</h4>
+                <ul class="list-unstyled">
+                    {% for feature, value in input_values.items() %}
+                    <li><strong>{{ feature }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <!-- Visualization Section -->
+            <h2 class="section-header">Model Visualizations</h2>
+            <div class="info-card">
+                <p>These plots help visualize the model's performance and relationships between variables.</p>
+            </div>
+            {% for plot in plots %}
+            <div class="plot-container animate-fade-in">
+                <img src="data:image/png;base64,{{ plot }}" alt="Regression Plot" class="img-fluid">
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-      </div>
-<!-- Add this after the plots-container div and before closing the container-fluid div -->
-<div class="prediction-container metrics-container">
-  <h2>Predict New Values</h2>
-  
-  {% if error_message %}
-  <div class="alert alert-danger" role="alert">
-    {{ error_message }}
-  </div>
-  {% endif %}
-  
-  <form action="{{ url_for('predict_multiple') }}" method="post">
-    {% for feature in coefficients.keys() %}
-    <div class="form-group mb-3">
-      <label for="{{ feature }}" class="form-label">{{ feature }}:</label>
-      <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
     </div>
-    {% endfor %}
-    
-    <input type="hidden" name="model_path" value="{{ model_path }}">
-    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
-    
-    <button type="submit" class="btn btn-primary">Predict</button>
-  </form>
 
-  {% if prediction is defined %}
-  <div class="prediction-result mt-4">
-    <h3>Prediction Result</h3>
-    <div class="alert alert-success">
-      <p class="mb-0">Predicted Value: <strong>{{ "%.4f"|format(prediction[0]) }}</strong></p>
-    </div>
-    <h4>Input Values:</h4>
-    <ul class="list-unstyled">
-      {% for feature, value in input_values.items() %}
-      <li><strong>{{ feature }}:</strong> {{ value }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    </div>
-  </main>
-
-  <!--   Core JS Files   -->
-  <script src="../static/js/core/popper.min.js"></script>
-  <script src="../static/js/core/bootstrap.min.js"></script>
-  <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../static/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../static/js/plugins/chartjs.min.js"></script>
-  <script src="../static/js/script.js"></script>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script src="../static/js/material-dashboard.min.js?v=3.1.0"></script>
-</body>
-
-</html>
+        // Add intersection observer for animations

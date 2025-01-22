@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicon.png">
+  <link rel="icon" type="image/png" href="../static/img/favicon.png">
+  <link rel="stylesheet" href="../static/css/results.css">
+  <title>Easy ML</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../static/css/nucleo-svg.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link id="pagestyle" href="../static/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <style>
+
+.prediction-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .prediction-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+    .plot-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .metrics-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .coefficients-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .download-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .download-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="#">
+        <img src="../static/img/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Easy ML</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white active bg-gradient-primary" href="{{ url_for('index') }}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">book</i>
+            </div>
+            <span class="nav-link-text ms-1">Result</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../pages/profile.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('sign_in') }}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">login</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign In</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('sign_up') }}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">assignment</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign Up</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <h6 class="font-weight-bolder mb-0">Multiple Linear Regression Results</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-flex">
+              <a href="{{ url_for('sign_in') }}" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="container-fluid py-4">
+      <!-- Model Metrics -->
+      <div class="metrics-container">
+        <h2>Model Performance Metrics</h2>
+        <p>Training R² Score: {{ "%.4f"|format(metrics.train_r2) }}</p>
+        <p>Testing R² Score: {{ "%.4f"|format(metrics.test_r2) }}</p>
+        <p>Training RMSE: {{ "%.4f"|format(metrics.train_rmse) }}</p>
+        <p>Testing RMSE: {{ "%.4f"|format(metrics.test_rmse) }}</p>
+      </div>
+
+      <!-- Coefficients and P-values -->
+      <div class="coefficients-container">
+        <h2>Model Coefficients</h2>
+        <p>Intercept: {{ "%.4f"|format(intercept) }}</p>
+        <table border="1">
+          <tr>
+            <th>Feature</th>
+            <th>Coefficient</th>
+            <th>P-value</th>
+          </tr>
+          {% for feature in coefficients.keys() %}
+          <tr>
+            <td>{{ feature }}</td>
+            <td>{{ "%.4f"|format(coefficients[feature]) }}</td>
+            <td>{{ "%.4f"|format(p_values[feature]) }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+      <!-- Download Model Button -->
+      <div class="metrics-container">
+        <h2>Download Trained Model</h2>
+        <a href="{{ url_for('download_model', filename=model_path) }}" class="download-button">
+          Download Model
+        </a>
+        <!-- <pre>
+          <h3>Guideline to use the downloaded model:</h3>
+import pickle
+import pandas as pd
+
+# Load the saved model
+with open('regression_model.pkl', 'rb') as f:
+    saved_data = pickle.load(f)
+
+# Extract components
+model = saved_data['model']
+metrics = saved_data['metrics']
+coefficients = saved_data['coefficients']
+p_values = saved_data['p_values']
+intercept = saved_data['intercept']
+
+# Prepare your new data (must have the same features as training data)
+# Example:
+new_data = pd.DataFrame({
+    'feature1': [value1],
+    'feature2': [value2],
+    # ... add all required features
+})
+
+# Make predictions
+predictions = model.predict(new_data)
+        </pre> -->
+      </div>
+
+      <!-- Plots -->
+      <div class="plots-container">
+        <h2>Visualization Plots</h2>
+        {% for plot in plots %}
+        <div class="plot-container">
+          <img src="data:image/png;base64,{{ plot }}" alt="Regression Plot">
+        </div>
+        {% endfor %}
+      </div>
+<!-- Add this after the plots-container div and before closing the container-fluid div -->
+<div class="prediction-container metrics-container">
+  <h2>Predict New Values</h2>
+  
+  {% if error_message %}
+  <div class="alert alert-danger" role="alert">
+    {{ error_message }}
+  </div>
+  {% endif %}
+  
+  <form action="{{ url_for('predict_multiple') }}" method="post">
+    {% for feature in coefficients.keys() %}
+    <div class="form-group mb-3">
+      <label for="{{ feature }}" class="form-label">{{ feature }}:</label>
+      <input type="number" step="any" class="form-control" id="{{ feature }}" name="{{ feature }}" required>
+    </div>
+    {% endfor %}
+    
+    <input type="hidden" name="model_path" value="{{ model_path }}">
+    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+    
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+
+  {% if prediction is defined %}
+  <div class="prediction-result mt-4">
+    <h3>Prediction Result</h3>
+    <div class="alert alert-success">
+      <p class="mb-0">Predicted Value: <strong>{{ "%.4f"|format(prediction[0]) }}</strong></p>
+    </div>
+    <h4>Input Values:</h4>
+    <ul class="list-unstyled">
+      {% for feature, value in input_values.items() %}
+      <li><strong>{{ feature }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+
+    </div>
+  </main>
+
+  <!--   Core JS Files   -->
+  <script src="../static/js/core/popper.min.js"></script>
+  <script src="../static/js/core/bootstrap.min.js"></script>
+  <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../static/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../static/js/plugins/chartjs.min.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="../static/js/material-dashboard.min.js?v=3.1.0"></script>
+</body>
+
+</html>

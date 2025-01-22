@@ -295,6 +295,7 @@ def perform_knn(file,target):
     image_stream.seek(0)
     img_str = base64.b64encode(image_stream.read()).decode('utf-8')
     return(accuracy,img_str,conf_matrix)
+    
 
 #############################################################################################
 #############################################################################################

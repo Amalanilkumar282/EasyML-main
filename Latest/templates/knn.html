@@ -25,6 +25,28 @@
   <!-- Nepcha Analytics (nepcha.com) -->
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  <style>
+    /* ... existing styles ... */
+    .download-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .download-button:hover {
+      background-color: #45a049;
+    }
+    .metrics-container {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+  
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -118,7 +140,13 @@
     
     </div>
 </div>
-
+<!-- Download Model -->
+<div class="metrics-container">
+  <h2>Download Trained Model</h2>
+  <a href="{{ url_for('download_model', filename=model_path) }}" class="download-button">
+    Download Model
+  </a>
+</div>
 </main>
   <!--   Core JS Files   -->
   <script src="../static/js/core/popper.min.js"></script>
