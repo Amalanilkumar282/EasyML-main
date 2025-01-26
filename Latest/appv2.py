@@ -438,16 +438,61 @@ def svm():
     return render_template('svm.html',acc=acc, plot=plot, conf=conf,precision=precision,recall=recall)
 
 
-@app.route('/analysis',methods=['POST'])
-def analysis():
 
-    file=FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    target = request.json.get('variable', '')
-    models=perform_analysis(file,target)
-    best_model = list(models.keys())[0]
-    best_model_info = models[best_model]
-    models.pop(best_model)
-    return render_template('analysis-classification.html',models=models,best_model=best_model,best_model_info=best_model_info)
+
+
+
+
+# @app.route('/analysis',methods=['POST'])
+# def analysis():
+
+#     file=FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+#     target = request.json.get('variable', '')
+#     models=perform_analysis(file,target)
+#     best_model = list(models.keys())[0]
+#     best_model_info = models[best_model]
+#     models.pop(best_model)
+#     return render_template('analysis-classification.html',models=models,best_model=best_model,best_model_info=best_model_info)
+# Flask routes
+# from model_analysis import analyze_dataset
+from models.model_analysis import analyze_dataset
+
+
+@app.route('/analysis', methods=['GET'])
+def analysis():
+    # Locate the most recently uploaded file
+    temp_folder = 'tempsy'
+    file_path = os.path.join(temp_folder, 'f')
+    
+    model_type, best_model, target = analyze_dataset(file_path)
+    
+    if model_type is None:
+        return jsonify({'error': 'Unable to determine model type'})
+    
+    # Mapping of model names to routes
+    route_mapping = {
+        'regression': {
+            'Linear Regression': '/reg',
+            'Multiple Linear Regression': '/multireg',
+            'KNN Regression': '/knn',
+            'Decision Tree Regression': '/dtree',
+            'SVM Regression': '/svm'
+        },
+        'classification': {
+            'Logistic Regression': '/logreg',
+            'KNN': '/knn',
+            'Decision Tree': '/dtree',
+            'Naive Bayes': '/naivebayes',
+            'SVM': '/svm'
+        }
+    }
+    
+    selected_route = route_mapping[model_type][best_model]
+    
+    return render_template('model_selection.html', 
+                           best_model=best_model, 
+                           route=selected_route, 
+                           target=target)
 
 @app.route('/signup', methods=['POST'])
 def signup():

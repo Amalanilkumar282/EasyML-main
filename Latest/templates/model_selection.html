@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Model Selected</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bestModel = "{{ best_model }}";
+            const route = "{{ route }}";
+            const target = "{{ target }}";
+            
+            // Display model name
+            document.getElementById('modelName').textContent = bestModel;
+            
+            // Redirect after 3 seconds
+            setTimeout(function() {
+                window.location.href = route + '?target=' + encodeURIComponent(target);
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <h1>Best Model Analysis</h1>
+    <p>Best Model Selected: <span id="modelName"></span></p>
+    <p>Redirecting to model training in 3 seconds...</p>
+</body>
+</html>

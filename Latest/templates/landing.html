@@ -33,13 +33,17 @@
             const fileInput = document.getElementById('fileInput');
             const fileNameDisplay = document.getElementById('fileNameDisplay');
             const uploadButton = document.getElementById('uploadButton');
+            const easyMLButton = document.getElementById('easyMLButton');
 
             fileInput.addEventListener('change', function() {
                 if (this.files && this.files.length > 0) {
                     fileNameDisplay.textContent = `Selected: ${this.files[0].name}`;
                     uploadButton.disabled = false;
+                    easyMLButton.disabled = false;
                     uploadButton.classList.remove('bg-gray-400');
                     uploadButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    easyMLButton.classList.remove('bg-gray-400');
+                    easyMLButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
                 }
             });
         });
@@ -86,13 +90,24 @@
                         </button>
                     </div>
                     
+                    <!-- New EasyML Automated Model Training Button -->
+                    <button 
+                        type="button" 
+                        id="easyMLButton" 
+                        onclick="window.location.href='/analysis'" 
+                        disabled 
+                        class="mt-6 w-full bg-gray-400 text-white px-6 py-3 rounded-lg"
+                    >
+                        EasyML automated model training
+                    </button>
+
                     <button 
                         type="submit" 
                         id="uploadButton" 
                         disabled 
                         class="mt-6 w-full bg-gray-400 text-white px-6 py-3 rounded-lg"
                     >
-                        Upload and Train Model
+                        Upload and train custom model
                     </button>
                 </form>
             </div>
@@ -150,7 +165,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">&copy; 2025 Custom ML Builder. All rights reserved.</p>
+            <p class="text-sm">&copy; 2025 EasyML. All rights reserved.</p>
         </div>
     </footer>
 </body>
