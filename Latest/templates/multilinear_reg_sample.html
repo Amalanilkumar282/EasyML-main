@@ -332,10 +332,10 @@
                     <th>P-value</th>
                 </tr>
                 {% for feature in coefficients.keys() %}
-                <tr class="animate-fade-in" style="animation-delay: {{ loop.index * 0.1 }}s">
+                <tr class="animate-fade-in" style="animation-delay: {{ (loop.index0 * 0.1)|string + 's' }}">
                     <td>{{ feature }}</td>
-                    <td>{{ "%.4f"|format(coefficients[feature]) }}</td>
-                    <td>{{ "%.4f"|format(p_values[feature]) }}</td>
+                    <td>{{ "{:.4f}".format(coefficients[feature]) }}</td>
+                    <td>{{ "{:.4f}".format(p_values[feature]) }}</td>
                 </tr>
                 {% endfor %}
             </table>
@@ -419,3 +419,7 @@
         });
 
         // Add intersection observer for animations
+        // Add your intersection observer code here if needed
+    </script>
+</body>
+</html>

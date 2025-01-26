@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom ML Model Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+            gsap.from(".hero-title", { duration: 1.2, y: 30, opacity: 0, ease: "power2.out", delay: 0.5 });
+            gsap.from(".hero-subtitle", { duration: 1.2, y: 30, opacity: 0, ease: "power2.out", delay: 0.7 });
+            gsap.from(".hero-buttons a", { duration: 1, scale: 0.8, opacity: 0, stagger: 0.2, ease: "back.out(1.7)", delay: 1 });
+            gsap.from("#features div", { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out", scrollTrigger: { trigger: "#features", start: "top 80%" } });
+            gsap.from("#how-it-works div", { duration: 1, x: -50, opacity: 0, stagger: 0.3, ease: "power2.out", scrollTrigger: { trigger: "#how-it-works", start: "top 80%" } });
+        });
+    </script>
+
+    <!-- Navbar -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">EasyML</div>
+            <nav class="space-x-4">
+                <a href="#features" class="text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600">How It Works</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-50 py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="hero-title text-4xl font-bold text-gray-800">Create Custom Machine Learning Models Effortlessly</h1>
+            <p class="hero-subtitle text-lg text-gray-600 mt-4">Upload your CSV datasets, train a model, and use it for predictions — no coding required!</p>
+            <div class="hero-buttons mt-6 flex justify-center space-x-4">
+                <a href="#get-started" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700">Get Started</a>
+                <a href="#how-it-works" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800">Why Choose Us?</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="text-blue-600 text-5xl mb-4">📂</div>
+                    <h3 class="text-xl font-bold">Easy Dataset Upload</h3>
+                    <p class="text-gray-600 mt-2">Simply drag and drop your CSV files to get started.</p>
+                </div>
+                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="text-blue-600 text-5xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold">Fast Model Training</h3>
+                    <p class="text-gray-600 mt-2">Our platform trains models quickly and efficiently for you.</p>
+                </div>
+                <div class="bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="text-blue-600 text-5xl mb-4">📥</div>
+                    <h3 class="text-xl font-bold">Download & Predict</h3>
+                    <p class="text-gray-600 mt-2">Download the model and use it to predict new values or classes easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800">How It Works</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex justify-center items-center text-xl font-bold">1</div>
+                    <h3 class="text-lg font-bold mt-4">Upload Dataset</h3>
+                    <p class="text-gray-600 text-center mt-2">Provide your CSV file to start building your model.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex justify-center items-center text-xl font-bold">2</div>
+                    <h3 class="text-lg font-bold mt-4">Train the Model</h3>
+                    <p class="text-gray-600 text-center mt-2">Let our system process and train a machine learning model for you.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex justify-center items-center text-xl font-bold">3</div>
+                    <h3 class="text-lg font-bold mt-4">Download & Predict</h3>
+                    <p class="text-gray-600 text-center mt-2">Download the model and use it for predictions or analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">&copy; 2025 Custom ML Builder. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
