@@ -1396,3 +1396,11 @@
 2025-01-27 00:11:00,921 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
 2025-01-27 00:11:01,545 - INFO - 127.0.0.1 - - [27/Jan/2025 00:11:01] "POST /logreg HTTP/1.1" 200 -
 2025-01-27 00:11:01,819 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-27 00:11:03,996 - WARNING -  * Debugger is active!
+2025-01-27 00:11:04,002 - INFO -  * Debugger PIN: 174-844-798
+2025-01-27 00:11:23,947 - INFO - 127.0.0.1 - - [27/Jan/2025 00:11:23] "GET / HTTP/1.1" 200 -
+2025-01-27 00:11:32,225 - INFO - 127.0.0.1 - - [27/Jan/2025 00:11:32] "GET /sign-in HTTP/1.1" 200 -
+2025-01-27 00:11:38,390 - INFO - package: mysql.connector.plugins
+2025-01-27 00:11:38,391 - INFO - plugin_name: mysql_native_password
+2025-01-27 00:11:38,392 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-27 00:11:38,398 - INFO - 127.0.0.1 - - [27/Jan/2025 00:11:38] "POST /login HTTP/1.1" 200 -
