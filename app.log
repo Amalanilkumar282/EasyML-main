@@ -1181,3 +1181,72 @@
 2025-01-26 17:51:03,540 - INFO -  * Restarting with watchdog (windowsapi)
 2025-01-26 17:51:05,661 - WARNING -  * Debugger is active!
 2025-01-26 17:51:05,666 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:37:07,455 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:07,455 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:08,729 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:37:11,552 - WARNING -  * Debugger is active!
+2025-01-26 18:37:11,557 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:37:12,916 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:12,917 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:12,917 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:14,341 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:37:16,711 - WARNING -  * Debugger is active!
+2025-01-26 18:37:16,715 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:37:47,674 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:47,676 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:47,677 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:49,056 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:37:51,940 - WARNING -  * Debugger is active!
+2025-01-26 18:37:51,945 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:37:52,767 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:52,769 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:37:53,595 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:37:55,901 - WARNING -  * Debugger is active!
+2025-01-26 18:37:55,905 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:38:01,421 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:38:01,422 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:38:01,423 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:38:02,078 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:38:04,449 - WARNING -  * Debugger is active!
+2025-01-26 18:38:04,456 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:38:20,424 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:38:20,426 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-01-26 18:38:20,909 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:38:38,588 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-01-26 18:38:38,588 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 18:38:38,600 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:38:40,665 - WARNING -  * Debugger is active!
+2025-01-26 18:38:40,670 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:38:40,800 - INFO - 127.0.0.1 - - [26/Jan/2025 18:38:40] "GET / HTTP/1.1" 200 -
+2025-01-26 18:43:32,045 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:32] "GET / HTTP/1.1" 200 -
+2025-01-26 18:43:34,437 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "GET /sign-in HTTP/1.1" 200 -
+2025-01-26 18:43:34,439 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-01-26 18:43:34,665 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,668 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,672 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,685 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,746 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/css/material-dashboard.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,763 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,797 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,809 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:34,960 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:34] "[36mGET /static/img/signinbg.png HTTP/1.1[0m" 304 -
+2025-01-26 18:43:35,477 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-26 18:43:37,717 - WARNING -  * Debugger is active!
+2025-01-26 18:43:37,723 - INFO -  * Debugger PIN: 174-844-798
+2025-01-26 18:43:39,190 - INFO - package: mysql.connector.plugins
+2025-01-26 18:43:39,190 - INFO - plugin_name: mysql_native_password
+2025-01-26 18:43:39,191 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-26 18:43:39,198 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "POST /login HTTP/1.1" 200 -
+2025-01-26 18:43:39,416 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,424 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,430 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,442 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,447 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,466 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,482 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,527 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,553 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/css/landing.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,560 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,578 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-26 18:43:39,601 - INFO - 127.0.0.1 - - [26/Jan/2025 18:43:39] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -

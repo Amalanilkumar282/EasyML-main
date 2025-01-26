@@ -95,89 +95,6 @@ def sign_up():
 def sign_in():
     return render_template('sign-in.html')
 
-# @app.route('/profile')
-# def profile():
-#     # if 'email' not in session:
-#     #     return redirect(url_for('sign_in'))
-    
-#     # Connect to database
-#     db_connection = mysql.connector.connect(**db_credentials)
-#     cursor = db_connection.cursor(dictionary=True)
-    
-#     # Fetch user data
-#     query = "SELECT fullname, email, phone_no, dob FROM users WHERE email = %s"
-#     cursor.execute(query, (session['email'],))
-#     user_data = cursor.fetchone()
-    
-#     # Fetch user's model history
-#     query = """
-#     SELECT model_type, created_at, accuracy 
-#     FROM model_history 
-#     WHERE user_email = %s 
-#     ORDER BY created_at DESC 
-#     LIMIT 5
-#     """
-#     cursor.execute(query, (session['email'],))
-#     model_history = cursor.fetchall()
-    
-#     cursor.close()
-#     db_connection.close()
-    
-#     return render_template('profile.html', user=user_data, history=model_history)
-
-
-# @app.route('/update_profile', methods=['POST'])
-# def update_profile():
-#     if 'email' not in session:
-#         return redirect(url_for('sign_in'))
-    
-#     fullname = request.form.get('fullname')
-#     phone_no = request.form.get('phone_no')
-#     dob = request.form.get('dob')
-#     current_password = request.form.get('current_password')
-#     new_password = request.form.get('new_password')
-    
-#     try:
-#         db_connection = mysql.connector.connect(**db_credentials)
-#         cursor = db_connection.cursor(dictionary=True)
-        
-#         # Verify current password if trying to change password
-#         if new_password:
-#             cursor.execute("SELECT password FROM users WHERE email = %s", (session['email'],))
-#             stored_password = cursor.fetchone()['password']
-#             if not check_password_hash(stored_password, current_password):
-#                 flash('Current password is incorrect', 'error')
-#                 return redirect(url_for('profile'))
-        
-#         # Update user information
-#         update_query = """
-#         UPDATE users 
-#         SET fullname = %s, phone_no = %s, dob = %s
-#         WHERE email = %s
-#         """
-#         cursor.execute(update_query, (fullname, phone_no, dob, session['email']))
-        
-#         # Update password if provided
-#         if new_password:
-#             password_hash = generate_password_hash(new_password)
-#             cursor.execute(
-#                 "UPDATE users SET password = %s WHERE email = %s",
-#                 (password_hash, session['email'])
-#             )
-        
-#         db_connection.commit()
-#         flash('Profile updated successfully', 'success')
-        
-#     except Exception as e:
-#         flash('Error updating profile: ' + str(e), 'error')
-        
-#     finally:
-#         cursor.close()
-#         db_connection.close()
-        
-#     return redirect(url_for('profile'))
-###################################################################
-
 
 @app.route('/models')
 def model():
@@ -614,16 +531,9 @@ def display_features():
 # Main route
 @app.route('/')
 def index():
-    return render_template('sign-in.html')
+    # return render_template('sign-in.html')
+    return render_template('home.html')
 
-# Upload route
-# @app.route('/linearreg', methods=['POST'])
-# def linear_reg():
-#     if file is None:
-#         return render_template('models.html', error='No file uploaded')
-
-#     model, plot = perform_linear_regression(file)
-#     return render_template('linearreg.html', plot=plot, model=model)
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -644,27 +554,5 @@ def upload():
     # file.to_csv('temp/file.csv')
     return render_template('models.html')
 
-
-# @app.route('/predict', methods=['POST'])
-# def predict():
-#     new_value = float(request.form['new_value'])  # Get the new value as a float
-#     # Create a new instance of LinearRegression
-#     model = LinearRegression()
-
-#     # Set the parameters for the new instance
-#     model.intercept_ = request.form['inter']
-#     model.intercept_=float(model.intercept_.strip('[]'))
-#     model.coef_ = request.form['coef']
-#     outer_list = ast.literal_eval(model.coef_)
-#     inner_list_floats = [float(item) for item in outer_list[0]]
-#     model.coef_ = np.array([inner_list_floats])
-#     # Reshape the new value to fit the model's input requirements
-#     new_value_reshaped = np.array([new_value]).reshape(-1, 1)
-
-#     # Use the trained model to predict the new value
-#     prediction = model.predict(new_value_reshaped)
-
-
-#     return render_template('linearreg.html', prediction=prediction, model=model, new_value=new_value)
 
 app.run(debug=True, use_reloader=True, port=5004)
