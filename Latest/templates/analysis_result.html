@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <style>
+        .analysis-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .model-name {
+            font-size: 24px;
+            color: #2196F3;
+            margin: 20px 0;
+        }
+        .loading {
+            display: none;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="analysis-container">
+        <h2>Dataset Analysis Complete</h2>
+        <div class="model-name">
+            Recommended Model: <span id="modelName">{{ model }}</span>
+        </div>
+        <p>Target Column: {{ target }}</p>
+        <div class="loading" id="loading">Redirecting to model training...</div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'block';
+            window.location.href = '/{{ model }}';
+        }, 3000);
+    </script>
+</body>
+</html>

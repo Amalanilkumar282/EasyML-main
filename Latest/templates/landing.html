@@ -12,7 +12,7 @@
 <body class="bg-gray-50 text-gray-800 font-sans">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // GSAP Animations similar to homepage
+            // GSAP Animations
             gsap.from(".page-header", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
             gsap.from(".upload-section", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.3 });
             gsap.from(".feature-card", { 
@@ -26,14 +26,14 @@
                     start: "top 80%"
                 }
             });
-        });
 
-        // File upload interaction
-        document.addEventListener("DOMContentLoaded", () => {
+            // File upload and form handling
             const fileInput = document.getElementById('fileInput');
             const fileNameDisplay = document.getElementById('fileNameDisplay');
             const uploadButton = document.getElementById('uploadButton');
             const easyMLButton = document.getElementById('easyMLButton');
+            const uploadForm = document.getElementById('uploadForm');
+            const loadingOverlay = document.getElementById('loadingOverlay');
 
             fileInput.addEventListener('change', function() {
                 if (this.files && this.files.length > 0) {
@@ -46,8 +46,97 @@
                     easyMLButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
                 }
             });
+
+            // Handle EasyML button click
+            easyMLButton.addEventListener('click', async function(e) {
+                e.preventDefault();
+                if (!fileInput.files || fileInput.files.length === 0) {
+                    alert('Please select a file first');
+                    return;
+                }
+
+                // Show loading overlay
+                loadingOverlay.classList.remove('hidden');
+
+                // First upload the file
+                const formData = new FormData();
+                formData.append('file', fileInput.files[0]);
+
+                try {
+                    // Upload file first
+                    const uploadResponse = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (!uploadResponse.ok) {
+                        throw new Error('File upload failed');
+                    }
+
+                    // Then trigger analysis
+                    const analysisResponse = await fetch('/analysis', {
+                        method: 'POST'
+                    });
+
+                    if (!analysisResponse.ok) {
+                        throw new Error('Analysis failed');
+                    }
+
+                    const htmlContent = await analysisResponse.text();
+                    document.body.innerHTML = htmlContent;
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred during processing: ' + error.message);
+                } finally {
+                    loadingOverlay.classList.add('hidden');
+                }
+            });
+
+            // Handle custom model upload
+            uploadForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                if (!fileInput.files || fileInput.files.length === 0) {
+                    alert('Please select a file first');
+                    return;
+                }
+
+                loadingOverlay.classList.remove('hidden');
+
+                const formData = new FormData();
+                formData.append('file', fileInput.files[0]);
+
+                try {
+                    const response = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Upload failed');
+                    }
+
+                    const result = await response.text();
+                    document.body.innerHTML = result;
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred during upload: ' + error.message);
+                } finally {
+                    loadingOverlay.classList.add('hidden');
+                }
+            });
         });
     </script>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p class="text-lg font-semibold">Processing your dataset...</p>
+            <p class="text-sm text-gray-600">This may take a few moments</p>
+        </div>
+    </div>
 
     <!-- Navbar -->
     <header class="page-header bg-white shadow">
@@ -67,7 +156,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Upload Your Dataset</h2>
             
             <div class="bg-blue-50 border-2 border-dashed border-blue-300 rounded-lg p-8 text-center">
-                <form action="/upload" method="post" enctype="multipart/form-data" class="space-y-6">
+                <form id="uploadForm" class="space-y-6">
                     <input 
                         type="file" 
                         id="fileInput" 
@@ -90,17 +179,17 @@
                         </button>
                     </div>
                     
-                    <!-- New EasyML Automated Model Training Button -->
+                    <!-- EasyML Button -->
                     <button 
                         type="button" 
                         id="easyMLButton" 
-                        onclick="window.location.href='/analysis'" 
                         disabled 
                         class="mt-6 w-full bg-gray-400 text-white px-6 py-3 rounded-lg"
                     >
                         EasyML automated model training
                     </button>
 
+                    <!-- Custom Model Button -->
                     <button 
                         type="submit" 
                         id="uploadButton" 

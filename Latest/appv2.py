@@ -455,44 +455,30 @@ def svm():
 #     return render_template('analysis-classification.html',models=models,best_model=best_model,best_model_info=best_model_info)
 # Flask routes
 # from model_analysis import analyze_dataset
-from models.model_analysis import analyze_dataset
+# Flask routes
+from models.model_analyzer import *
+@app.route('/analysis', methods=['POST'])
+def analyze():
+    try:
+        file_path = os.path.join('tempsy', 'f')
+        result = analyze_dataset(file_path)
+        
+        if result["status"] == "error":
+            return jsonify(result), 400
+        
+        return render_template('analysis_result.html', 
+                             model=result["best_model"], 
+                             target=result["target_column"],
+                             details=result["model_details"])
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
-@app.route('/analysis', methods=['GET'])
-def analysis():
-    # Locate the most recently uploaded file
-    temp_folder = 'tempsy'
-    file_path = os.path.join(temp_folder, 'f')
-    
-    model_type, best_model, target = analyze_dataset(file_path)
-    
-    if model_type is None:
-        return jsonify({'error': 'Unable to determine model type'})
-    
-    # Mapping of model names to routes
-    route_mapping = {
-        'regression': {
-            'Linear Regression': '/reg',
-            'Multiple Linear Regression': '/multireg',
-            'KNN Regression': '/knn',
-            'Decision Tree Regression': '/dtree',
-            'SVM Regression': '/svm'
-        },
-        'classification': {
-            'Logistic Regression': '/logreg',
-            'KNN': '/knn',
-            'Decision Tree': '/dtree',
-            'Naive Bayes': '/naivebayes',
-            'SVM': '/svm'
-        }
-    }
-    
-    selected_route = route_mapping[model_type][best_model]
-    
-    return render_template('model_selection.html', 
-                           best_model=best_model, 
-                           route=selected_route, 
-                           target=target)
+
+
+
+
 
 @app.route('/signup', methods=['POST'])
 def signup():
