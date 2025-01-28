@@ -1,3 +1,6 @@
+new landing.html
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,19 +98,19 @@
 
             // Handle custom model upload
             uploadForm.addEventListener('submit', function(e) {
-                // Check if a file is selected
-                if (!fileInput.files || fileInput.files.length === 0) {
-                    alert('Please select a file first');
-                    e.preventDefault(); // Prevent submission if no file
-                    return;
-                }
+    // Check if a file is selected
+    if (!fileInput.files || fileInput.files.length === 0) {
+        alert('Please select a file first');
+        e.preventDefault(); // Prevent submission if no file
+        return;
+    }
 
-                // Show loading overlay
-                loadingOverlay.classList.remove('hidden');
+    // Show loading overlay
+    loadingOverlay.classList.remove('hidden');
 
-                // Allow the form to submit natively
-                return true;
-            });
+    // Allow the form to submit natively
+    return true;
+});
         });
     </script>
 
@@ -138,7 +141,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Upload Your Dataset</h2>
             
             <div class="bg-blue-50 border-2 border-dashed border-blue-300 rounded-lg p-8 text-center">
-                <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data" class="space-y-6">
+                <form id="uploadForm" class="space-y-6">
                     <input 
                         type="file" 
                         id="fileInput" 
@@ -209,6 +212,7 @@
         </div>
     </section>
 
+    
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
