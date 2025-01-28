@@ -1129,3 +1129,84 @@
 2025-01-29 03:21:46,934 - INFO - 127.0.0.1 - - [29/Jan/2025 03:21:46] "GET /sign-in HTTP/1.1" 200 -
 2025-01-29 03:21:46,934 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
 2025-01-29 03:21:47,341 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-29 03:21:49,464 - WARNING -  * Debugger is active!
+2025-01-29 03:21:49,469 - INFO -  * Debugger PIN: 174-844-798
+2025-01-29 03:21:50,183 - INFO - package: mysql.connector.plugins
+2025-01-29 03:21:50,184 - INFO - plugin_name: mysql_native_password
+2025-01-29 03:21:50,185 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-29 03:21:50,193 - INFO - 127.0.0.1 - - [29/Jan/2025 03:21:50] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:22:12,418 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:22:12,652 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,667 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,699 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,706 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,712 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,717 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,721 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,725 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,728 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:12,733 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:12] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:22:13,012 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:13] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-29 03:22:26,577 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:26] "[31m[1mGET /analysis HTTP/1.1[0m" 405 -
+2025-01-29 03:22:40,940 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:40] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:22:45,485 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:45] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:22:45,519 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:45] "POST /analysis HTTP/1.1" 200 -
+2025-01-29 03:22:49,066 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:49] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:22:53,058 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:22:53,088 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,093 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,100 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,104 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,104 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,113 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,115 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,124 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,125 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,135 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:22:53,418 - INFO - 127.0.0.1 - - [29/Jan/2025 03:22:53] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-29 03:23:00,100 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-01-29 03:23:00,139 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-01-29 03:23:00,166 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:23:00,168 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:23:00,171 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:23:00,172 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-29 03:23:00,179 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:23:00,180 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:23:00,187 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:23:00,192 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:23:00,195 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:23:00,199 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:00] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-29 03:23:04,939 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:04] "POST /multireg HTTP/1.1" 200 -
+2025-01-29 03:23:20,112 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:20] "GET / HTTP/1.1" 200 -
+2025-01-29 03:23:25,133 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:25] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:23:29,389 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:29] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:23:54,152 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:54] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:23:54,162 - INFO - 127.0.0.1 - - [29/Jan/2025 03:23:54] "POST /analysis HTTP/1.1" 200 -
+2025-01-29 03:24:05,466 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:05] "GET / HTTP/1.1" 200 -
+2025-01-29 03:24:07,957 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:07] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:24:11,770 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:11] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:24:17,298 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:24:17,319 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,322 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,325 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,331 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,334 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,341 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,349 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,359 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,364 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,374 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:24:17,638 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:17] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-29 03:24:19,876 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-01-29 03:24:19,897 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-01-29 03:24:19,929 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:24:19,931 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:24:19,940 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-29 03:24:19,940 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:24:19,948 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:24:19,954 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:24:19,956 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:24:19,963 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:24:19,964 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:24:19,971 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-29 03:24:23,493 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:23] "POST /multireg HTTP/1.1" 200 -
