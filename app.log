@@ -1210,3 +1210,886 @@
 2025-01-29 03:24:19,964 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
 2025-01-29 03:24:19,971 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:19] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
 2025-01-29 03:24:23,493 - INFO - 127.0.0.1 - - [29/Jan/2025 03:24:23] "POST /multireg HTTP/1.1" 200 -
+2025-01-29 03:31:00,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-01-29 03:31:00,722 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 03:31:00,734 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-29 03:31:03,085 - WARNING -  * Debugger is active!
+2025-01-29 03:31:03,091 - INFO -  * Debugger PIN: 174-844-798
+2025-01-29 03:31:03,222 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:03] "GET / HTTP/1.1" 200 -
+2025-01-29 03:31:05,022 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:05] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:31:09,201 - INFO - package: mysql.connector.plugins
+2025-01-29 03:31:09,201 - INFO - plugin_name: mysql_native_password
+2025-01-29 03:31:09,202 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-29 03:31:09,206 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:09] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:31:15,001 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:31:15,223 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,242 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,250 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,250 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,251 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,264 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,267 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,278 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,280 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,292 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:31:15,439 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:15] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-29 03:31:18,600 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-01-29 03:31:18,638 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-01-29 03:31:18,664 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:31:18,665 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:31:18,669 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:31:18,671 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-29 03:31:18,680 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:31:18,681 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:31:18,687 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:31:18,688 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:31:18,695 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:31:18,699 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:18] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-29 03:31:22,555 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:22] "POST /multireg HTTP/1.1" 200 -
+2025-01-29 03:31:33,935 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-01-29 03:31:33,939 - INFO - 127.0.0.1 - - [29/Jan/2025 03:31:33] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:31:34,365 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-29 03:31:36,453 - WARNING -  * Debugger is active!
+2025-01-29 03:31:36,458 - INFO -  * Debugger PIN: 174-844-798
+2025-01-29 03:32:26,578 - INFO - 127.0.0.1 - - [29/Jan/2025 03:32:26] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:43:42,172 - INFO - 127.0.0.1 - - [29/Jan/2025 03:43:42] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:43:46,020 - INFO - 127.0.0.1 - - [29/Jan/2025 03:43:46] "GET /download_model/model_1738101682.pkl HTTP/1.1" 200 -
+2025-01-29 03:43:58,309 - INFO - 127.0.0.1 - - [29/Jan/2025 03:43:58] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:45:21,626 - INFO - 127.0.0.1 - - [29/Jan/2025 03:45:21] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:46:08,120 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:08] "POST /predict_multiple HTTP/1.1" 200 -
+2025-01-29 03:46:36,562 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:36] "GET / HTTP/1.1" 200 -
+2025-01-29 03:46:39,664 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:39] "GET / HTTP/1.1" 200 -
+2025-01-29 03:46:43,521 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:43] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:46:45,673 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:45] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:46:48,655 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:48] "GET / HTTP/1.1" 200 -
+2025-01-29 03:46:51,570 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:51] "GET /sign-in HTTP/1.1" 200 -
+2025-01-29 03:46:55,042 - INFO - package: mysql.connector.plugins
+2025-01-29 03:46:55,042 - INFO - plugin_name: mysql_native_password
+2025-01-29 03:46:55,043 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-29 03:46:55,047 - INFO - 127.0.0.1 - - [29/Jan/2025 03:46:55] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:47:06,296 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:06] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:47:06,311 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:06] "POST /analysis HTTP/1.1" 200 -
+2025-01-29 03:47:09,642 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:09] "POST /login HTTP/1.1" 200 -
+2025-01-29 03:47:14,336 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "POST /upload HTTP/1.1" 200 -
+2025-01-29 03:47:14,614 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,642 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,676 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,685 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,691 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,698 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,701 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,708 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,713 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,721 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:47:14,867 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:14] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-29 03:47:16,898 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-01-29 03:47:16,919 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-29 03:47:16,921 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-29 03:47:16,921 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-29 03:47:16,925 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-29 03:47:16,933 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-29 03:47:16,934 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:47:16,941 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:47:16,942 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:47:16,947 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-29 03:47:16,949 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:16] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-29 03:47:19,035 - INFO - 127.0.0.1 - - [29/Jan/2025 03:47:19] "POST /logreg HTTP/1.1" 200 -
+2025-01-30 02:56:51,097 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-01-30 02:56:51,098 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-30 02:56:51,116 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 02:56:53,225 - WARNING -  * Debugger is active!
+2025-01-30 02:56:53,311 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 02:56:59,097 - INFO - 127.0.0.1 - - [30/Jan/2025 02:56:59] "GET / HTTP/1.1" 200 -
+2025-01-30 02:56:59,280 - INFO - 127.0.0.1 - - [30/Jan/2025 02:56:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-30 02:57:01,233 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:01] "GET /sign-in HTTP/1.1" 200 -
+2025-01-30 02:57:01,234 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-01-30 02:57:01,705 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 02:57:03,916 - WARNING -  * Debugger is active!
+2025-01-30 02:57:03,920 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 02:57:04,957 - INFO - package: mysql.connector.plugins
+2025-01-30 02:57:04,957 - INFO - plugin_name: mysql_native_password
+2025-01-30 02:57:04,958 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-30 02:57:04,967 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:04] "POST /login HTTP/1.1" 200 -
+2025-01-30 02:57:10,839 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:10] "POST /upload HTTP/1.1" 200 -
+2025-01-30 02:57:10,864 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:10] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 02:57:13,612 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:13] "POST /login HTTP/1.1" 200 -
+2025-01-30 02:57:18,351 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "POST /upload HTTP/1.1" 200 -
+2025-01-30 02:57:18,583 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,592 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,596 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,599 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,602 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,616 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,617 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,630 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,631 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,644 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:18,860 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:18] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:20,711 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "GET /features?m=svm HTTP/1.1" 200 -
+2025-01-30 02:57:20,732 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:20,736 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:20,739 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:20,742 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:57:20,751 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:20,756 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:20,758 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:20,766 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:20,767 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:20,773 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:20] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:57:22,072 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:22] "POST /svm HTTP/1.1" 200 -
+2025-01-30 02:57:22,078 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:22] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:22,078 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:22] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:22,079 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:22] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:22,085 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:22] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:28,842 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "GET /features?m=svm HTTP/1.1" 200 -
+2025-01-30 02:57:28,862 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:28,863 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:28,866 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:28,868 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:57:28,874 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:28,875 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:28,882 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:28,886 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:28,891 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:28,893 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:28] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:57:31,094 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:31] "POST /svm HTTP/1.1" 200 -
+2025-01-30 02:57:31,100 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:31] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:31,100 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:31] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:31,103 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:31] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:31,106 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:31] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:36,445 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "GET /features?m=svm HTTP/1.1" 200 -
+2025-01-30 02:57:36,466 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:36,469 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:36,470 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:57:36,474 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:36,481 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:36,482 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:36,489 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:36,490 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:36,496 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:36,497 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:36] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:57:38,247 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-01-30 02:57:38,248 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-01-30 02:57:38,249 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\base.py', reloading
+2025-01-30 02:57:38,250 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\svm\\_base.py', reloading
+2025-01-30 02:57:38,251 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\multiclass.py', reloading
+2025-01-30 02:57:38,271 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:38] "[35m[1mPOST /svm HTTP/1.1[0m" 500 -
+2025-01-30 02:57:38,635 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 02:57:40,601 - WARNING -  * Debugger is active!
+2025-01-30 02:57:40,607 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 02:57:40,755 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:40] "[35m[1mPOST /svm HTTP/1.1[0m" 500 -
+2025-01-30 02:57:45,017 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "GET /features?m=dtree HTTP/1.1" 200 -
+2025-01-30 02:57:45,036 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:57:45,195 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:45,201 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:45,207 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:45,208 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:45,217 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:45,219 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:45,223 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:45,224 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:45,226 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:45] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:57:47,229 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,230 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,230 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,230 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,230 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,231 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,231 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,231 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,231 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,231 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,232 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,232 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,232 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,232 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,232 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,233 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,234 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,235 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,236 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,237 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,238 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,239 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,240 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,242 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,243 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,244 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,245 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,246 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,247 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,248 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,249 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,250 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,251 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,251 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,251 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,251 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,251 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,252 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,253 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,254 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,255 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,256 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,257 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,258 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,259 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,260 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,261 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,263 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,264 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,265 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,266 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,267 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,267 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,267 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,267 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,268 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,268 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,271 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,274 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,276 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,277 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,277 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,278 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,280 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,280 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,282 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,284 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,285 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,287 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,288 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,290 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,291 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,292 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,294 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,296 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,298 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,299 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,299 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,300 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,300 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,300 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,300 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,301 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,302 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,302 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,302 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,302 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,303 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,304 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,304 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,304 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,304 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,304 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,306 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,306 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,306 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,306 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,307 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,308 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,309 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,310 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,311 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,311 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,311 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,312 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,312 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,313 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,316 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,316 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,317 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,317 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,317 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,317 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,318 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,318 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,318 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,318 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,319 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,319 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,319 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,320 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,320 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,320 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,320 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,320 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,322 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,322 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,322 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,322 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,323 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,323 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,323 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,323 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,324 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,325 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,326 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,327 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,327 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,327 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,327 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,328 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,329 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,330 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,331 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,332 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:47,333 - INFO - Fontsize 0.42 < 1.0 pt not allowed by FreeType. Setting fontsize = 1 pt
+2025-01-30 02:57:51,083 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:51] "POST /dtree HTTP/1.1" 200 -
+2025-01-30 02:57:51,092 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:51] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:51,092 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:51] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:51,094 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:51] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:51,101 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:51] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:58,427 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "GET /features?m=knn HTTP/1.1" 200 -
+2025-01-30 02:57:58,448 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:58,455 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:57:58,455 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:58,457 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:57:58,466 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:57:58,467 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:58,479 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:58,484 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:58,486 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:57:58,493 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:58] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:57:59,919 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:59] "POST /knn HTTP/1.1" 200 -
+2025-01-30 02:57:59,927 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:59] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:59,927 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:59] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:59,928 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:59] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:57:59,935 - INFO - 127.0.0.1 - - [30/Jan/2025 02:57:59] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:03,155 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "GET /features?m=naivebayes HTTP/1.1" 200 -
+2025-01-30 02:58:03,173 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:03,175 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:03,176 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:03,178 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:03,187 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:03,188 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:03,194 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:03,197 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:03,200 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:03,205 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:03] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:05,015 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:05] "POST /naivebayes HTTP/1.1" 200 -
+2025-01-30 02:58:05,023 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:05] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:05,025 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:05] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:05,029 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:05] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:05,032 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:05] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:09,492 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "GET /features?m=naivebayes HTTP/1.1" 200 -
+2025-01-30 02:58:09,516 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:09,516 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:09,518 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:09,520 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:09,528 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:09,528 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:09,536 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:09,537 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:09,542 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:09,545 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:09] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:11,083 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:11] "POST /naivebayes HTTP/1.1" 200 -
+2025-01-30 02:58:11,089 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:11] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:11,090 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:11] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:11,095 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:11] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:11,098 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:11] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:13,904 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "GET /features?m=svm HTTP/1.1" 200 -
+2025-01-30 02:58:13,923 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:13,927 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:13,930 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:13,930 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:13,938 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:13,938 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:13,944 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:13,946 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:13,953 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:13,957 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:13] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:15,613 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:15] "POST /svm HTTP/1.1" 200 -
+2025-01-30 02:58:15,619 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:15] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:15,621 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:15] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:15,625 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:15] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:15,628 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:15] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:19,954 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-01-30 02:58:19,973 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:19,978 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:19,980 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:19,982 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:19,988 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:19,988 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:19,996 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:19,997 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:19] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:20,004 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:20] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:20,006 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:20] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:21,369 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-01-30 02:58:22,097 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 02:58:24,118 - WARNING -  * Debugger is active!
+2025-01-30 02:58:24,123 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 02:58:26,611 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "GET /features?m=analysis HTTP/1.1" 200 -
+2025-01-30 02:58:26,634 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:26,766 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:26,794 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:26,798 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:26,798 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:26,801 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:26,804 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:26,807 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:26,810 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:26,812 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:26] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:27,938 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:27] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 02:58:36,463 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "GET /features?m=analysis HTTP/1.1" 200 -
+2025-01-30 02:58:36,482 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:36,484 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:36,485 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:36,487 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:36,497 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:36,497 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:36,505 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:36,506 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:36,514 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:36,515 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:36] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:39,437 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:39] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 02:58:41,633 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "GET /features?m=analysis HTTP/1.1" 200 -
+2025-01-30 02:58:41,650 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:41,655 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 02:58:41,656 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 02:58:41,657 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-01-30 02:58:41,664 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:41,665 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 02:58:41,671 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:41,673 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:41,677 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-01-30 02:58:41,681 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:41] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-01-30 02:58:43,129 - INFO - 127.0.0.1 - - [30/Jan/2025 02:58:43] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:02:49,659 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-01-30 03:02:49,684 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-01-30 03:02:49,710 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\automl.py', reloading
+2025-01-30 03:02:49,748 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\config.py', reloading
+2025-01-30 03:02:49,749 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\ss.py', reloading
+2025-01-30 03:02:49,752 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\classification.py', reloading
+2025-01-30 03:02:49,764 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\main.py', reloading
+2025-01-30 03:02:49,811 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\test.py', reloading
+2025-01-30 03:02:49,821 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\temp\\test.py', reloading
+2025-01-30 03:02:50,033 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-01-30 03:02:50,054 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py', reloading
+2025-01-30 03:02:50,057 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\aliases.py', reloading
+2025-01-30 03:02:50,061 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8.py', reloading
+2025-01-30 03:02:50,062 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\cp1252.py', reloading
+2025-01-30 03:02:50,081 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\__init__.py', reloading
+2025-01-30 03:02:50,081 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\decoder.py', reloading
+2025-01-30 03:02:50,089 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py', reloading
+2025-01-30 03:02:50,090 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\enum.py', reloading
+2025-01-30 03:02:50,091 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\types.py', reloading
+2025-01-30 03:02:50,092 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\operator.py', reloading
+2025-01-30 03:02:50,092 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\functools.py', reloading
+2025-01-30 03:02:50,093 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py', reloading
+2025-01-30 03:02:50,100 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py', reloading
+2025-01-30 03:02:50,104 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py', reloading
+2025-01-30 03:02:50,105 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py', reloading
+2025-01-30 03:02:50,107 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py', reloading
+2025-01-30 03:02:50,115 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py', reloading
+2025-01-30 03:02:50,116 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py', reloading
+2025-01-30 03:02:50,117 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py', reloading
+2025-01-30 03:02:50,122 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\scanner.py', reloading
+2025-01-30 03:02:50,126 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\encoder.py', reloading
+2025-01-30 03:02:50,155 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-01-30 03:02:50,213 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-01-30 03:02:50,269 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-01-30 03:02:50,275 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-01-30 03:02:50,282 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-01-30 03:02:50,345 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-01-30 03:02:50,350 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-01-30 03:02:50,361 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-01-30 03:02:50,368 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-01-30 03:02:50,381 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-01-30 03:02:50,392 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-01-30 03:02:50,398 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-01-30 03:02:50,421 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-01-30 03:02:50,436 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-01-30 03:02:50,467 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\__init__.py', reloading
+2025-01-30 03:02:50,777 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\_distutils_hack\\__init__.py', reloading
+2025-01-30 03:02:50,832 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_typing\\__init__.py', reloading
+2025-01-30 03:02:50,840 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_utils\\__init__.py', reloading
+2025-01-30 03:02:51,346 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 03:02:54,343 - WARNING -  * Debugger is active!
+2025-01-30 03:02:54,351 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 03:03:51,026 - INFO - 127.0.0.1 - - [30/Jan/2025 03:03:51] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:03:51,038 - INFO - 127.0.0.1 - - [30/Jan/2025 03:03:51] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:04:42,833 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\file_storage.py', reloading
+2025-01-30 03:04:43,754 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 03:04:45,990 - WARNING -  * Debugger is active!
+2025-01-30 03:04:45,995 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 03:05:41,991 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\__init__.py', reloading
+2025-01-30 03:05:42,006 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\__init__.py', reloading
+2025-01-30 03:05:42,031 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\numeric.py', reloading
+2025-01-30 03:05:42,043 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\umath.py', reloading
+2025-01-30 03:05:42,106 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\fromnumeric.py', reloading
+2025-01-30 03:05:42,123 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\memmap.py', reloading
+2025-01-30 03:05:42,129 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\function_base.py', reloading
+2025-01-30 03:05:42,138 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\getlimits.py', reloading
+2025-01-30 03:05:42,153 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\shape_base.py', reloading
+2025-01-30 03:05:42,161 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\einsumfunc.py', reloading
+2025-01-30 03:05:42,172 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\__init__.py', reloading
+2025-01-30 03:05:42,208 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\type_check.py', reloading
+2025-01-30 03:05:42,213 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\index_tricks.py', reloading
+2025-01-30 03:05:42,224 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\function_base.py', reloading
+2025-01-30 03:05:42,254 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\nanfunctions.py', reloading
+2025-01-30 03:05:42,265 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\shape_base.py', reloading
+2025-01-30 03:05:42,271 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\stride_tricks.py', reloading
+2025-01-30 03:05:42,275 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\twodim_base.py', reloading
+2025-01-30 03:05:42,282 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\ufunclike.py', reloading
+2025-01-30 03:05:42,284 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\histograms.py', reloading
+2025-01-30 03:05:42,290 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\polynomial.py', reloading
+2025-01-30 03:05:42,679 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 03:05:44,989 - WARNING -  * Debugger is active!
+2025-01-30 03:05:44,995 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 03:06:25,608 - INFO - package: mysql.connector.plugins
+2025-01-30 03:06:25,608 - INFO - plugin_name: mysql_native_password
+2025-01-30 03:06:25,609 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-30 03:06:25,614 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:25] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:06:29,221 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:06:29,458 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,509 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,546 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,554 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,565 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,570 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,576 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,589 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,604 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,606 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-01-30 03:06:29,685 - INFO - 127.0.0.1 - - [30/Jan/2025 03:06:29] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-01-30 03:19:40,417 - INFO - 127.0.0.1 - - [30/Jan/2025 03:19:40] "GET / HTTP/1.1" 200 -
+2025-01-30 03:19:42,511 - INFO - 127.0.0.1 - - [30/Jan/2025 03:19:42] "GET /sign-in HTTP/1.1" 200 -
+2025-01-30 03:19:46,202 - INFO - 127.0.0.1 - - [30/Jan/2025 03:19:46] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:19:52,841 - INFO - 127.0.0.1 - - [30/Jan/2025 03:19:52] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:19:52,854 - INFO - 127.0.0.1 - - [30/Jan/2025 03:19:52] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:20:08,677 - INFO - 127.0.0.1 - - [30/Jan/2025 03:20:08] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:20:13,414 - INFO - 127.0.0.1 - - [30/Jan/2025 03:20:13] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:20:13,424 - INFO - 127.0.0.1 - - [30/Jan/2025 03:20:13] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:21:33,438 - INFO - 127.0.0.1 - - [30/Jan/2025 03:21:33] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:21:38,063 - INFO - 127.0.0.1 - - [30/Jan/2025 03:21:38] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:21:38,074 - INFO - 127.0.0.1 - - [30/Jan/2025 03:21:38] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:23:17,592 - INFO - 127.0.0.1 - - [30/Jan/2025 03:23:17] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:23:21,760 - INFO - 127.0.0.1 - - [30/Jan/2025 03:23:21] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:23:21,771 - INFO - 127.0.0.1 - - [30/Jan/2025 03:23:21] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:25:19,134 - INFO - 127.0.0.1 - - [30/Jan/2025 03:25:19] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:25:24,038 - INFO - 127.0.0.1 - - [30/Jan/2025 03:25:24] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:25:24,048 - INFO - 127.0.0.1 - - [30/Jan/2025 03:25:24] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:35:37,982 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:37] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:35:41,767 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:41] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:35:41,777 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:41] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:35:52,213 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:52] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:35:57,010 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:57] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:35:57,020 - INFO - 127.0.0.1 - - [30/Jan/2025 03:35:57] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:41:05,887 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:05] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:41:09,953 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:09] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:41:09,964 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:09] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:41:24,615 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:24] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:41:29,155 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:29] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:41:29,162 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:29] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:41:59,586 - INFO - 127.0.0.1 - - [30/Jan/2025 03:41:59] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:42:05,666 - INFO - 127.0.0.1 - - [30/Jan/2025 03:42:05] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:42:05,679 - INFO - 127.0.0.1 - - [30/Jan/2025 03:42:05] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:53:32,905 - INFO - 127.0.0.1 - - [30/Jan/2025 03:53:32] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:53:36,753 - INFO - 127.0.0.1 - - [30/Jan/2025 03:53:36] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:53:36,765 - INFO - 127.0.0.1 - - [30/Jan/2025 03:53:36] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:58:13,617 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:13] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:58:17,137 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:17] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:58:17,154 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:17] "[35m[1mPOST /analysis HTTP/1.1[0m" 500 -
+2025-01-30 03:58:33,194 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:33] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:58:33,202 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:33] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:58:43,603 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:43] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:58:51,095 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:51] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:58:51,103 - INFO - 127.0.0.1 - - [30/Jan/2025 03:58:51] "[35m[1mPOST /analysis HTTP/1.1[0m" 500 -
+2025-01-30 03:59:03,021 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:03] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:59:09,251 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:09] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:59:09,262 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:09] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 03:59:11,962 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:11] "POST /login HTTP/1.1" 200 -
+2025-01-30 03:59:17,052 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:17] "POST /upload HTTP/1.1" 200 -
+2025-01-30 03:59:17,063 - INFO - 127.0.0.1 - - [30/Jan/2025 03:59:17] "POST /analysis HTTP/1.1" 200 -
+2025-01-30 13:51:50,982 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-01-30 13:51:50,982 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-30 13:51:51,003 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 13:51:53,491 - WARNING -  * Debugger is active!
+2025-01-30 13:51:53,594 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 13:51:53,768 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:53] "GET / HTTP/1.1" 200 -
+2025-01-30 13:51:53,933 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-30 13:51:55,497 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:55] "GET /sign-in HTTP/1.1" 200 -
+2025-01-30 13:51:55,502 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading

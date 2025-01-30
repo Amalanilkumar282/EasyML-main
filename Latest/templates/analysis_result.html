@@ -3,38 +3,215 @@
 <head>
     <title>Analysis Result</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .analysis-container {
+            background: white;
             max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
+            width: 90%;
+            margin: 20px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
+            animation: fadeIn 0.5s ease-out;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #1a1a1a;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .model-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            color: white;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .model-label {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
         .model-name {
-            font-size: 24px;
-            color: #2196F3;
-            margin: 20px 0;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 10px 0;
         }
+
+        #modelName {
+            display: inline;
+        }
+
+        .target-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .target-label {
+            color: #495057;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .target-value {
+            color: #212529;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
         .loading {
             display: none;
             margin: 20px 0;
+            padding: 20px;
+        }
+
+        .loading-text {
+            color: #495057;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="analysis-container">
         <h2>Dataset Analysis Complete</h2>
-        <div class="model-name">
-            Recommended Model: <span id="modelName">{{ model }}</span>
+        
+        <div class="model-card">
+            <div class="model-label">Recommended Model</div>
+            <div class="model-name">
+                <span id="modelName">
+                    {% if model == 'reg' %}
+                        Linear Regression
+                    {% elif model == 'multireg' %}
+                        Multiple Linear Regression
+                    {% elif model == 'logreg' %}
+                        Logistic Regression
+                    {% elif model == 'svm' %}
+                        Scalable Vector Machine
+                    {% elif model == 'knn' %}
+                        K-Nearest Neighbor
+                    {% elif model == 'dtree' %}
+                        Decision Tree
+                    {% elif model == 'naivebayes' %}
+                        Naive Bayes Classifier
+                    {% else %}
+                        {{ model }}
+                    {% endif %}
+                </span>
+            </div>
         </div>
-        <p>Target Column: {{ target }}</p>
-        <div class="loading" id="loading">Redirecting to model training...</div>
+
+        <div class="target-container">
+            <div class="target-label">The ideal column to be selected as Target:</div>
+            <div class="target-value">{{ target }}</div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-text">Performing EasyML automation, please wait...</div>
+            <div class="loading-spinner"></div>
+        </div>
     </div>
 
     <script>
-        setTimeout(function() {
-            document.getElementById('loading').style.display = 'block';
-            window.location.href = '/{{ model }}';
-        }, 3000);
+        // Get the displayed model name when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const modelName = document.getElementById('modelName').textContent.trim();
+            
+            // Function to get route based on model name
+            function getRoute(modelName) {
+                switch (modelName) {
+                    case 'Linear Regression':
+                        return '/reg';
+                    case 'Multiple Linear Regression':
+                        return '/multireg';
+                    case 'Logistic Regression':
+                        return '/logreg';
+                    case 'Scalable Vector Machine':
+                        return '/svm';
+                    case 'K-Nearest Neighbor':
+                        return '/knn';
+                    case 'Decision Tree':
+                        return '/dtree';
+                    case 'Naive Bayes Classifier':
+                        return '/naivebayes';
+                    default:
+                        console.error('Unknown model:', modelName);
+                        return null;
+                }
+            }
+
+            // Start the process after 3 seconds
+            setTimeout(function() {
+                // Add visual feedback
+                document.querySelector('.model-card').style.opacity = '0.5';
+                document.querySelector('.target-container').style.opacity = '0.5';
+                document.getElementById('loading').style.display = 'block';
+                
+                // Get the appropriate route
+                const route = getRoute(modelName);
+                
+                if (route) {
+                    // Create a form and submit it to trigger the route
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = route;
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            }, 3000);
+        });
     </script>
 </body>
 </html>
