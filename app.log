@@ -2093,3 +2093,12 @@
 2025-01-30 13:51:53,933 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2025-01-30 13:51:55,497 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:55] "GET /sign-in HTTP/1.1" 200 -
 2025-01-30 13:51:55,502 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-01-30 13:51:56,676 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-30 13:51:58,849 - WARNING -  * Debugger is active!
+2025-01-30 13:51:58,853 - INFO -  * Debugger PIN: 174-844-798
+2025-01-30 13:51:59,220 - INFO - package: mysql.connector.plugins
+2025-01-30 13:51:59,220 - INFO - plugin_name: mysql_native_password
+2025-01-30 13:51:59,222 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-01-30 13:51:59,255 - INFO - 127.0.0.1 - - [30/Jan/2025 13:51:59] "POST /login HTTP/1.1" 200 -
+2025-01-30 13:52:04,059 - INFO - 127.0.0.1 - - [30/Jan/2025 13:52:04] "POST /upload HTTP/1.1" 200 -
+2025-01-30 13:52:04,144 - INFO - 127.0.0.1 - - [30/Jan/2025 13:52:04] "POST /analysis HTTP/1.1" 200 -
