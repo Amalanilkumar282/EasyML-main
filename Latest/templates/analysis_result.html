@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>Analysis Result</title>
+    {% if model == 'reg' %}
+        <meta http-equiv="refresh" content="3;url=/reg">
+    {% elif model == 'multireg' %}
+        <meta http-equiv="refresh" content="3;url=/multireg">
+    {% elif model == 'logreg' %}
+        <meta http-equiv="refresh" content="3;url=/logreg">
+    {% elif model == 'svm' %}
+        <meta http-equiv="refresh" content="3;url=/svm">
+    {% elif model == 'knn' %}
+        <meta http-equiv="refresh" content="3;url=/knn">
+    {% elif model == 'dtree' %}
+        <meta http-equiv="refresh" content="3;url=/dtree">
+    {% elif model == 'naivebayes' %}
+        <meta http-equiv="refresh" content="3;url=/naivebayes">
+    {% endif %}
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
@@ -29,12 +44,6 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
@@ -50,12 +59,7 @@
             border-radius: 12px;
             margin: 30px 0;
             color: white;
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .model-card:hover {
-            transform: translateY(-5px);
+            animation: fade 3s forwards;
         }
 
         .model-label {
@@ -72,16 +76,13 @@
             margin: 10px 0;
         }
 
-        #modelName {
-            display: inline;
-        }
-
         .target-container {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
             margin: 30px 0;
             border: 1px solid #e9ecef;
+            animation: fade 3s forwards;
         }
 
         .target-label {
@@ -97,9 +98,10 @@
         }
 
         .loading {
-            display: none;
             margin: 20px 0;
-            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
         }
 
         .loading-text {
@@ -121,6 +123,18 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fade {
+            0% { opacity: 1; }
+            66% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            66% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -158,60 +172,10 @@
             <div class="target-value">{{ target }}</div>
         </div>
 
-        <div class="loading" id="loading">
-            <div class="loading-text">Performing EasyML automation, please wait...</div>
+        <div class="loading">
+            <div class="loading-text">Redirecting to model training...</div>
             <div class="loading-spinner"></div>
         </div>
     </div>
-
-    <script>
-        // Get the displayed model name when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            const modelName = document.getElementById('modelName').textContent.trim();
-            
-            // Function to get route based on model name
-            function getRoute(modelName) {
-                switch (modelName) {
-                    case 'Linear Regression':
-                        return '/reg';
-                    case 'Multiple Linear Regression':
-                        return '/multireg';
-                    case 'Logistic Regression':
-                        return '/logreg';
-                    case 'Scalable Vector Machine':
-                        return '/svm';
-                    case 'K-Nearest Neighbor':
-                        return '/knn';
-                    case 'Decision Tree':
-                        return '/dtree';
-                    case 'Naive Bayes Classifier':
-                        return '/naivebayes';
-                    default:
-                        console.error('Unknown model:', modelName);
-                        return null;
-                }
-            }
-
-            // Start the process after 3 seconds
-            setTimeout(function() {
-                // Add visual feedback
-                document.querySelector('.model-card').style.opacity = '0.5';
-                document.querySelector('.target-container').style.opacity = '0.5';
-                document.getElementById('loading').style.display = 'block';
-                
-                // Get the appropriate route
-                const route = getRoute(modelName);
-                
-                if (route) {
-                    // Create a form and submit it to trigger the route
-                    const form = document.createElement('form');
-                    form.method = 'POST';
-                    form.action = route;
-                    document.body.appendChild(form);
-                    form.submit();
-                }
-            }, 3000);
-        });
-    </script>
 </body>
 </html>
