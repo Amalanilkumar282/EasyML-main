@@ -310,33 +310,76 @@ def predict_logistic():
             
         model = saved_data['model']
         original_target_values = saved_data['original_target_values']
-        
-        # Create mapping from numeric to original labels
-        class_mapping = {i: str(val) for i, val in enumerate(original_target_values)}
-        
-        # Collect input values
+        feature_encoders = saved_data.get('feature_encoders', {})
+        target_encoder = saved_data.get('target_encoder', None)
+        scaler = saved_data.get('scaler', None)  # Assuming you saved the scaler
+
+        # Collect input values with proper encoding and validation
         values_dict = {}
+        raw_values = {}  # Store original values for display
         for feature in features:
-            try:
-                values_dict[feature] = float(request.form[feature])
-            except ValueError:
-                raise ValueError(f"Invalid value provided for feature '{feature}'")
-        
+            input_value = request.form[feature].strip()
+            raw_values[feature] = input_value  # Store original value
+            
+            # Handle categorical features
+            if feature in feature_encoders:
+                encoder = feature_encoders[feature]
+                try:
+                    # Try to convert to numerical value first (in case encoded value was entered)
+                    numerical_value = float(input_value)
+                    if numerical_value in encoder.classes_:
+                        values_dict[feature] = numerical_value
+                    else:
+                        # If not a valid numerical value, try string transformation
+                        encoded_value = encoder.transform([input_value])[0]
+                        values_dict[feature] = encoded_value
+                except ValueError:
+                    # Handle categorical string values
+                    try:
+                        encoded_value = encoder.transform([input_value])[0]
+                        values_dict[feature] = encoded_value
+                    except ValueError:
+                        valid_values = list(encoder.classes_)
+                        raise ValueError(
+                            f"Invalid value '{input_value}' for feature '{feature}'. "
+                            f"Valid options are: {', '.join(map(str, valid_values))}"
+                        )
+            else:
+                # Handle numerical features
+                try:
+                    values_dict[feature] = float(input_value)
+                except ValueError:
+                    raise ValueError(f"Invalid numerical value '{input_value}' for feature '{feature}'")
+
+        # Scale the input data if scaler exists
+        if scaler:
+            input_array = np.array([[values_dict[feature] for feature in features]])
+            input_array = scaler.transform(input_array)
+        else:
+            input_array = np.array([[values_dict[feature] for feature in features]])
+
         # Make prediction
-        prediction, prediction_proba = predict_new_values_logistic(model, features, values_dict)
-        
-        # Get final prediction class (0 or 1) based on probability
-        final_class = 1 if prediction_proba[1] > 0.5 else 0
-        
+        prediction_proba = model.predict_proba(input_array)[0]
+        prediction = model.predict(input_array)[0]
+
         # Map the numeric prediction to actual class name from original values
-        actual_class_name = class_mapping[final_class]
-        
+        if target_encoder:
+            actual_class_name = target_encoder.inverse_transform([prediction])[0]
+        else:
+            actual_class_name = str(prediction)
+
         # Create probabilities dictionary with actual class names
-        probabilities = {
-            class_mapping[i]: f"{prob * 100:.2f}%"
-            for i, prob in enumerate(prediction_proba)
-        }
-        
+        if target_encoder and original_target_values is not None:
+            probabilities = {
+                str(cls): f"{prob * 100:.2f}%"
+                for cls, prob in zip(original_target_values, prediction_proba)
+            }
+        else:
+            probabilities = {
+                str(i): f"{prob * 100:.2f}%"
+                for i, prob in enumerate(prediction_proba)
+            }
+
         # Re-render the results page with the prediction
         return render_template(
             'logistic.html',
@@ -344,19 +387,19 @@ def predict_logistic():
             metrics=saved_data['metrics'],
             coefficients=saved_data['coefficients'],
             plots=saved_data.get('plots', []),
-            prediction=actual_class_name,  # Now using the actual class name from training data
+            prediction=actual_class_name,
             final_class_name=actual_class_name,
             probability=max(prediction_proba) * 100,
             probabilities=probabilities,
-            input_values=values_dict,
-            class_mapping=class_mapping
+            input_values=raw_values,  # Use raw values for display
+            class_mapping=original_target_values
         )
         
     except Exception as e:
-        print(f"Debug - Error details: {str(e)}")
+        print(f"Prediction error: {str(e)}")
         traceback.print_exc()
         return render_template('error.html', 
-                             error_message=f"Error during prediction: {str(e)}")
+                             error_message=f"Prediction error: {str(e)}")
 
 def predict_new_values_logistic(model, features, values_dict):
     """Helper function to make predictions with logistic regression model"""
