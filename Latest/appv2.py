@@ -420,20 +420,115 @@ def predict_new_values_logistic(model, features, values_dict):
 
 
 
-@app.route('/knn',methods=['POST'])
+@app.route('/knn', methods=['GET', 'POST'])
 def knn_f():
+    if request.method == 'POST':
+        file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+        target = request.json.get('variable', '')
+        try:
+            model_path, plots, metrics, _, _, _ = perform_knn(file, target)
+            
+            model_full_path = os.path.join(app.config['MODEL_FOLDER'], model_path)
+            if not os.path.exists(model_full_path):
+                raise FileNotFoundError(f"Model file not found at {model_full_path}")
+            
+            with open(model_full_path, 'rb') as f:
+                saved_data = pickle.load(f)
+                feature_names = saved_data.get('feature_names', [])
+            
+            formatted_metrics = {
+                'accuracy': metrics['accuracy'],
+                'roc_auc': metrics.get('roc_auc')
+            }
+            
+            return render_template('knn.html',
+                                 plots=plots,
+                                 metrics=formatted_metrics,
+                                 model_path=model_path,
+                                 feature_names=feature_names)
+        except Exception as e:
+            app.logger.error(f"Error in KNN: {str(e)}")
+            return render_template('error.html', error_message=str(e))
+    else:
+        return redirect(url_for('display_features', m='knn'))
 
-    file=FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    target = request.json.get('variable', '')
-    acc,plot,confm = perform_knn(file,target)
-    acc=round(acc*100,2)
-    correct=confm.diagonal().sum()
-    total=confm.sum()
-    wrong=total-correct
-    conf=[correct,wrong,total]
-    precision=round((confm[0][0]/(confm[0][0]+confm[0][1]))*100,2)
-    recall=round((confm[0][0]/(confm[0][0]+confm[1][0]))*100,2)
-    return render_template('knn.html',acc=acc, plot=plot, conf=conf,precision=precision,recall=recall)
+@app.route('/predict_knn', methods=['POST'])
+def predict_knn():
+    try:
+        # Load model components
+        model_filename = request.form['model_path']
+        model_path = os.path.join(app.config['MODEL_FOLDER'], model_filename)
+        
+        with open(model_path, 'rb') as f:
+            model_data = pickle.load(f)
+        
+        model = model_data['model']
+        scaler = model_data['scaler']
+        feature_encoders = model_data.get('feature_encoders', {})
+        target_encoder = model_data.get('target_encoder')
+        feature_names = model_data['feature_names']
+        
+        # Process input features
+        encoded_features = []
+        input_values = {}
+        
+        for feature in feature_names:
+            raw_value = request.form[feature].strip()
+            input_values[feature] = raw_value  # Store original value
+
+            if feature in feature_encoders:
+                # Handle categorical feature
+                encoder = feature_encoders[feature]
+                try:
+                    encoded_value = encoder.transform([raw_value])[0]
+                except ValueError:
+                    valid_classes = list(encoder.classes_)
+                    raise ValueError(
+                        f"Invalid value '{raw_value}' for {feature}. "
+                        f"Valid options: {', '.join(valid_classes)}"
+                    )
+                encoded_features.append(encoded_value)
+            else:
+                # Handle numerical feature
+                try:
+                    encoded_features.append(float(raw_value))
+                except ValueError:
+                    raise ValueError(f"Invalid number for {feature}: {raw_value}")
+
+        # Scale and predict
+        scaled_input = scaler.transform([encoded_features])
+        prediction = model.predict(scaled_input)[0]
+        probabilities = model.predict_proba(scaled_input)[0] if hasattr(model, 'predict_proba') else None
+        
+        # Decode prediction
+        if target_encoder:
+            class_name = target_encoder.inverse_transform([prediction])[0]
+            if probabilities is not None:
+                prob_dict = {
+                    str(cls): f"{prob*100:.1f}%"
+                    for cls, prob in zip(model_data['original_target_values'], probabilities)
+                }
+            else:
+                prob_dict = None
+        else:
+            class_name = str(prediction)
+            prob_dict = None
+
+        return render_template('knn.html',
+                             model_path=model_filename,
+                             prediction=class_name,
+                             probabilities=prob_dict,
+                             input_values=input_values,
+                             feature_names=feature_names,
+                             metrics=model_data['metrics'],
+                             plots=model_data['plots'])
+
+    except Exception as e:
+        return render_template('error.html', 
+                             error_message=f"Prediction Error: {str(e)}")
+    ###############################################################################################
+    ###############################################################################################
+    ###############################################################################################
 
 @app.route('/dtree',methods=['POST'])
 def decision_tree():
