@@ -3,74 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistic Regression Analysis</title>
+    <title>Smart Prediction Platform</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .metric-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .metric-card:hover {
+            border-left-color: currentColor;
+            transform: translateX(5px);
+        }
+        
+        .form-input {
+            @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+        }
+        
+        .form-label {
+            @apply block text-sm font-medium text-gray-700 mb-1;
+        }
+        
+        .form-group {
+            @apply mb-4;
+        }
+        
+        .btn {
+            @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+        }
+        
+        .btn-primary {
+            @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+        }
+        
+        .collapsible-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .collapsible-section.open {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <div class="container mx-auto px-4 py-8">
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
         <!-- Header -->
-        <div class="mb-8 text-center">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Logistic Regression Analysis</h1>
-            <p class="text-gray-600">Interactive model analysis and prediction platform</p>
+        <div class="mb-12 text-center fade-in">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Smart Prediction Platform</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Make data-driven decisions with our easy-to-use prediction tool. Simply input your values and get instant insights.</p>
         </div>
 
         {% if plots %}
-        <!-- Model Analysis Section -->
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h2 class="text-2xl font-semibold mb-6">Model Analysis</h2>
+        <!-- Quick Stats -->
+        <div class="mb-12 fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Model Performance Overview</h2>
+                <button id="toggleTechnicalBtn" class="text-blue-600 hover:text-blue-700 flex items-center">
+                    <span id="toggleText">Show Technical Details</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-200" id="toggleIcon"></i>
+                </button>
+            </div>
             
-            <!-- Performance Metrics -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <h3 class="text-lg font-medium text-blue-800 mb-2">Test Accuracy</h3>
-                    <p class="text-2xl font-bold text-blue-600">{{ metrics.accuracy }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-bullseye text-blue-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Overall Accuracy</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-600">{{ metrics.accuracy }}</p>
+                    <p class="text-sm text-gray-600 mt-2">How often our predictions are correct</p>
                 </div>
-                <div class="bg-green-50 p-4 rounded-lg">
-                    <h3 class="text-lg font-medium text-green-800 mb-2">Training Accuracy</h3>
-                    <p class="text-2xl font-bold text-green-600">{{ metrics.train_accuracy }}</p>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Learning Score</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-green-600">{{ metrics.train_accuracy }}</p>
+                    <p class="text-sm text-gray-600 mt-2">How well the model learned from training data</p>
                 </div>
-                <div class="bg-purple-50 p-4 rounded-lg">
-                    <h3 class="text-lg font-medium text-purple-800 mb-2">ROC AUC Score</h3>
-                    <p class="text-2xl font-bold text-purple-600">{{ metrics.roc_auc }}</p>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-chart-line text-purple-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Reliability Score</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-600">{{ metrics.roc_auc }}</p>
+                    <p class="text-sm text-gray-600 mt-2">Overall model reliability measure</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Visualization Plots -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {% for plot in plots %}
-                <div class="bg-gray-50 p-4 rounded-lg">
-                    <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full">
+        <!-- Technical Details Section (Collapsible) -->
+        <div id="technicalDetails" class="collapsible-section mb-12">
+            <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+                
+                <!-- Visualization Plots -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {% for plot in plots %}
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full">
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
 
-            <!-- Feature Coefficients -->
-            <div class="mt-8">
-                <h3 class="text-xl font-semibold mb-4">Feature Importance</h3>
+                <!-- Feature Importance Table -->
                 <div class="overflow-x-auto">
                     <table class="min-w-full table-auto">
                         <thead>
-                            <tr class="bg-gray-100">
-                                <th class="px-4 py-2 text-left">Feature</th>
-                                <th class="px-4 py-2 text-left">Coefficient</th>
-                                <th class="px-4 py-2 text-left">P-Value</th>
-                                <th class="px-4 py-2 text-left">Significance</th>
+                            <tr class="bg-gray-50">
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Feature</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Impact Score</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Confidence</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Importance Level</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for feature in feature_names %}
-                            <tr class="border-b">
-                                <td class="px-4 py-2">{{ feature }}</td>
-                                <td class="px-4 py-2">{{ "%.4f"|format(coefficients[feature]) }}</td>
-                                <td class="px-4 py-2">{{ "%.4f"|format(p_values[feature]) }}</td>
-                                <td class="px-4 py-2">
+                            <tr class="border-b hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3">{{ feature }}</td>
+                                <td class="px-4 py-3">{{ "%.4f"|format(coefficients[feature]) }}</td>
+                                <td class="px-4 py-3">{{ "%.4f"|format(p_values[feature]) }}</td>
+                                <td class="px-4 py-3">
                                     {% if p_values[feature] < 0.01 %}
-                                    <span class="text-green-600 font-medium">Highly Significant</span>
+                                    <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">High Impact</span>
                                     {% elif p_values[feature] < 0.05 %}
-                                    <span class="text-blue-600 font-medium">Significant</span>
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Moderate Impact</span>
                                     {% else %}
-                                    <span class="text-gray-600">Not Significant</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Low Impact</span>
                                     {% endif %}
                                 </td>
                             </tr>
@@ -79,107 +162,109 @@
                     </table>
                 </div>
             </div>
-
-            <!-- Download Model Button -->
-            <div class="mt-8 text-center">
-                <a href="{{ url_for('download_model', filename=model_path) }}" 
-                   class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                    Download Trained Model
-                </a>
-            </div>
+        </div>
         {% endif %}
 
         <!-- Prediction Form Section -->
-        <div class="bg-white rounded-lg shadow-lg p-6">
-            <h2 class="text-2xl font-semibold mb-6">Make Predictions</h2>
-            <form action="{{ url_for('predict_logistic') }}" method="post" class="prediction-form">
-                {% for feature in coefficients.keys() %}
-                <div class="form-group">
-                    <label for="{{ feature }}" class="form-label">{{ feature }}</label>
-                    <input type="text" class="form-input" id="{{ feature }}" name="{{ feature }}" required>
-                </div>z
-                {% endfor %}
-            
-                <input type="hidden" name="model_path" value="{{ model_path }}">
-                <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
-            
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-calculator"></i> Make Prediction
-                </button>
-            </form>
-            
-            {% if prediction %}
-<div class="prediction-results">
-    <h3>Prediction Results</h3>
-    <div class="result-item">
-        <strong>Predicted Class:</strong> {{ prediction }}
-    </div>
-    <div class="result-item">
-        <strong>Prediction Probabilities:</strong>
-        <ul>
-            {% for class_label, prob in probabilities.items() %}
-            <li>{{ class_label }}: {{ prob }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="result-item">
-        <strong>Input Values:</strong>
-        <ul>
-            {% for feature, value in input_values.items() %}
-            <li>{{ feature }}: {{ value }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
+                <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
+                
+                <form action="{{ url_for('predict_logistic') }}" method="post" class="prediction-form space-y-6">
+                    {% for feature in coefficients.keys() %}
+                    <div class="form-group">
+                        <label for="{{ feature }}" class="form-label">{{ feature }}</label>
+                        <input type="text" class="form-input" id="{{ feature }}" name="{{ feature }}" required
+                               placeholder="Enter value for {{ feature }}">
+                    </div>
+                    {% endfor %}
+                
+                    <input type="hidden" name="model_path" value="{{ model_path }}">
+                    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+                
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" class="btn btn-primary flex items-center">
+                            <i class="fas fa-magic mr-2"></i>
+                            Get Prediction
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<style>
-.prediction-results {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.result-item {
-    margin: 10px 0;
-}
-</style>
-{% endif %}
+        {% if prediction %}
+        <!-- Prediction Results -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Outcome</h4>
+                    <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
+                </div>
+                
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-purple-800 mb-4">Confidence Levels</h4>
+                    <div class="space-y-2">
+                        {% for class_label, prob in probabilities.items() %}
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-purple-800">{{ class_label }}</span>
+                                <span class="text-sm font-medium text-purple-800">{{ prob }}%</span>
+                            </div>
+                            <div class="w-full bg-purple-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: {{ prob }}%"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h4 class="text-lg font-medium text-gray-800 mb-4">Input Summary</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {% for feature, value in input_values.items() %}
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">{{ feature }}</p>
+                        <p class="text-lg font-medium text-gray-800">{{ value }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                <i class="fas fa-download mr-2"></i>
+                Download Trained Model
+            </a>
         </div>
     </div>
 
-    <!-- <script>
-        // Dynamically load form fields based on model features
-        $(document).ready(function() {
-            $.get('/get_model_features/{{ model_path }}', function(features) {
-                const formFields = $('#formFields');
-                features.forEach(feature => {
-                    formFields.append(`
-                        <div class="form-group">
-                            <label class="block text-sm font-medium text-gray-700 mb-1">${feature}</label>
-                            <input type="text" name="${feature}" 
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                   required>
-                        </div>
-                    `);
-                });
-            });
-        });
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleTechnicalBtn');
+            const technicalDetails = document.getElementById('technicalDetails');
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
 
-        // Handle form submission
-        $('#predictionForm').on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                url: $(this).attr('action'),
-                method: 'POST',
-                data: $(this).serialize(),
-                success: function(response) {
-                    location.reload();
-                },
-                error: function(xhr) {
-                    alert('Error making prediction: ' + xhr.responseJSON.error);
-                }
-            });
+            if (toggleBtn && technicalDetails) {
+                toggleBtn.addEventListener('click', function() {
+                    technicalDetails.classList.toggle('open');
+                    toggleIcon.style.transform = technicalDetails.classList.contains('open') 
+                        ? 'rotate(180deg)' 
+                        : 'rotate(0)';
+                    toggleText.textContent = technicalDetails.classList.contains('open')
+                        ? 'Hide Technical Details'
+                        : 'Show Technical Details';
+                });
+            }
         });
-    </script> -->
+    </script>
 </body>
 </html>
