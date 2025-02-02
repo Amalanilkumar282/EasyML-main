@@ -3047,3 +3047,93 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-03 00:44:25,644 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
 2025-02-03 00:44:25,653 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
 2025-02-03 00:44:29,762 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:29] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:46:51,747 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 00:46:51,747 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 00:46:51,758 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:46:53,891 - WARNING -  * Debugger is active!
+2025-02-03 00:46:53,898 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:46:54,029 - INFO - 127.0.0.1 - - [03/Feb/2025 00:46:54] "GET / HTTP/1.1" 200 -
+2025-02-03 00:47:00,705 - INFO - 127.0.0.1 - - [03/Feb/2025 00:47:00] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 00:47:04,125 - INFO - package: mysql.connector.plugins
+2025-02-03 00:47:04,125 - INFO - plugin_name: mysql_native_password
+2025-02-03 00:47:04,126 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 00:47:04,130 - INFO - 127.0.0.1 - - [03/Feb/2025 00:47:04] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:47:18,740 - INFO - 127.0.0.1 - - [03/Feb/2025 00:47:18] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:48:50,940 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:50] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:48:50,958 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:50] "POST /analysis HTTP/1.1" 200 -
+2025-02-03 00:48:53,987 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:53] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-03 00:48:54,016 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 00:48:54,048 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,057 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,065 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,073 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,082 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,090 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:48:54,270 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:48:54,305 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:48:54,328 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:48:54,335 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:54] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:48:58,802 - INFO - 127.0.0.1 - - [03/Feb/2025 00:48:58] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:49:27,769 - INFO - 127.0.0.1 - - [03/Feb/2025 00:49:27] "GET /download_model/model_1738523938.pkl HTTP/1.1" 200 -
+2025-02-03 00:49:40,369 - INFO - 127.0.0.1 - - [03/Feb/2025 00:49:40] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 01:01:08,990 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 01:01:08,990 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 01:01:09,001 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 01:01:11,842 - WARNING -  * Debugger is active!
+2025-02-03 01:01:11,848 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 01:01:12,024 - INFO - 127.0.0.1 - - [03/Feb/2025 01:01:12] "GET / HTTP/1.1" 200 -
+2025-02-03 01:01:12,295 - INFO - 127.0.0.1 - - [03/Feb/2025 01:01:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-03 01:01:13,702 - INFO - 127.0.0.1 - - [03/Feb/2025 01:01:13] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 01:01:13,704 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-03 01:01:14,948 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 01:01:17,130 - WARNING -  * Debugger is active!
+2025-02-03 01:01:17,137 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 01:01:17,733 - INFO - package: mysql.connector.plugins
+2025-02-03 01:01:17,734 - INFO - plugin_name: mysql_native_password
+2025-02-03 01:01:17,735 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 01:01:17,742 - INFO - 127.0.0.1 - - [03/Feb/2025 01:01:17] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:12:52,189 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 01:12:52,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 01:12:52,204 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 01:12:54,380 - WARNING -  * Debugger is active!
+2025-02-03 01:12:54,385 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 01:12:54,520 - INFO - 127.0.0.1 - - [03/Feb/2025 01:12:54] "GET / HTTP/1.1" 200 -
+2025-02-03 01:12:54,658 - INFO - 127.0.0.1 - - [03/Feb/2025 01:12:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-03 01:12:56,145 - INFO - 127.0.0.1 - - [03/Feb/2025 01:12:56] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 01:13:00,046 - INFO - package: mysql.connector.plugins
+2025-02-03 01:13:00,046 - INFO - plugin_name: mysql_native_password
+2025-02-03 01:13:00,048 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 01:13:00,052 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:00] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:13:09,735 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:09] "POST /upload HTTP/1.1" 200 -
+2025-02-03 01:13:09,751 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:09] "POST /analysis HTTP/1.1" 200 -
+2025-02-03 01:13:12,764 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:12] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-03 01:13:12,776 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:12] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-03 01:13:45,969 - INFO - 127.0.0.1 - - [03/Feb/2025 01:13:45] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-03 01:14:19,963 - INFO - 127.0.0.1 - - [03/Feb/2025 01:14:19] "POST /multireg HTTP/1.1" 200 -
+2025-02-03 01:14:45,155 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-03 01:14:45,157 - INFO - 127.0.0.1 - - [03/Feb/2025 01:14:45] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-03 01:14:46,563 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 01:14:48,581 - WARNING -  * Debugger is active!
+2025-02-03 01:14:48,586 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 01:15:00,543 - INFO - 127.0.0.1 - - [03/Feb/2025 01:15:00] "GET /download_model/model_1738525459.pkl HTTP/1.1" 200 -
+2025-02-03 01:15:09,588 - INFO - 127.0.0.1 - - [03/Feb/2025 01:15:09] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-03 01:15:25,387 - INFO - 127.0.0.1 - - [03/Feb/2025 01:15:25] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-03 01:15:41,099 - INFO - 127.0.0.1 - - [03/Feb/2025 01:15:41] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-03 01:16:01,799 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:01] "POST /multireg HTTP/1.1" 200 -
+2025-02-03 01:16:09,206 - INFO - package: mysql.connector.plugins
+2025-02-03 01:16:09,206 - INFO - plugin_name: mysql_native_password
+2025-02-03 01:16:09,208 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 01:16:09,211 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:09] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:16:18,049 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:18] "POST /upload HTTP/1.1" 200 -
+2025-02-03 01:16:18,065 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:18] "POST /analysis HTTP/1.1" 200 -
+2025-02-03 01:16:21,088 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:21] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-03 01:16:21,119 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:21] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 01:16:33,027 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:33] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 01:16:36,738 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:36] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 01:16:53,376 - INFO - 127.0.0.1 - - [03/Feb/2025 01:16:53] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 01:17:01,418 - INFO - 127.0.0.1 - - [03/Feb/2025 01:17:01] "GET /download_model/model_1738525596.pkl HTTP/1.1" 200 -
+2025-02-03 01:17:25,182 - INFO - 127.0.0.1 - - [03/Feb/2025 01:17:25] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 01:17:30,581 - INFO - 127.0.0.1 - - [03/Feb/2025 01:17:30] "GET / HTTP/1.1" 200 -
