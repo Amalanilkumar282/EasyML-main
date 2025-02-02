@@ -2681,3 +2681,369 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-02 14:37:26,493 - INFO -  * Restarting with watchdog (windowsapi)
 2025-02-02 14:37:29,603 - WARNING -  * Debugger is active!
 2025-02-02 14:37:29,611 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:39:06,421 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 14:39:06,422 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 14:39:06,430 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:39:08,563 - WARNING -  * Debugger is active!
+2025-02-02 14:39:08,569 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:39:08,705 - INFO - 127.0.0.1 - - [02/Feb/2025 14:39:08] "GET / HTTP/1.1" 200 -
+2025-02-02 14:39:09,022 - INFO - 127.0.0.1 - - [02/Feb/2025 14:39:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-02 14:39:24,985 - INFO - 127.0.0.1 - - [02/Feb/2025 14:39:24] "GET / HTTP/1.1" 200 -
+2025-02-02 14:39:53,573 - INFO - 127.0.0.1 - - [02/Feb/2025 14:39:53] "GET /sign-in HTTP/1.1" 200 -
+2025-02-02 14:40:01,810 - INFO - package: mysql.connector.plugins
+2025-02-02 14:40:01,810 - INFO - plugin_name: mysql_native_password
+2025-02-02 14:40:01,811 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 14:40:01,816 - INFO - 127.0.0.1 - - [02/Feb/2025 14:40:01] "POST /login HTTP/1.1" 200 -
+2025-02-02 14:40:28,976 - INFO - 127.0.0.1 - - [02/Feb/2025 14:40:28] "POST /login HTTP/1.1" 200 -
+2025-02-02 14:41:08,794 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:08] "POST /upload HTTP/1.1" 200 -
+2025-02-02 14:41:08,810 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:08] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 14:41:11,836 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 14:41:11,857 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:41:11,882 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:41:11,895 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:41:11,902 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:41:11,908 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:41:11,916 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:41:11,924 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:11] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:41:12,136 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:12] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:41:12,156 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:12] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:41:12,163 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:12] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:41:12,167 - INFO - 127.0.0.1 - - [02/Feb/2025 14:41:12] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 15:13:23,875 - INFO - 127.0.0.1 - - [02/Feb/2025 15:13:23] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 15:13:41,062 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-02 15:13:41,065 - INFO - 127.0.0.1 - - [02/Feb/2025 15:13:41] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 15:13:42,601 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 15:13:44,831 - WARNING -  * Debugger is active!
+2025-02-02 15:13:44,835 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 17:03:21,608 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 17:03:21,608 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 17:03:21,627 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 17:03:24,069 - WARNING -  * Debugger is active!
+2025-02-02 17:03:24,074 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 17:03:43,090 - INFO - 127.0.0.1 - - [02/Feb/2025 17:03:43] "GET / HTTP/1.1" 200 -
+2025-02-02 17:03:43,469 - INFO - 127.0.0.1 - - [02/Feb/2025 17:03:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-02 17:03:47,204 - INFO - 127.0.0.1 - - [02/Feb/2025 17:03:47] "GET /sign-in HTTP/1.1" 200 -
+2025-02-02 17:03:47,205 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-02 17:03:48,216 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 17:03:50,233 - WARNING -  * Debugger is active!
+2025-02-02 17:03:50,237 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 17:03:55,040 - INFO - package: mysql.connector.plugins
+2025-02-02 17:03:55,040 - INFO - plugin_name: mysql_native_password
+2025-02-02 17:03:55,041 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 17:03:55,050 - INFO - 127.0.0.1 - - [02/Feb/2025 17:03:55] "POST /login HTTP/1.1" 200 -
+2025-02-02 17:04:01,118 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "POST /upload HTTP/1.1" 200 -
+2025-02-02 17:04:01,343 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,419 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,431 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,439 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,446 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,458 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,461 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,474 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,474 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,481 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 17:04:01,494 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:01] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-02 17:04:05,308 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 17:04:05,355 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 17:04:05,367 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 17:04:05,374 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 17:04:05,374 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 17:04:05,375 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 17:04:05,378 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 17:04:05,383 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 17:04:05,384 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 17:04:05,384 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 17:04:05,386 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 17:04:05,387 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:05] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 17:04:10,863 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:10] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 17:04:10,986 - INFO - 127.0.0.1 - - [02/Feb/2025 17:04:10] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 17:05:12,410 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-02 17:05:12,412 - INFO - 127.0.0.1 - - [02/Feb/2025 17:05:12] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 17:05:12,940 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 17:05:14,907 - WARNING -  * Debugger is active!
+2025-02-02 17:05:14,913 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 17:05:21,494 - INFO - 127.0.0.1 - - [02/Feb/2025 17:05:21] "GET /download_model/model_1738496050.pkl HTTP/1.1" 200 -
+2025-02-02 17:06:51,098 - INFO - 127.0.0.1 - - [02/Feb/2025 17:06:51] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 17:06:57,258 - INFO - 127.0.0.1 - - [02/Feb/2025 17:06:57] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 17:07:23,697 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-02 17:07:24,562 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 17:07:27,605 - WARNING -  * Debugger is active!
+2025-02-02 17:07:27,611 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 23:46:56,641 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 23:46:56,641 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 23:46:56,654 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 23:46:58,587 - WARNING -  * Debugger is active!
+2025-02-02 23:46:58,595 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 23:47:00,461 - INFO - 127.0.0.1 - - [02/Feb/2025 23:47:00] "GET / HTTP/1.1" 200 -
+2025-02-02 23:47:00,938 - INFO - 127.0.0.1 - - [02/Feb/2025 23:47:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-02 23:58:26,921 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 23:58:26,921 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 23:58:26,932 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 23:58:29,456 - WARNING -  * Debugger is active!
+2025-02-02 23:58:29,465 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 23:58:29,620 - INFO - 127.0.0.1 - - [02/Feb/2025 23:58:29] "GET / HTTP/1.1" 200 -
+2025-02-02 23:59:42,788 - INFO - 127.0.0.1 - - [02/Feb/2025 23:59:42] "GET / HTTP/1.1" 200 -
+2025-02-03 00:00:49,218 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-02-03 00:00:49,218 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-02-03 00:00:49,220 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-02-03 00:00:49,222 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\loaders.py', reloading
+2025-02-03 00:00:49,248 - INFO - 127.0.0.1 - - [03/Feb/2025 00:00:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-03 00:00:49,416 - INFO - 127.0.0.1 - - [03/Feb/2025 00:00:49] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-03 00:00:49,422 - INFO - 127.0.0.1 - - [03/Feb/2025 00:00:49] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-03 00:00:49,431 - INFO - 127.0.0.1 - - [03/Feb/2025 00:00:49] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-03 00:00:49,643 - INFO - 127.0.0.1 - - [03/Feb/2025 00:00:49] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-03 00:00:50,585 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:00:53,184 - WARNING -  * Debugger is active!
+2025-02-03 00:00:53,188 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:01:08,993 - INFO - 127.0.0.1 - - [03/Feb/2025 00:01:08] "GET / HTTP/1.1" 200 -
+2025-02-03 00:01:13,346 - INFO - 127.0.0.1 - - [03/Feb/2025 00:01:13] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 00:01:13,348 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-03 00:01:14,590 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:01:16,747 - WARNING -  * Debugger is active!
+2025-02-03 00:01:16,753 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:01:55,742 - INFO - 127.0.0.1 - - [03/Feb/2025 00:01:55] "GET / HTTP/1.1" 200 -
+2025-02-03 00:02:31,548 - INFO - 127.0.0.1 - - [03/Feb/2025 00:02:31] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 00:02:35,527 - INFO - package: mysql.connector.plugins
+2025-02-03 00:02:35,528 - INFO - plugin_name: mysql_native_password
+2025-02-03 00:02:35,529 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 00:02:35,535 - INFO - 127.0.0.1 - - [03/Feb/2025 00:02:35] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:02:48,007 - INFO - 127.0.0.1 - - [03/Feb/2025 00:02:48] "GET / HTTP/1.1" 200 -
+2025-02-03 00:03:16,789 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:16] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:03:41,789 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:41] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:03:41,823 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:41] "POST /analysis HTTP/1.1" 200 -
+2025-02-03 00:03:44,831 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-03 00:03:44,841 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-03 00:03:44,869 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:03:44,873 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:03:44,881 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:03:44,889 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:03:44,895 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:03:44,903 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:44] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:03:45,087 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:45] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:03:45,103 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:45] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:03:45,125 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:45] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:03:45,132 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:45] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:03:51,710 - INFO - 127.0.0.1 - - [03/Feb/2025 00:03:51] "POST /multireg HTTP/1.1" 200 -
+2025-02-03 00:04:07,562 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-03 00:04:07,565 - INFO - 127.0.0.1 - - [03/Feb/2025 00:04:07] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-03 00:04:07,941 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:04:10,135 - WARNING -  * Debugger is active!
+2025-02-03 00:04:10,140 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:04:20,585 - INFO - 127.0.0.1 - - [03/Feb/2025 00:04:20] "GET /download_model/model_1738521231.pkl HTTP/1.1" 200 -
+2025-02-03 00:05:03,137 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:03] "GET / HTTP/1.1" 200 -
+2025-02-03 00:05:08,078 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:08] "GET / HTTP/1.1" 200 -
+2025-02-03 00:05:11,471 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:11] "GET / HTTP/1.1" 200 -
+2025-02-03 00:05:29,239 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 00:05:29,239 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 00:05:29,250 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:05:31,296 - WARNING -  * Debugger is active!
+2025-02-03 00:05:31,301 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:05:31,432 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:31] "GET / HTTP/1.1" 200 -
+2025-02-03 00:05:32,856 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:32] "GET / HTTP/1.1" 200 -
+2025-02-03 00:05:38,078 - INFO - 127.0.0.1 - - [03/Feb/2025 00:05:38] "GET / HTTP/1.1" 200 -
+2025-02-03 00:09:33,406 - INFO - 127.0.0.1 - - [03/Feb/2025 00:09:33] "GET / HTTP/1.1" 200 -
+2025-02-03 00:12:09,592 - INFO - 127.0.0.1 - - [03/Feb/2025 00:12:09] "GET / HTTP/1.1" 200 -
+2025-02-03 00:14:51,394 - INFO - 127.0.0.1 - - [03/Feb/2025 00:14:51] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 00:14:57,064 - INFO - package: mysql.connector.plugins
+2025-02-03 00:14:57,064 - INFO - plugin_name: mysql_native_password
+2025-02-03 00:14:57,065 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 00:14:57,069 - INFO - 127.0.0.1 - - [03/Feb/2025 00:14:57] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:15:03,220 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:15:03,503 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,516 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,525 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,535 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,546 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,559 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,568 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,588 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,596 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,607 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:03,711 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:03] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:05,290 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 00:15:05,304 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:05,310 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:05,312 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:05,313 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:15:05,318 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:05,321 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:05,324 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:05,330 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:05,332 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:05,338 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:05] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:15:07,149 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-03 00:15:07,755 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:07] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:15:08,180 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:15:10,374 - WARNING -  * Debugger is active!
+2025-02-03 00:15:10,379 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:15:16,431 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:16] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 00:15:40,862 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:40] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:15:47,015 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:15:47,272 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,281 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,335 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,355 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,361 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,370 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,372 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,385 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,386 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:15:47,396 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:47] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:51,125 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:51] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:55,429 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 00:15:55,443 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:55,448 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:15:55,449 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:15:55,449 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:15:55,452 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:15:55,456 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:55,464 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:55,465 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:55,471 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:15:55,474 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:55] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:15:59,252 - INFO - 127.0.0.1 - - [03/Feb/2025 00:15:59] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 00:16:05,810 - INFO - 127.0.0.1 - - [03/Feb/2025 00:16:05] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 00:16:07,890 - INFO - 127.0.0.1 - - [03/Feb/2025 00:16:07] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 00:16:10,088 - INFO - 127.0.0.1 - - [03/Feb/2025 00:16:10] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 00:17:55,053 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:17:55,067 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,075 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,075 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,075 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,076 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,087 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,088 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,095 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,096 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,124 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:17:55,125 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:55] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-03 00:17:56,594 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 00:17:56,642 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:17:56,650 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:17:56,652 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:17:56,658 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:17:56,659 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:17:56,660 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:17:56,671 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:17:56,673 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:17:56,677 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:17:56,680 - INFO - 127.0.0.1 - - [03/Feb/2025 00:17:56] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:18:03,247 - INFO - 127.0.0.1 - - [03/Feb/2025 00:18:03] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:18:47,499 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\preprocessing\\_label.py', reloading
+2025-02-03 00:18:47,501 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\_encode.py', reloading
+2025-02-03 00:18:47,507 - INFO - 127.0.0.1 - - [03/Feb/2025 00:18:47] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 00:18:47,533 - INFO - 127.0.0.1 - - [03/Feb/2025 00:18:47] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:18:48,699 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:18:50,773 - WARNING -  * Debugger is active!
+2025-02-03 00:18:50,778 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:19:11,394 - INFO - 127.0.0.1 - - [03/Feb/2025 00:19:11] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:19:19,478 - INFO - 127.0.0.1 - - [03/Feb/2025 00:19:19] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:21:13,789 - INFO - 127.0.0.1 - - [03/Feb/2025 00:21:13] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 00:21:13,923 - INFO - 127.0.0.1 - - [03/Feb/2025 00:21:13] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:21:25,901 - INFO - 127.0.0.1 - - [03/Feb/2025 00:21:25] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:21:52,199 - INFO - 127.0.0.1 - - [03/Feb/2025 00:21:52] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 00:22:12,012 - INFO - 127.0.0.1 - - [03/Feb/2025 00:22:12] "GET /download_model/model_1738522285.pkl HTTP/1.1" 200 -
+2025-02-03 00:22:26,634 - INFO - 127.0.0.1 - - [03/Feb/2025 00:22:26] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-03 00:22:30,667 - INFO - 127.0.0.1 - - [03/Feb/2025 00:22:30] "POST /logreg HTTP/1.1" 200 -
+2025-02-03 00:22:46,934 - INFO - 127.0.0.1 - - [03/Feb/2025 00:22:46] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-03 00:23:47,271 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:23:47,286 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,289 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,295 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,297 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,298 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,313 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,329 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,342 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,344 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,352 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:23:47,363 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:47] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-03 00:23:49,030 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-03 00:23:49,065 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:23:49,073 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:23:49,076 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:23:49,077 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:23:49,078 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:23:49,080 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:23:49,093 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:23:49,096 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:23:49,100 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:23:49,106 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:49] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:23:51,529 - ERROR - Error in KNN: Input X contains NaN.
+KNeighborsClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-02-03 00:23:51,530 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:51] "POST /knn HTTP/1.1" 200 -
+2025-02-03 00:23:51,535 - INFO - 127.0.0.1 - - [03/Feb/2025 00:23:51] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,809 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:24:00,824 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,828 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,828 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,829 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,833 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,839 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,845 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,860 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,877 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,880 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:00,884 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:00] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-03 00:24:02,296 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-03 00:24:02,313 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:02,322 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:02,323 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:24:02,324 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:02,326 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:24:02,327 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:02,336 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:02,340 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:02,346 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:02,351 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:02] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:24:06,205 - ERROR - Error in KNN: Unknown label type: continuous. Maybe you are trying to fit a classifier, which expects discrete classes on a regression target with continuous values.
+2025-02-03 00:24:06,206 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:06] "POST /knn HTTP/1.1" 200 -
+2025-02-03 00:24:06,213 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:06] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:09,037 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-03 00:24:09,051 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:09,056 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:24:09,057 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:24:09,059 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:24:09,063 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:09,063 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:24:09,073 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:09,079 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:09,080 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:24:09,089 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:09] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:24:11,217 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:11] "POST /knn HTTP/1.1" 200 -
+2025-02-03 00:24:23,711 - INFO - 127.0.0.1 - - [03/Feb/2025 00:24:23] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-03 00:25:09,714 - INFO - 127.0.0.1 - - [03/Feb/2025 00:25:09] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:42:22,598 - INFO - 127.0.0.1 - - [03/Feb/2025 00:42:22] "GET / HTTP/1.1" 200 -
+2025-02-03 00:42:49,155 - INFO - 127.0.0.1 - - [03/Feb/2025 00:42:49] "GET / HTTP/1.1" 200 -
+2025-02-03 00:43:17,057 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 00:43:17,058 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 00:43:17,070 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 00:43:19,255 - WARNING -  * Debugger is active!
+2025-02-03 00:43:19,259 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 00:43:19,399 - INFO - 127.0.0.1 - - [03/Feb/2025 00:43:19] "GET / HTTP/1.1" 200 -
+2025-02-03 00:44:06,686 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:06] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 00:44:12,012 - INFO - package: mysql.connector.plugins
+2025-02-03 00:44:12,012 - INFO - plugin_name: mysql_native_password
+2025-02-03 00:44:12,014 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 00:44:12,017 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:12] "POST /login HTTP/1.1" 200 -
+2025-02-03 00:44:22,314 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:22] "POST /upload HTTP/1.1" 200 -
+2025-02-03 00:44:22,332 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:22] "POST /analysis HTTP/1.1" 200 -
+2025-02-03 00:44:25,356 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-03 00:44:25,390 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-03 00:44:25,420 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-03 00:44:25,600 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-03 00:44:25,621 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-03 00:44:25,627 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-03 00:44:25,627 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-03 00:44:25,632 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:44:25,636 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:44:25,640 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:44:25,644 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-03 00:44:25,653 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:25] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-03 00:44:29,762 - INFO - 127.0.0.1 - - [03/Feb/2025 00:44:29] "POST /logreg HTTP/1.1" 200 -
