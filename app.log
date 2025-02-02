@@ -3260,3 +3260,22 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-03 01:34:52,907 - INFO - 127.0.0.1 - - [03/Feb/2025 01:34:52] "GET / HTTP/1.1" 200 -
 2025-02-03 01:35:01,715 - INFO - 127.0.0.1 - - [03/Feb/2025 01:35:01] "GET / HTTP/1.1" 200 -
 2025-02-03 01:35:04,719 - INFO - 127.0.0.1 - - [03/Feb/2025 01:35:04] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+2025-02-03 01:37:02,308 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-03 01:37:02,308 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-03 01:37:02,320 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-03 01:37:04,535 - WARNING -  * Debugger is active!
+2025-02-03 01:37:04,540 - INFO -  * Debugger PIN: 174-844-798
+2025-02-03 01:37:04,680 - INFO - 127.0.0.1 - - [03/Feb/2025 01:37:04] "GET / HTTP/1.1" 200 -
+2025-02-03 01:37:36,141 - INFO - 127.0.0.1 - - [03/Feb/2025 01:37:36] "GET / HTTP/1.1" 200 -
+2025-02-03 01:39:57,856 - INFO - 127.0.0.1 - - [03/Feb/2025 01:39:57] "GET /sign-in HTTP/1.1" 200 -
+2025-02-03 01:40:04,453 - INFO - package: mysql.connector.plugins
+2025-02-03 01:40:04,453 - INFO - plugin_name: mysql_native_password
+2025-02-03 01:40:04,454 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-03 01:40:04,458 - INFO - 127.0.0.1 - - [03/Feb/2025 01:40:04] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:40:26,079 - INFO - 127.0.0.1 - - [03/Feb/2025 01:40:26] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:40:35,296 - INFO - 127.0.0.1 - - [03/Feb/2025 01:40:35] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:40:47,692 - INFO - 127.0.0.1 - - [03/Feb/2025 01:40:47] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:41:06,633 - INFO - 127.0.0.1 - - [03/Feb/2025 01:41:06] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:42:03,615 - INFO - 127.0.0.1 - - [03/Feb/2025 01:42:03] "POST /login HTTP/1.1" 200 -
+2025-02-03 01:42:12,746 - INFO - 127.0.0.1 - - [03/Feb/2025 01:42:12] "GET / HTTP/1.1" 200 -
