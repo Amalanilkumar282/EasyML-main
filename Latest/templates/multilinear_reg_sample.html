@@ -1,425 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>EasyML - Machine Learning Made Simple</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Prediction Platform - Multiple Linear Regression</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #4361ee;
-            --secondary-color: #3f37c9;
-            --success-color: #4CAF50;
-            --error-color: #ef476f;
-            --background-color: #f8f9fa;
-            --card-background: #ffffff;
-            --text-primary: #2b2d42;
-            --text-secondary: #6c757d;
-            --border-radius: 12px;
-            --transition-speed: 0.3s;
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-        }
-
-        .navbar-brand {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Card Container Styles */
-        .card {
-            background: var(--card-background);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform var(--transition-speed);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Section Headers */
-        .section-header {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.75rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            border-radius: 3px;
-        }
-
-        /* Metrics Display */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .metric-item {
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: all var(--transition-speed);
-        }
-
-        .metric-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .metric-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-value {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        /* Table Styles */
-        .coefficients-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        .coefficients-table th,
-        .coefficients-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .coefficients-table th {
-            background-color: rgba(67, 97, 238, 0.05);
-            font-weight: 600;
-        }
-
-        .coefficients-table tr:hover {
-            background-color: rgba(67, 97, 238, 0.02);
-        }
-
-        /* Form Styles */
-        .prediction-form {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .form-label {
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .form-input {
-            padding: 0.75rem 1rem;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: var(--border-radius);
-            font-size: 1rem;
-            transition: border-color var(--transition-speed);
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
-        }
-
-        /* Button Styles */
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-speed);
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
-        }
-
-        /* Info Cards */
-        .info-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .info-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Animations */
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        .animate-slide-up {
-            animation: slideUp 0.5s ease-out;
-        }
-
+        
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
         }
-
-        /* Tooltips */
-        .tooltip {
-            position: relative;
-            display: inline-block;
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
         }
-
-        .tooltip .tooltip-text {
-            visibility: hidden;
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -100px;
-            opacity: 0;
-            transition: opacity 0.3s;
+        
+        .metric-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
         }
-
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
+        
+        .metric-card:hover {
+            border-left-color: currentColor;
+            transform: translateX(5px);
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .card {
-                margin: 1rem;
-                padding: 1.5rem;
-            }
-
-            .metrics-grid {
-                grid-template-columns: 1fr;
-            }
+        
+        .form-input {
+            @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+        }
+        
+        .form-label {
+            @apply block text-sm font-medium text-gray-700 mb-1;
+        }
+        
+        .form-group {
+            @apply mb-4;
+        }
+        
+        .btn {
+            @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+        }
+        
+        .btn-primary {
+            @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+        }
+        
+        .collapsible-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .collapsible-section.open {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
         }
     </style>
 </head>
-<body>
-    <nav class="navbar animate-fade-in">
-        <a href="#" class="navbar-brand">
-            <i class="fas fa-brain"></i>
-            EasyML
-        </a>
-    </nav>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <div class="mb-12 text-center fade-in">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">MULTIPLE LINEAR REGRESSION PERFORMED!</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Make data-driven decisions with our easy-to-use EasyML prediction tool. Simply input your values and get instant insights.</p>
+        </div>
 
-    <div class="container">
-        <div class="card animate-slide-up">
-            <div class="info-card">
-                <h3><i class="fas fa-info-circle"></i> What is Multiple Linear Regression?</h3>
-                <p>Multiple Linear Regression helps predict a value based on several input factors. Think of it like predicting house prices based on size, location, and number of rooms combined.</p>
-            </div>
-
-            <!-- Model Metrics Section -->
-            <h2 class="section-header">Model Performance</h2>
-            <div class="info-card">
-                <p>These numbers tell us how well our model performs. Higher R² scores (closer to 1) and lower RMSE values indicate better predictions.</p>
-            </div>
-            <div class="metrics-grid">
-                <div class="metric-item tooltip">
-                    <div class="metric-label">Training R² Score</div>
-                    <div class="metric-value">{{ "%.4f"|format(metrics.train_r2) }}</div>
-                    <span class="tooltip-text">Shows how well the model fits training data (1.0 is perfect)</span>
-                </div>
-                <div class="metric-item tooltip">
-                    <div class="metric-label">Testing R² Score</div>
-                    <div class="metric-value">{{ "%.4f"|format(metrics.test_r2) }}</div>
-                    <span class="tooltip-text">Shows how well the model performs on new data</span>
-                </div>
-                <div class="metric-item tooltip">
-                    <div class="metric-label">Training RMSE</div>
-                    <div class="metric-value">{{ "%.4f"|format(metrics.train_rmse) }}</div>
-                    <span class="tooltip-text">Average prediction error on training data</span>
-                </div>
-                <div class="metric-item tooltip">
-                    <div class="metric-label">Testing RMSE</div>
-                    <div class="metric-value">{{ "%.4f"|format(metrics.test_rmse) }}</div>
-                    <span class="tooltip-text">Average prediction error on new data</span>
-                </div>
-            </div>
-
-            <!-- Coefficients Section -->
-            <h2 class="section-header">Model Coefficients</h2>
-            <div class="info-card">
-                <p>Coefficients show how much each feature affects the prediction. A positive value means the prediction increases when the feature increases.</p>
-            </div>
-            <table class="coefficients-table">
-                <tr>
-                    <th>Feature</th>
-                    <th>Coefficient</th>
-                    <th>P-value</th>
-                </tr>
-                {% for feature in coefficients.keys() %}
-                <tr class="animate-fade-in" style="animation-delay: {{ (loop.index0 * 0.1)|string + 's' }}">
-                    <td>{{ feature }}</td>
-                    <td>{{ "{:.4f}".format(coefficients[feature]) }}</td>
-                    <td>{{ "{:.4f}".format(p_values[feature]) }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-
-            <!-- Download Section -->
-            <h2 class="section-header">Download Model</h2>
-            <div class="info-card">
-                <p>Download the trained model to use it in your own applications. Check the documentation for integration guidelines.</p>
-            </div>
-            <a href="{{ url_for('download_model', filename=model_path) }}" class="btn btn-primary">
-                <i class="fas fa-download"></i> Download Model
-            </a>
-
-            <!-- Prediction Section -->
-            <h2 class="section-header">Make Predictions</h2>
-            <div class="info-card">
-                <p>Enter values for each feature to get a prediction from the model. Use real-world values that make sense for each input.</p>
+        <!-- Quick Stats -->
+        <div class="mb-12 fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Model Performance Overview</h2>
+                <button id="toggleTechnicalBtn" class="text-blue-600 hover:text-blue-700 flex items-center">
+                    <span id="toggleText">Show Technical Details</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-200" id="toggleIcon"></i>
+                </button>
             </div>
             
-            {% if error_message %}
-            <div class="alert alert-danger" role="alert">
-                {{ error_message }}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-bullseye text-blue-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Training R² Score</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-600">{{ "%.4f"|format(metrics.train_r2) }}</p>
+                    <p class="text-sm text-gray-600 mt-2">How well the model fits the training data</p>
+                </div>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Testing R² Score</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-green-600">{{ "%.4f"|format(metrics.test_r2) }}</p>
+                    <p class="text-sm text-gray-600 mt-2">How well the model performs on new data</p>
+                </div>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-chart-line text-purple-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Testing RMSE</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-600">{{ "%.4f"|format(metrics.test_rmse) }}</p>
+                    <p class="text-sm text-gray-600 mt-2">Average prediction error on new data</p>
+                </div>
             </div>
-            {% endif %}
+        </div>
 
-            <form action="{{ url_for('predict_multiple') }}" method="post" class="prediction-form">
-                {% for feature in coefficients.keys() %}
-                <div class="form-group">
-                    <label for="{{ feature }}" class="form-label">{{ feature }}</label>
-                    <input type="number" step="any" class="form-input" id="{{ feature }}" name="{{ feature }}" required>
-                </div>
-                {% endfor %}
-
-                <input type="hidden" name="model_path" value="{{ model_path }}">
-                <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
-
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-calculator"></i> Make Prediction
-                </button>
-            </form>
-
-            {% if prediction is defined %}
-            <div class="prediction-result animate-fade-in">
-                <h3>Prediction Result</h3>
-                <div class="metric-item">
-                    <div class="metric-label">Predicted Value</div>
-                    <div class="metric-value">{{ "%.4f"|format(prediction[0]) }}</div>
-                </div>
-                <h4>Input Values:</h4>
-                <ul class="list-unstyled">
-                    {% for feature, value in input_values.items() %}
-                    <li><strong>{{ feature }}:</strong> {{ value }}</li>
+        <!-- Technical Details Section (Collapsible) -->
+        <div id="technicalDetails" class="collapsible-section mb-12">
+            <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+                
+                <!-- Visualization Plots -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {% for plot in plots %}
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full">
+                    </div>
                     {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
+                </div>
 
-            <!-- Visualization Section -->
-            <h2 class="section-header">Model Visualizations</h2>
-            <div class="info-card">
-                <p>These plots help visualize the model's performance and relationships between variables.</p>
+                <!-- Coefficients Table -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Feature</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Coefficient</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">P-value</th>
+                                <th class="px-4 py-3 text-left text-sm font-medium text-gray-700">Importance Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for feature in coefficients.keys() %}
+                            <tr class="border-b hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3">{{ feature }}</td>
+                                <td class="px-4 py-3">{{ "%.4f"|format(coefficients[feature]) }}</td>
+                                <td class="px-4 py-3">{{ "%.4f"|format(p_values[feature]) }}</td>
+                                <td class="px-4 py-3">
+                                    {% if p_values[feature] < 0.01 %}
+                                    <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">High Impact</span>
+                                    {% elif p_values[feature] < 0.05 %}
+                                    <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Moderate Impact</span>
+                                    {% else %}
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Low Impact</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            {% for plot in plots %}
-            <div class="plot-container animate-fade-in">
-                <img src="data:image/png;base64,{{ plot }}" alt="Regression Plot" class="img-fluid">
+        </div>
+
+        <!-- Prediction Form Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
+                <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
+                
+                <form action="{{ url_for('predict_multiple') }}" method="post" class="prediction-form space-y-6">
+                    {% for feature in coefficients.keys() %}
+                    <div class="form-group">
+                        <label for="{{ feature }}" class="form-label">{{ feature }}</label>
+                        <input type="number" step="any" class="form-input" id="{{ feature }}" name="{{ feature }}" required
+                               placeholder="Enter value for {{ feature }}">
+                    </div>
+                    {% endfor %}
+                
+                    <input type="hidden" name="model_path" value="{{ model_path }}">
+                    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+                
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" class="btn btn-primary flex items-center">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Get Prediction
+                        </button>
+                    </div>
+                </form>
             </div>
-            {% endfor %}
+        </div>
+
+        {% if prediction is defined %}
+        <!-- Prediction Results -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Value</h4>
+                    <p class="text-3xl font-bold text-blue-600">{{ "%.4f"|format(prediction[0]) }}</p>
+                </div>
+                
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-purple-800 mb-4">Input Summary</h4>
+                    <div class="space-y-2">
+                        {% for feature, value in input_values.items() %}
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-purple-800">{{ feature }}</span>
+                                <span class="text-sm font-medium text-purple-800">{{ value }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                <i class="fas fa-download mr-2"></i>
+                Download Trained Model
+            </a>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleTechnicalBtn');
+            const technicalDetails = document.getElementById('technicalDetails');
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
 
-        // Add intersection observer for animations
-        // Add your intersection observer code here if needed
+            if (toggleBtn && technicalDetails) {
+                toggleBtn.addEventListener('click', function() {
+                    technicalDetails.classList.toggle('open');
+                    toggleIcon.style.transform = technicalDetails.classList.contains('open') 
+                        ? 'rotate(180deg)' 
+                        : 'rotate(0)';
+                    toggleText.textContent = technicalDetails.classList.contains('open')
+                        ? 'Hide Technical Details'
+                        : 'Show Technical Details';
+                });
+            }
+        });
     </script>
 </body>
 </html>

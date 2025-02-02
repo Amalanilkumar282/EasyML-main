@@ -2427,3 +2427,257 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-02 01:57:57,303 - INFO - 127.0.0.1 - - [02/Feb/2025 01:57:57] "POST /logreg HTTP/1.1" 200 -
 2025-02-02 01:58:23,650 - INFO - 127.0.0.1 - - [02/Feb/2025 01:58:23] "POST /predict_logistic HTTP/1.1" 200 -
 2025-02-02 01:58:52,066 - INFO - 127.0.0.1 - - [02/Feb/2025 01:58:52] "GET /download_model/model_1738441677.pkl HTTP/1.1" 200 -
+2025-02-02 13:50:26,322 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 13:50:26,322 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 13:50:26,343 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 13:50:28,535 - WARNING -  * Debugger is active!
+2025-02-02 13:50:28,543 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 13:50:28,677 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:28] "GET / HTTP/1.1" 200 -
+2025-02-02 13:50:28,817 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-02 13:50:30,227 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:30] "GET /sign-in HTTP/1.1" 200 -
+2025-02-02 13:50:30,228 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-02 13:50:31,428 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 13:50:33,537 - WARNING -  * Debugger is active!
+2025-02-02 13:50:33,542 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 13:50:33,698 - INFO - package: mysql.connector.plugins
+2025-02-02 13:50:33,698 - INFO - plugin_name: mysql_native_password
+2025-02-02 13:50:33,700 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 13:50:33,708 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:33] "POST /login HTTP/1.1" 200 -
+2025-02-02 13:50:51,284 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:51] "POST /upload HTTP/1.1" 200 -
+2025-02-02 13:50:51,315 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:51] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 13:50:54,333 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 13:50:54,349 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 13:50:54,375 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 13:50:54,569 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 13:50:54,582 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 13:50:54,588 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 13:50:54,591 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 13:50:54,595 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 13:50:54,597 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 13:50:54,606 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 13:50:54,610 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 13:50:54,613 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:54] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 13:50:59,016 - INFO - 127.0.0.1 - - [02/Feb/2025 13:50:59] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 13:51:49,004 - INFO - 127.0.0.1 - - [02/Feb/2025 13:51:49] "GET /download_model/model_1738484459.pkl HTTP/1.1" 200 -
+2025-02-02 13:52:11,639 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-02 13:52:11,641 - INFO - 127.0.0.1 - - [02/Feb/2025 13:52:11] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 13:52:12,698 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 13:52:14,844 - WARNING -  * Debugger is active!
+2025-02-02 13:52:14,849 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:10:33,146 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:33] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 14:10:33,257 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:33] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:10:36,702 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:36] "GET / HTTP/1.1" 200 -
+2025-02-02 14:10:38,984 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:38] "GET /sign-in HTTP/1.1" 200 -
+2025-02-02 14:10:42,346 - INFO - package: mysql.connector.plugins
+2025-02-02 14:10:42,346 - INFO - plugin_name: mysql_native_password
+2025-02-02 14:10:42,347 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 14:10:42,353 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:42] "POST /login HTTP/1.1" 200 -
+2025-02-02 14:10:56,405 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:56] "POST /upload HTTP/1.1" 200 -
+2025-02-02 14:10:56,426 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:56] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 14:10:59,448 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 14:10:59,480 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:10:59,513 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:10:59,514 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:10:59,519 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:10:59,520 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:10:59,531 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:10:59,531 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:10:59,541 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:10:59,543 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:10:59,554 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:10:59,557 - INFO - 127.0.0.1 - - [02/Feb/2025 14:10:59] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:11:02,885 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-02-02 14:11:02,886 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-02-02 14:11:02,888 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-02-02 14:11:02,910 - INFO - 127.0.0.1 - - [02/Feb/2025 14:11:02] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:11:03,403 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:11:05,536 - WARNING -  * Debugger is active!
+2025-02-02 14:11:05,541 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:11:07,676 - INFO - 127.0.0.1 - - [02/Feb/2025 14:11:07] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:11:11,732 - INFO - 127.0.0.1 - - [02/Feb/2025 14:11:11] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:12:54,543 - INFO - 127.0.0.1 - - [02/Feb/2025 14:12:54] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:13:01,310 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:01] "POST /upload HTTP/1.1" 200 -
+2025-02-02 14:13:01,322 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:01] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 14:13:04,346 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 14:13:04,369 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:13:04,404 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:13:04,578 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:13:04,587 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:13:04,593 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:13:04,594 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:13:04,602 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:13:04,605 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:13:04,611 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:13:04,615 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:13:04,617 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:04] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:13:07,633 - INFO - 127.0.0.1 - - [02/Feb/2025 14:13:07] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:14:17,433 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:17] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:14:36,115 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-02 14:14:36,115 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 14:14:36,125 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:14:38,320 - WARNING -  * Debugger is active!
+2025-02-02 14:14:38,326 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:14:38,475 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:38] "GET / HTTP/1.1" 200 -
+2025-02-02 14:14:40,079 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:40] "GET /sign-in HTTP/1.1" 200 -
+2025-02-02 14:14:43,459 - INFO - package: mysql.connector.plugins
+2025-02-02 14:14:43,460 - INFO - plugin_name: mysql_native_password
+2025-02-02 14:14:43,461 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 14:14:43,464 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:43] "POST /login HTTP/1.1" 200 -
+2025-02-02 14:14:54,239 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:54] "POST /upload HTTP/1.1" 200 -
+2025-02-02 14:14:54,253 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:54] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 14:14:57,264 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 14:14:57,277 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:14:57,307 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:14:57,488 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:14:57,496 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:14:57,503 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:14:57,510 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:14:57,511 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:14:57,512 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:14:57,522 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:14:57,525 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:14:57,531 - INFO - 127.0.0.1 - - [02/Feb/2025 14:14:57] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:15:01,254 - INFO - 127.0.0.1 - - [02/Feb/2025 14:15:01] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-02 14:16:19,471 - INFO - 127.0.0.1 - - [02/Feb/2025 14:16:19] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 14:17:21,850 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-02 14:17:22,503 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-02-02 14:17:22,712 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-02 14:17:22,766 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\automl.py', reloading
+2025-02-02 14:17:23,606 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:17:26,474 - WARNING -  * Debugger is active!
+2025-02-02 14:17:26,478 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:17:29,510 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\__init__.py', reloading
+2025-02-02 14:17:29,514 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_base.py', reloading
+2025-02-02 14:17:29,535 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_csr.py', reloading
+2025-02-02 14:17:29,547 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_csc.py', reloading
+2025-02-02 14:17:29,551 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_lil.py', reloading
+2025-02-02 14:17:29,560 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_dok.py', reloading
+2025-02-02 14:17:29,572 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_coo.py', reloading
+2025-02-02 14:17:29,617 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_dia.py', reloading
+2025-02-02 14:17:29,630 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_bsr.py', reloading
+2025-02-02 14:17:29,647 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_construct.py', reloading
+2025-02-02 14:17:29,669 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_extract.py', reloading
+2025-02-02 14:17:29,672 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_matrix_io.py', reloading
+2025-02-02 14:17:29,675 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_matrix.py', reloading
+2025-02-02 14:17:29,690 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py', reloading
+2025-02-02 14:17:29,845 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\api.py', reloading
+2025-02-02 14:17:29,870 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\discrete\\discrete_model.py', reloading
+2025-02-02 14:17:29,954 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\base\\model.py', reloading
+2025-02-02 14:17:30,483 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:17:32,964 - WARNING -  * Debugger is active!
+2025-02-02 14:17:32,969 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:19:30,607 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-02-02 14:19:30,675 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-02-02 14:19:30,702 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-02-02 14:19:30,730 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-02-02 14:19:30,778 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-02-02 14:19:30,781 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-02-02 14:19:30,786 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-02-02 14:19:30,789 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-02-02 14:19:30,793 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-02-02 14:19:30,809 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-02-02 14:19:30,820 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-02-02 14:19:30,836 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\__init__.py', reloading
+2025-02-02 14:19:30,924 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\__init__.py', reloading
+2025-02-02 14:19:30,933 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\__init__.py', reloading
+2025-02-02 14:19:30,946 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_stats_py.py', reloading
+2025-02-02 14:19:31,126 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\distributions.py', reloading
+2025-02-02 14:19:31,132 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_continuous_distns.py', reloading
+2025-02-02 14:19:31,261 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_discrete_distns.py', reloading
+2025-02-02 14:19:31,277 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_morestats.py', reloading
+2025-02-02 14:19:31,316 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_multicomp.py', reloading
+2025-02-02 14:19:31,323 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_binned_statistic.py', reloading
+2025-02-02 14:19:31,329 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_multivariate.py', reloading
+2025-02-02 14:19:31,371 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_entropy.py', reloading
+2025-02-02 14:19:31,376 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_hypotests.py', reloading
+2025-02-02 14:19:31,389 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_sensitivity_analysis.py', reloading
+2025-02-02 14:19:31,392 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_survival.py', reloading
+2025-02-02 14:19:31,426 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\security.py', reloading
+2025-02-02 14:19:31,437 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\pooling.py', reloading
+2025-02-02 14:19:31,449 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\abstracts.py', reloading
+2025-02-02 14:19:31,485 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\types.py', reloading
+2025-02-02 14:19:31,498 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\typing.py', reloading
+2025-02-02 14:19:31,509 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-02-02 14:19:31,515 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-02-02 14:19:31,524 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\utils.py', reloading
+2025-02-02 14:19:31,538 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\_internal.py', reloading
+2025-02-02 14:19:31,594 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_distn_infrastructure.py', reloading
+2025-02-02 14:19:32,107 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:19:34,547 - WARNING -  * Debugger is active!
+2025-02-02 14:19:34,553 - INFO -  * Debugger PIN: 174-844-798
+2025-02-02 14:31:39,726 - INFO - package: mysql.connector.plugins
+2025-02-02 14:31:39,726 - INFO - plugin_name: mysql_native_password
+2025-02-02 14:31:39,727 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-02 14:31:39,731 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:39] "POST /login HTTP/1.1" 200 -
+2025-02-02 14:31:43,705 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:43] "POST /upload HTTP/1.1" 200 -
+2025-02-02 14:31:43,719 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:43] "POST /analysis HTTP/1.1" 200 -
+2025-02-02 14:31:46,751 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-02 14:31:46,780 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:31:46,811 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:31:46,817 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:31:46,823 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:31:46,828 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:31:46,835 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:31:46,841 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:46] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:31:47,031 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:47] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:31:47,055 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:47] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:31:47,062 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:47] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:31:47,074 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:47] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:31:51,683 - INFO - 127.0.0.1 - - [02/Feb/2025 14:31:51] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 14:32:32,728 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:32:32,744 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:32:32,747 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:32:32,751 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:32:32,751 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:32:32,758 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:32:32,761 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:32:32,763 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:32:32,771 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:32:32,779 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:32:32,784 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:32] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:32:33,427 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:33] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:32:36,847 - INFO - 127.0.0.1 - - [02/Feb/2025 14:32:36] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 14:34:29,127 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-02 14:34:29,149 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-02 14:34:29,155 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /static/css/models.css HTTP/1.1[0m" 404 -
+2025-02-02 14:34:29,156 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-02 14:34:29,158 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-02 14:34:29,160 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /assets/js/core/popper.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:34:29,161 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:34:29,174 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /assets/js/core/bootstrap.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:34:29,177 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /assets/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:34:29,182 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /assets/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 404 -
+2025-02-02 14:34:29,187 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:29] "[33mGET /assets/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 404 -
+2025-02-02 14:34:30,136 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:30] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-02 14:34:32,514 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:32] "POST /multireg HTTP/1.1" 200 -
+2025-02-02 14:34:52,813 - INFO - 127.0.0.1 - - [02/Feb/2025 14:34:52] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 14:36:09,571 - INFO - 127.0.0.1 - - [02/Feb/2025 14:36:09] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 14:36:35,690 - INFO - 127.0.0.1 - - [02/Feb/2025 14:36:35] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-02 14:36:43,805 - INFO - 127.0.0.1 - - [02/Feb/2025 14:36:43] "GET /download_model/model_1738487072.pkl HTTP/1.1" 200 -
+2025-02-02 14:37:25,265 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py', reloading
+2025-02-02 14:37:25,265 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\aliases.py', reloading
+2025-02-02 14:37:25,266 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8.py', reloading
+2025-02-02 14:37:25,269 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\cp1252.py', reloading
+2025-02-02 14:37:25,273 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\_distutils_hack\\__init__.py', reloading
+2025-02-02 14:37:25,276 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\__init__.py', reloading
+2025-02-02 14:37:25,277 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\decoder.py', reloading
+2025-02-02 14:37:25,278 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py', reloading
+2025-02-02 14:37:25,279 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\enum.py', reloading
+2025-02-02 14:37:25,280 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\types.py', reloading
+2025-02-02 14:37:25,283 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\operator.py', reloading
+2025-02-02 14:37:25,285 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\functools.py', reloading
+2025-02-02 14:37:25,286 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py', reloading
+2025-02-02 14:37:25,288 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py', reloading
+2025-02-02 14:37:25,290 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py', reloading
+2025-02-02 14:37:25,293 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py', reloading
+2025-02-02 14:37:25,294 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py', reloading
+2025-02-02 14:37:25,295 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py', reloading
+2025-02-02 14:37:25,298 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py', reloading
+2025-02-02 14:37:25,299 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py', reloading
+2025-02-02 14:37:25,300 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\scanner.py', reloading
+2025-02-02 14:37:25,302 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\encoder.py', reloading
+2025-02-02 14:37:26,493 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-02 14:37:29,603 - WARNING -  * Debugger is active!
+2025-02-02 14:37:29,611 - INFO -  * Debugger PIN: 174-844-798
