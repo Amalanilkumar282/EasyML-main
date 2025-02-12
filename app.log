@@ -4330,3 +4330,15 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-13 00:27:23,634 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\sparse\\_matrix.py', reloading
 2025-02-13 00:27:23,648 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py', reloading
 2025-02-13 00:27:24,132 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:27:26,870 - WARNING -  * Debugger is active!
+2025-02-13 00:27:26,875 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:29:52,347 - INFO - 127.0.0.1 - - [13/Feb/2025 00:29:52] "POST /upload HTTP/1.1" 200 -
+2025-02-13 00:29:52,512 - INFO - 127.0.0.1 - - [13/Feb/2025 00:29:52] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 00:29:55,416 - INFO - 127.0.0.1 - - [13/Feb/2025 00:29:55] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 00:29:58,060 - INFO - 127.0.0.1 - - [13/Feb/2025 00:29:58] "POST /knn HTTP/1.1" 200 -
+2025-02-13 00:30:12,343 - INFO - 127.0.0.1 - - [13/Feb/2025 00:30:12] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:31:21,957 - INFO - 127.0.0.1 - - [13/Feb/2025 00:31:21] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:40:30,341 - INFO - 127.0.0.1 - - [13/Feb/2025 00:40:30] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:41:22,627 - INFO - 127.0.0.1 - - [13/Feb/2025 00:41:22] "GET /download_model/model_1739386798.pkl HTTP/1.1" 200 -
+2025-02-13 00:43:31,632 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 00:43:32,852 - INFO -  * Restarting with watchdog (windowsapi)
