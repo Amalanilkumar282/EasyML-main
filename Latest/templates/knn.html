@@ -3,89 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KNN Results</title>
+    <title>K-Nearest Neighbors Analysis</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .collapsible-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .collapsible-section.open {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-        <!-- Results Section -->
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4">KNN Model Results</h2>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <div class="mb-12 text-center fade-in">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">K-NEAREST NEIGHBORS ANALYSIS COMPLETED!</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                Make accurate predictions using the K-Nearest Neighbors algorithm, which classifies data points based on their similarity to neighboring examples.
+            </p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="mb-12 fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Model Performance Overview</h2>
+                <button id="toggleTechnicalBtn" class="text-blue-600 hover:text-blue-700 flex items-center">
+                    <span id="toggleText">Show Technical Details</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-200" id="toggleIcon"></i>
+                </button>
+            </div>
             
-            <!-- Accuracy -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Model Accuracy</h3>
-                <div class="bg-blue-100 p-4 rounded-lg">
-                    <p class="text-2xl font-bold text-blue-600">
-                        {{ "%.2f"|format(metrics.accuracy * 100) }}%
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-bullseye text-blue-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Model Accuracy</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-600">{{ "%.2f"|format(metrics.accuracy * 100) }}%</p>
+                    <p class="text-sm text-gray-600 mt-2">
+                        The percentage of correct predictions made by the model on test data
                     </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Plots -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {% for plot in plots %}
-                <div class="bg-gray-50 p-2 rounded-lg">
-                    <img src="data:image/png;base64,{{ plot }}" alt="Model Plot" class="w-full">
-                </div>
-                {% endfor %}
-            </div>
-
-            <!-- Download Button -->
-            <div class="text-center mb-8">
-                <a href="{{ url_for('download_model', filename=model_path) }}" 
-                   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Download Model
-                </a>
-            </div>
-
-            <!-- Prediction Form -->
-            <div class="bg-gray-50 p-6 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">Make New Prediction</h3>
-                <form method="POST" action="{{ url_for('predict_knn') }}">
-                    {% for feature in feature_names %}
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2">
-                            {{ feature }}
-                        </label>
-                        <input type="text" name="{{ feature }}" 
-                               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                               required>
+        <!-- Technical Details Section (Collapsible) -->
+        <div id="technicalDetails" class="collapsible-section mb-12">
+            <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+                
+                <!-- Visualization Plots with Descriptions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {% for plot in plots %}
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full mb-4">
+                        {% if loop.index == 1 %}
+                        <div class="text-sm text-gray-600">
+                            <h4 class="font-semibold mb-2">Confusion Matrix</h4>
+                            <p>This heatmap shows how well the model classifies different categories:</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>Darker colors indicate more predictions</li>
+                                <li>Diagonal values show correct predictions</li>
+                                <li>Off-diagonal values show misclassifications</li>
+                            </ul>
+                        </div>
+                        {% else %}
+                        <div class="text-sm text-gray-600">
+                            <h4 class="font-semibold mb-2">Feature Distribution</h4>
+                            <p>These histograms show how your data is distributed across different features:</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>Height shows frequency of values</li>
+                                <li>Helps identify patterns and potential outliers</li>
+                                <li>Important for understanding data characteristics</li>
+                            </ul>
+                        </div>
+                        {% endif %}
                     </div>
                     {% endfor %}
-                    <input type="hidden" name="model_path" value="{{ model_path }}">
-                    <input type="hidden" name="features" value="{{ feature_names|join(',') }}">
-                    <button type="submit" 
-                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Predict
-                    </button>
-                </form>
-            </div>
+                </div>
 
-            <!-- Prediction Results -->
-            {% if prediction %}
-            <div class="mt-8 bg-green-50 p-6 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">Prediction Result</h3>
-                <div class="space-y-2">
-                    <p><span class="font-semibold">Predicted Class:</span> {{ prediction }}</p>
-                    {% if probabilities %}
-                    <div class="mt-4">
-                        <p class="font-semibold mb-2">Class Probabilities:</p>
-                        <ul class="list-disc pl-6">
-                            {% for class_name, prob in probabilities.items() %}
-                            <li>{{ class_name }}: {{ prob }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endif %}
-                    <div class="mt-4">
-                        <p class="font-semibold">Input Values:</p>
-                        <pre class="bg-white p-3 rounded">{{ input_values|tojson(indent=2) }}</pre>
-                    </div>
+                <!-- Model Information -->
+                <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                    <h4 class="text-lg font-semibold mb-4">How KNN Works</h4>
+                    <p class="text-gray-600 mb-4">
+                        The K-Nearest Neighbors algorithm makes predictions by:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2">
+                        <li>Finding the K closest training examples to a new data point</li>
+                        <li>Taking a majority vote among these neighbors</li>
+                        <li>Assigning the most common class among neighbors as the prediction</li>
+                    </ul>
                 </div>
             </div>
-            {% endif %}
+        </div>
+
+        <!-- Prediction Form Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
+            <h3 class="text-xl font-bold mb-4">Make New Prediction</h3>
+            <form method="POST" action="{{ url_for('predict_knn') }}">
+                {% for feature in feature_names %}
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">
+                        {{ feature }}
+                    </label>
+                    <input type="text" name="{{ feature }}" 
+                           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           required>
+                </div>
+                {% endfor %}
+                <input type="hidden" name="model_path" value="{{ model_path }}">
+                <input type="hidden" name="features" value="{{ feature_names|join(',') }}">
+                <button type="submit" 
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    Predict
+                </button>
+            </form>
+        </div>
+
+        <!-- Prediction Results -->
+        {% if prediction %}
+        <div class="mt-8 bg-green-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">Prediction Result</h3>
+            <div class="space-y-2">
+                <p><span class="font-semibold">Predicted Class:</span> {{ prediction }}</p>
+                {% if probabilities %}
+                <div class="mt-4">
+                    <p class="font-semibold mb-2">Class Probabilities:</p>
+                    <ul class="list-disc pl-6">
+                        {% for class_name, prob in probabilities.items() %}
+                        <li>{{ class_name }}: {{ prob }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <div class="mt-4">
+                    <p class="font-semibold">Input Values:</p>
+                    <pre class="bg-white p-3 rounded">{{ input_values|tojson(indent=2) }}</pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Download Model
+            </a>
         </div>
     </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-50">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleTechnicalBtn');
+            const technicalDetails = document.getElementById('technicalDetails');
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
+
+            if (toggleBtn && technicalDetails) {
+                toggleBtn.addEventListener('click', function() {
+                    technicalDetails.classList.toggle('open');
+                    toggleIcon.style.transform = technicalDetails.classList.contains('open') 
+                        ? 'rotate(180deg)' 
+                        : 'rotate(0)';
+                    toggleText.textContent = technicalDetails.classList.contains('open')
+                        ? 'Hide Technical Details'
+                        : 'Show Technical Details';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

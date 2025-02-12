@@ -91,7 +91,7 @@
                         <i class="fas fa-bullseye text-blue-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Training R² Score</h3>
                     </div>
-                    <p class="text-3xl font-bold text-blue-600">{{ "%.4f"|format(metrics.train_r2) }}</p>
+                    <p class="text-3xl font-bold text-blue-600">{{ "%.2f"|format(metrics.train_r2*100) }}%</p>
                     <p class="text-sm text-gray-600 mt-2">How well the model fits the training data</p>
                 </div>
                 
@@ -100,7 +100,7 @@
                         <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Testing R² Score</h3>
                     </div>
-                    <p class="text-3xl font-bold text-green-600">{{ "%.4f"|format(metrics.test_r2) }}</p>
+                    <p class="text-3xl font-bold text-green-600">{{ "%.2f"|format(metrics.test_r2*100) }}%</p>
                     <p class="text-sm text-gray-600 mt-2">How well the model performs on new data</p>
                 </div>
                 
@@ -109,8 +109,8 @@
                         <i class="fas fa-chart-line text-purple-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Testing RMSE</h3>
                     </div>
-                    <p class="text-3xl font-bold text-purple-600">{{ "%.4f"|format(metrics.test_rmse) }}</p>
-                    <p class="text-sm text-gray-600 mt-2">Average prediction error on new data</p>
+                    <p class="text-3xl font-bold text-purple-600">{{ "%.2f"|format(metrics.test_rmse) }}</p>
+                    <p class="text-sm text-gray-600 mt-2">Average error between actual and predicted values for your target</p>
                 </div>
             </div>
         </div>
