@@ -4342,3 +4342,5 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-13 00:41:22,627 - INFO - 127.0.0.1 - - [13/Feb/2025 00:41:22] "GET /download_model/model_1739386798.pkl HTTP/1.1" 200 -
 2025-02-13 00:43:31,632 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
 2025-02-13 00:43:32,852 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:43:35,362 - WARNING -  * Debugger is active!
+2025-02-13 00:43:35,369 - INFO -  * Debugger PIN: 174-844-798
