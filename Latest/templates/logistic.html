@@ -47,8 +47,8 @@
         }
         
         .form-input:focus {
-            ring: 2px;
-            ring-color: #3b82f6;
+            outline: 2px solid;
+            outline-color: #3b82f6;
             border-color: #3b82f6;
         }
         
@@ -197,6 +197,58 @@
         </div>
         {% endif %}
 
+        {% if prediction %}
+        <!-- Prediction Results -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Outcome</h4>
+                    <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
+                </div>
+                
+                <!-- <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-purple-800 mb-4">Confidence Levels</h4>
+                    <div class="space-y-2">
+                        {% for class_label, prob in probabilities.items() %}
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-purple-800">{{ class_label }}</span>
+                                <span class="text-sm font-medium text-purple-800">{{ prob }}%</span>
+                            </div>
+                            <div class="w-full bg-purple-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: {{ prob }}%;"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="mt-8">
+                <h4 class="text-lg font-medium text-gray-800 mb-4">Input Summary</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {% for feature, value in input_values.items() %}
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">{{ feature }}</p>
+                        <p class="text-lg font-medium text-gray-800">{{ value }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                <i class="fas fa-download mr-2"></i>
+                Download Trained Model
+            </a>
+        </div>
+<br>
         <!-- Prediction Form Section -->
         <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
             <div class="max-w-2xl mx-auto">
@@ -225,57 +277,7 @@
             </div>
         </div>
 
-        {% if prediction %}
-        <!-- Prediction Results -->
-        <div class="mt-8 bg-white rounded-lg shadow-sm p-8 fade-in">
-            <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-blue-50 p-6 rounded-lg">
-                    <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Outcome</h4>
-                    <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
-                </div>
-                
-                <div class="bg-purple-50 p-6 rounded-lg">
-                    <h4 class="text-lg font-medium text-purple-800 mb-4">Confidence Levels</h4>
-                    <div class="space-y-2">
-                        {% for class_label, prob in probabilities.items() %}
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-purple-800">{{ class_label }}</span>
-                                <span class="text-sm font-medium text-purple-800">{{ prob }}%</span>
-                            </div>
-                            <div class="w-full bg-purple-200 rounded-full h-2">
-                                <div class="bg-purple-600 h-2 rounded-full" style="width: {{ prob }}%;"></div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-8">
-                <h4 class="text-lg font-medium text-gray-800 mb-4">Input Summary</h4>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {% for feature, value in input_values.items() %}
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <p class="text-sm text-gray-600">{{ feature }}</p>
-                        <p class="text-lg font-medium text-gray-800">{{ value }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Download Model Section -->
-        <div class="mt-8 text-center fade-in">
-            <a href="{{ url_for('download_model', filename=model_path) }}" 
-               class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
-                <i class="fas fa-download mr-2"></i>
-                Download Trained Model
-            </a>
-        </div>
+        
     </div>
 
     <script>

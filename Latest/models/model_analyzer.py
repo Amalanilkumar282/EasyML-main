@@ -18,6 +18,14 @@ def analyze_dataset(file_path, target=None):
         else:
             df = pd.read_csv(file_path)
         
+        # Calculate dataset characteristics
+        dataset_stats = {
+            'total_rows': len(df),
+            'missing_values': df.isnull().sum().sum(),
+            'numeric_features': df.select_dtypes(include=['int64', 'float64']).columns,
+            'categorical_features': df.select_dtypes(include=['object']).columns
+        }
+        
         # If target is not provided, try to identify potential target columns
         if target is None:
             potential_targets = []
@@ -26,9 +34,11 @@ def analyze_dataset(file_path, target=None):
                 total_count = len(df)
                 unique_ratio = unique_count / total_count
                 
-                # Potential target columns criteria
-                if unique_ratio < 0.5 and df[col].dtype in ['int64', 'float64', 'object']:
-                    potential_targets.append(col)
+                # Enhanced target column criteria
+                if unique_ratio < 0.7 and df[col].dtype in ['int64', 'float64', 'object']:
+                    # Check for ID-like columns to exclude
+                    if not (col.lower().endswith('id') or col.lower().startswith('id')):
+                        potential_targets.append(col)
         else:
             if target not in df.columns:
                 return {
@@ -48,6 +58,9 @@ def analyze_dataset(file_path, target=None):
         for target_col in potential_targets:
             target_data = df[target_col]
             
+            # Enhanced feature analysis
+            features = df.drop(columns=[target_col])
+            
             # Check if target is numeric
             is_numeric = pd.api.types.is_numeric_dtype(target_data)
             
@@ -58,42 +71,86 @@ def analyze_dataset(file_path, target=None):
             # Check if target is binary
             is_binary = unique_values == 2
             
-            # Check if features are primarily numeric
-            numeric_features = df.select_dtypes(include=['int64', 'float64']).columns
-            numeric_ratio = len(numeric_features) / len(df.columns)
+            # Calculate feature characteristics
+            numeric_features = features.select_dtypes(include=['int64', 'float64'])
+            categorical_features = features.select_dtypes(include=['object'])
             
-            # Determine suitable models
+            # Enhanced model selection criteria
             suitable_models = []
             
+            # Multiple Linear Regression
             if is_numeric and not is_categorical:
-                if len(numeric_features) > 2:
-                    suitable_models.append(("multireg", 0))
-                else:
-                    suitable_models.append(("reg", 0))
+                score = 0
+                if len(numeric_features.columns) > 2:
+                    score += 0.8
+                    # Check for linear relationships
+                    if numeric_features.shape[1] > 0:
+                        correlations = numeric_features.corrwith(target_data).abs()
+                        if correlations.mean() > 0.3:
+                            score += 0.2
+                    suitable_models.append(("multireg", score))
             
+            # Simple Linear Regression
+            if is_numeric and not is_categorical:
+                score = 0
+                if len(numeric_features.columns) <= 2:
+                    score += 0.8
+                    if numeric_features.shape[1] > 0:
+                        correlations = numeric_features.corrwith(target_data).abs()
+                        if correlations.mean() > 0.3:
+                            score += 0.2
+                    suitable_models.append(("reg", score))
+            
+            # Logistic Regression
             if is_categorical:
+                score = 0
                 if is_binary:
-                    suitable_models.append(("logreg", 0))
-                suitable_models.append(("dtree", 0))
-                suitable_models.append(("naivebayes", 0))
-                suitable_models.append(("knn", 0))
-                suitable_models.append(("svm", 0))
+                    score += 0.8
+                    if len(numeric_features.columns) > len(categorical_features.columns):
+                        score += 0.2
+                    suitable_models.append(("logreg", score))
             
-            # Score models based on dataset characteristics
-            for i, (model, score) in enumerate(suitable_models):
-                # Add score based on numeric feature ratio
-                if model in ["multireg", "reg", "logreg", "svm"]:
-                    suitable_models[i] = (model, score + numeric_ratio)
-                
-                # Add score based on dataset size
-                if len(df) > 1000 and model in ["svm", "knn"]:
-                    suitable_models[i] = (model, score - 0.2)
-                elif len(df) < 1000 and model in ["dtree", "naivebayes"]:
-                    suitable_models[i] = (model, score + 0.2)
-                
-                # Add score based on number of classes
-                if is_categorical and not is_binary and model == "logreg":
-                    suitable_models[i] = (model, score - 0.5)
+            # Decision Tree
+            if is_categorical:
+                score = 0.6
+                if len(df) < 1000:
+                    score += 0.2
+                if len(categorical_features.columns) > 0:
+                    score += 0.2
+                suitable_models.append(("dtree", score))
+            
+            # Naive Bayes
+            if is_categorical:
+                score = 0.5
+                if is_binary:
+                    score += 0.2
+                if len(categorical_features.columns) > len(numeric_features.columns):
+                    score += 0.2
+                if len(df) < 1000:
+                    score += 0.1
+                suitable_models.append(("naivebayes", score))
+            
+            # KNN
+            if is_categorical:
+                score = 0.5
+                if len(df) < 5000:
+                    score += 0.2
+                if len(numeric_features.columns) > len(categorical_features.columns):
+                    score += 0.2
+                if unique_values < 10:
+                    score += 0.1
+                suitable_models.append(("knn", score))
+            
+            # SVM
+            if is_categorical:
+                score = 0.5
+                if is_binary:
+                    score += 0.3
+                if len(df) < 5000:
+                    score += 0.1
+                if len(numeric_features.columns) > len(categorical_features.columns):
+                    score += 0.1
+                suitable_models.append(("svm", score))
             
             # Sort models by score
             suitable_models.sort(key=lambda x: x[1], reverse=True)

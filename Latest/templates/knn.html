@@ -113,6 +113,40 @@
             </div>
         </div>
 
+        <!-- Prediction Results -->
+        {% if prediction %}
+        <div class="mt-8 bg-green-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4">Prediction Result</h3>
+            <div class="space-y-2">
+                <p><span class="font-semibold">Predicted Class:</span> {{ prediction }}</p>
+                <!-- {% if probabilities %}
+                <div class="mt-4">
+                    <p class="font-semibold mb-2">Class Probabilities:</p>
+                    <ul class="list-disc pl-6">
+                        {% for class_name, prob in probabilities.items() %}
+                        <li>{{ class_name }}: {{ prob }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %} -->
+                <div class="mt-4">
+                    <p class="font-semibold">Input Values:</p>
+                    <pre class="bg-white p-3 rounded">{{ input_values|tojson(indent=2) }}</pre>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Download Model
+            </a>
+        </div>
+    </div>
+    <br><br>
+
         <!-- Prediction Form Section -->
         <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
             <h3 class="text-xl font-bold mb-4">Make New Prediction</h3>
@@ -136,40 +170,9 @@
             </form>
         </div>
 
-        <!-- Prediction Results -->
-        {% if prediction %}
-        <div class="mt-8 bg-green-50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4">Prediction Result</h3>
-            <div class="space-y-2">
-                <p><span class="font-semibold">Predicted Class:</span> {{ prediction }}</p>
-                {% if probabilities %}
-                <div class="mt-4">
-                    <p class="font-semibold mb-2">Class Probabilities:</p>
-                    <ul class="list-disc pl-6">
-                        {% for class_name, prob in probabilities.items() %}
-                        <li>{{ class_name }}: {{ prob }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %}
-                <div class="mt-4">
-                    <p class="font-semibold">Input Values:</p>
-                    <pre class="bg-white p-3 rounded">{{ input_values|tojson(indent=2) }}</pre>
-                </div>
-            </div>
-        </div>
-        {% endif %}
+        
 
-        <!-- Download Model Section -->
-        <div class="mt-8 text-center fade-in">
-            <a href="{{ url_for('download_model', filename=model_path) }}" 
-               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Download Model
-            </a>
-        </div>
-    </div>
-
-    <!-- Loading  Overlay -->
+    <!-- Loading Overlay -->
     <div id="loadingOverlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-50">
     </div>
 

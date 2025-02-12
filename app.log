@@ -4344,3 +4344,428 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-13 00:43:32,852 - INFO -  * Restarting with watchdog (windowsapi)
 2025-02-13 00:43:35,362 - WARNING -  * Debugger is active!
 2025-02-13 00:43:35,369 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:47:22,738 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:22] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:47:22,739 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-13 00:47:22,877 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:22] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 00:47:24,135 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:47:26,132 - WARNING -  * Debugger is active!
+2025-02-13 00:47:26,138 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:47:26,284 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:26] "GET / HTTP/1.1" 200 -
+2025-02-13 00:47:28,069 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:28] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 00:47:31,590 - INFO - package: mysql.connector.plugins
+2025-02-13 00:47:31,590 - INFO - plugin_name: mysql_native_password
+2025-02-13 00:47:31,591 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 00:47:31,595 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:31] "POST /login HTTP/1.1" 200 -
+2025-02-13 00:47:37,178 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:37] "POST /upload HTTP/1.1" 200 -
+2025-02-13 00:47:37,326 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:37] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 00:47:39,898 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:39] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 00:47:41,907 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-13 00:47:42,473 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:42] "POST /knn HTTP/1.1" 200 -
+2025-02-13 00:47:43,837 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:47:46,047 - WARNING -  * Debugger is active!
+2025-02-13 00:47:46,051 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:47:50,627 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:50] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:47:50,744 - INFO - 127.0.0.1 - - [13/Feb/2025 00:47:50] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 00:48:21,995 - INFO - 127.0.0.1 - - [13/Feb/2025 00:48:21] "POST /knn HTTP/1.1" 200 -
+2025-02-13 00:48:25,189 - INFO - 127.0.0.1 - - [13/Feb/2025 00:48:25] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:53:02,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 00:53:02,514 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 00:53:02,526 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:53:04,670 - WARNING -  * Debugger is active!
+2025-02-13 00:53:04,675 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:53:04,812 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:04] "GET / HTTP/1.1" 200 -
+2025-02-13 00:53:06,854 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:06] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 00:53:11,085 - INFO - package: mysql.connector.plugins
+2025-02-13 00:53:11,085 - INFO - plugin_name: mysql_native_password
+2025-02-13 00:53:11,086 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 00:53:11,092 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:11] "POST /login HTTP/1.1" 200 -
+2025-02-13 00:53:15,030 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:15] "POST /upload HTTP/1.1" 200 -
+2025-02-13 00:53:15,183 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:15] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 00:53:17,117 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:17] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 00:53:19,223 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:19] "POST /knn HTTP/1.1" 200 -
+2025-02-13 00:53:22,413 - INFO - 127.0.0.1 - - [13/Feb/2025 00:53:22] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:53:37,567 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-02-13 00:53:37,674 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 00:53:37,725 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\config.py', reloading
+2025-02-13 00:53:37,727 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\ss.py', reloading
+2025-02-13 00:53:37,729 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\classification.py', reloading
+2025-02-13 00:53:37,744 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\main.py', reloading
+2025-02-13 00:53:37,782 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\test.py', reloading
+2025-02-13 00:53:37,797 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\temp\\test.py', reloading
+2025-02-13 00:53:38,222 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_typing\\__init__.py', reloading
+2025-02-13 00:53:38,232 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_utils\\__init__.py', reloading
+2025-02-13 00:53:38,285 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\typing\\__init__.py', reloading
+2025-02-13 00:53:38,290 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_typing\\_array_like.py', reloading
+2025-02-13 00:53:38,316 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\_typing\\_nested_sequence.py', reloading
+2025-02-13 00:53:38,345 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-02-13 00:53:39,084 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:53:41,554 - WARNING -  * Debugger is active!
+2025-02-13 00:53:41,559 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:54:06,138 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\io.py', reloading
+2025-02-13 00:54:07,443 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:54:09,594 - WARNING -  * Debugger is active!
+2025-02-13 00:54:09,599 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:54:27,411 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_ranking.py', reloading
+2025-02-13 00:54:28,791 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 00:54:30,851 - WARNING -  * Debugger is active!
+2025-02-13 00:54:30,857 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 00:58:04,496 - INFO - 127.0.0.1 - - [13/Feb/2025 00:58:04] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:58:04,602 - INFO - 127.0.0.1 - - [13/Feb/2025 00:58:04] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 00:58:07,824 - INFO - 127.0.0.1 - - [13/Feb/2025 00:58:07] "GET / HTTP/1.1" 200 -
+2025-02-13 00:58:09,790 - INFO - 127.0.0.1 - - [13/Feb/2025 00:58:09] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 00:59:02,796 - INFO - package: mysql.connector.plugins
+2025-02-13 00:59:02,796 - INFO - plugin_name: mysql_native_password
+2025-02-13 00:59:02,797 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 00:59:02,800 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:02] "POST /login HTTP/1.1" 200 -
+2025-02-13 00:59:07,612 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:07] "POST /upload HTTP/1.1" 200 -
+2025-02-13 00:59:07,632 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:07] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 00:59:10,167 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:10] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 00:59:12,566 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:12] "POST /knn HTTP/1.1" 200 -
+2025-02-13 00:59:16,841 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:16] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 00:59:48,481 - INFO - 127.0.0.1 - - [13/Feb/2025 00:59:48] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:02:34,469 - INFO - 127.0.0.1 - - [13/Feb/2025 01:02:34] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:02:34,486 - INFO - 127.0.0.1 - - [13/Feb/2025 01:02:34] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:02:38,049 - INFO - 127.0.0.1 - - [13/Feb/2025 01:02:38] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:02:38,069 - INFO - 127.0.0.1 - - [13/Feb/2025 01:02:38] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:03:00,843 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:00] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:03:00,862 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:00] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:03:04,511 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:04] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:03:08,634 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:08] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:03:08,651 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:08] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:03:21,176 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:21] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:03:27,628 - INFO - 127.0.0.1 - - [13/Feb/2025 01:03:27] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:04:25,161 - INFO - 127.0.0.1 - - [13/Feb/2025 01:04:25] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:06:02,316 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:02] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:06:02,334 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:02] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:06:05,644 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:05] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:06:09,884 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:09] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:06:09,903 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:09] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:06:18,167 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:18] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:06:21,686 - INFO - 127.0.0.1 - - [13/Feb/2025 01:06:21] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:08:19,670 - INFO - 127.0.0.1 - - [13/Feb/2025 01:08:19] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:10:51,999 - INFO - 127.0.0.1 - - [13/Feb/2025 01:10:51] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:15:32,739 - INFO - 127.0.0.1 - - [13/Feb/2025 01:15:32] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:16:29,940 - INFO - 127.0.0.1 - - [13/Feb/2025 01:16:29] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:16:36,487 - INFO - 127.0.0.1 - - [13/Feb/2025 01:16:36] "GET /download_model/model_1739388978.pkl HTTP/1.1" 200 -
+2025-02-13 01:16:53,366 - INFO - 127.0.0.1 - - [13/Feb/2025 01:16:53] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:18:51,601 - INFO - 127.0.0.1 - - [13/Feb/2025 01:18:51] "GET / HTTP/1.1" 200 -
+2025-02-13 01:18:54,001 - INFO - 127.0.0.1 - - [13/Feb/2025 01:18:54] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 01:18:56,918 - INFO - 127.0.0.1 - - [13/Feb/2025 01:18:56] "POST /login HTTP/1.1" 200 -
+2025-02-13 01:19:06,085 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:06] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:19:06,105 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:06] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:19:09,121 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:09] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:19:09,137 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:09] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:19:11,419 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:11] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:19:31,698 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:31] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 01:19:31,719 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:31] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 01:19:42,959 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:42] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:19:53,992 - INFO - 127.0.0.1 - - [13/Feb/2025 01:19:53] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 01:20:17,763 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:17] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:20:17,785 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:17] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 01:20:23,081 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:23] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:20:26,156 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:26] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:20:45,422 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:45] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 01:20:54,887 - INFO - 127.0.0.1 - - [13/Feb/2025 01:20:54] "GET /download_model/model_1739389826.pkl HTTP/1.1" 200 -
+2025-02-13 01:22:32,214 - INFO - 127.0.0.1 - - [13/Feb/2025 01:22:32] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 01:22:36,308 - INFO - 127.0.0.1 - - [13/Feb/2025 01:22:36] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:25:05,879 - INFO - 127.0.0.1 - - [13/Feb/2025 01:25:05] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 01:25:10,900 - INFO - 127.0.0.1 - - [13/Feb/2025 01:25:10] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:25:22,632 - INFO - 127.0.0.1 - - [13/Feb/2025 01:25:22] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:26:20,000 - INFO - 127.0.0.1 - - [13/Feb/2025 01:26:20] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 01:30:05,092 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\__init__.py', reloading
+2025-02-13 01:30:05,262 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\__init__.py', reloading
+2025-02-13 01:30:05,289 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_stats_py.py', reloading
+2025-02-13 01:30:05,425 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\distributions.py', reloading
+2025-02-13 01:30:05,429 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\scipy\\stats\\_continuous_distns.py', reloading
+2025-02-13 01:30:06,075 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:30:08,454 - WARNING -  * Debugger is active!
+2025-02-13 01:30:08,460 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:30:20,709 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\frame.py', reloading
+2025-02-13 01:30:22,128 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:30:24,217 - WARNING -  * Debugger is active!
+2025-02-13 01:30:24,222 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:43:12,293 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:43:12,293 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:43:13,464 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:43:16,166 - WARNING -  * Debugger is active!
+2025-02-13 01:43:16,171 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:43:18,819 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:18] "GET / HTTP/1.1" 200 -
+2025-02-13 01:43:20,568 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:20] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 01:43:23,712 - INFO - package: mysql.connector.plugins
+2025-02-13 01:43:23,712 - INFO - plugin_name: mysql_native_password
+2025-02-13 01:43:23,713 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 01:43:23,718 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:23] "POST /login HTTP/1.1" 200 -
+2025-02-13 01:43:29,147 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:29] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:43:29,166 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:29] "[31m[1mPOST /analysis HTTP/1.1[0m" 400 -
+2025-02-13 01:43:39,209 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:43:39,209 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:43:40,295 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:43:43,107 - WARNING -  * Debugger is active!
+2025-02-13 01:43:43,115 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:43:44,149 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:44] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:43:44,169 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:44] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:43:47,187 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:47] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:43:47,207 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:47] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:43:52,650 - INFO - 127.0.0.1 - - [13/Feb/2025 01:43:52] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:44:21,553 - INFO - 127.0.0.1 - - [13/Feb/2025 01:44:21] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:44:24,441 - INFO - 127.0.0.1 - - [13/Feb/2025 01:44:24] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:46:18,978 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:46:18,979 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 01:46:19,868 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:46:22,091 - WARNING -  * Debugger is active!
+2025-02-13 01:46:22,096 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:46:40,264 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:40] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:46:44,799 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:44] "GET / HTTP/1.1" 200 -
+2025-02-13 01:46:46,772 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:46] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 01:46:50,771 - INFO - package: mysql.connector.plugins
+2025-02-13 01:46:50,771 - INFO - plugin_name: mysql_native_password
+2025-02-13 01:46:50,771 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 01:46:50,776 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:50] "POST /login HTTP/1.1" 200 -
+2025-02-13 01:46:56,013 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:56] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:46:56,033 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:56] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:46:59,043 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:59] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:46:59,056 - INFO - 127.0.0.1 - - [13/Feb/2025 01:46:59] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:47:01,608 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:01] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:47:07,068 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:07] "GET / HTTP/1.1" 200 -
+2025-02-13 01:47:08,775 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:08] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 01:47:12,730 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:12] "POST /login HTTP/1.1" 200 -
+2025-02-13 01:47:22,515 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:22] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:47:22,531 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:22] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:47:25,541 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:25] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:47:25,555 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:25] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:47:38,527 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:38] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:47:38,534 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:38] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:47:41,542 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:41] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 01:47:41,550 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:41] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 01:47:48,334 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:48] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:47:48,341 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:48] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:47:51,357 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:51] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 01:47:51,363 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:51] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 01:47:52,863 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-13 01:47:53,312 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:53] "POST /knn HTTP/1.1" 200 -
+2025-02-13 01:47:54,038 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:47:56,426 - WARNING -  * Debugger is active!
+2025-02-13 01:47:56,432 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:47:58,893 - INFO - package: mysql.connector.plugins
+2025-02-13 01:47:58,893 - INFO - plugin_name: mysql_native_password
+2025-02-13 01:47:58,895 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 01:47:58,900 - INFO - 127.0.0.1 - - [13/Feb/2025 01:47:58] "POST /login HTTP/1.1" 200 -
+2025-02-13 01:48:03,561 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:03] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:48:03,562 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-13 01:48:03,609 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:03] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:48:04,673 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 01:48:06,840 - WARNING -  * Debugger is active!
+2025-02-13 01:48:06,846 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 01:48:06,991 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:06] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:48:07,007 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:07] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:48:19,638 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:19] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:48:19,664 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:19] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:48:22,675 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:22] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:48:22,684 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:22] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:48:35,095 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:35] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:48:35,110 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:35] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:48:38,118 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:38] "[31m[1mGET /dtree HTTP/1.1[0m" 405 -
+2025-02-13 01:48:48,001 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:48] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:48:48,008 - INFO - 127.0.0.1 - - [13/Feb/2025 01:48:48] "[31m[1mPOST /analysis HTTP/1.1[0m" 400 -
+2025-02-13 01:49:05,899 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:05] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:49:05,912 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:05] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:49:08,924 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:08] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:49:08,932 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:08] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:49:24,071 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:24] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:49:24,084 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:24] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:49:27,096 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:27] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:49:27,111 - INFO - 127.0.0.1 - - [13/Feb/2025 01:49:27] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:50:01,959 - INFO - 127.0.0.1 - - [13/Feb/2025 01:50:01] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:50:01,995 - INFO - 127.0.0.1 - - [13/Feb/2025 01:50:01] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:50:05,009 - INFO - 127.0.0.1 - - [13/Feb/2025 01:50:05] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 01:50:05,018 - INFO - 127.0.0.1 - - [13/Feb/2025 01:50:05] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 01:52:16,640 - INFO - 127.0.0.1 - - [13/Feb/2025 01:52:16] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:52:16,810 - INFO - 127.0.0.1 - - [13/Feb/2025 01:52:16] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 01:53:28,363 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:28] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:53:28,383 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:28] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 01:53:35,914 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:35] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:53:35,925 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:35] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:53:38,933 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:38] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:53:38,944 - INFO - 127.0.0.1 - - [13/Feb/2025 01:53:38] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:54:16,376 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:16] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:54:16,389 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:16] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:54:19,401 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:19] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:54:19,408 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:19] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:54:22,939 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:22] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 01:54:26,454 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:26] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 01:54:35,334 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:35] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 01:54:46,732 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:46] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:54:46,751 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:46] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:54:49,762 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:49] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:54:49,772 - INFO - 127.0.0.1 - - [13/Feb/2025 01:54:49] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:55:11,408 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:11] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:55:11,421 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:11] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:55:14,431 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:14] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:55:14,445 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:14] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:55:56,475 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:56] "POST /upload HTTP/1.1" 200 -
+2025-02-13 01:55:56,490 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:56] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 01:55:59,500 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:59] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 01:55:59,508 - INFO - 127.0.0.1 - - [13/Feb/2025 01:55:59] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 01:56:03,172 - INFO - 127.0.0.1 - - [13/Feb/2025 01:56:03] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 01:56:10,657 - INFO - 127.0.0.1 - - [13/Feb/2025 01:56:10] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:04:27,821 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:27] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:04:27,837 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:27] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:04:30,848 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:30] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:04:30,858 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:30] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:04:34,355 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:34] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:04:47,028 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:47] "GET /download_model/model_1739392474.pkl HTTP/1.1" 200 -
+2025-02-13 02:04:53,914 - INFO - 127.0.0.1 - - [13/Feb/2025 02:04:53] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:05:26,978 - INFO - 127.0.0.1 - - [13/Feb/2025 02:05:26] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:06:10,965 - INFO - 127.0.0.1 - - [13/Feb/2025 02:06:10] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:06:43,921 - INFO - 127.0.0.1 - - [13/Feb/2025 02:06:43] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:06:53,758 - INFO - 127.0.0.1 - - [13/Feb/2025 02:06:53] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:07:24,685 - INFO - 127.0.0.1 - - [13/Feb/2025 02:07:24] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:07:39,943 - INFO - 127.0.0.1 - - [13/Feb/2025 02:07:39] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:08:22,087 - INFO - 127.0.0.1 - - [13/Feb/2025 02:08:22] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:08:22,112 - INFO - 127.0.0.1 - - [13/Feb/2025 02:08:22] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 02:08:24,214 - INFO - 127.0.0.1 - - [13/Feb/2025 02:08:24] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:08:27,294 - INFO - 127.0.0.1 - - [13/Feb/2025 02:08:27] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:08:39,845 - INFO - 127.0.0.1 - - [13/Feb/2025 02:08:39] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:09:04,348 - INFO - 127.0.0.1 - - [13/Feb/2025 02:09:04] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:09:04,364 - INFO - 127.0.0.1 - - [13/Feb/2025 02:09:04] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:09:07,379 - INFO - 127.0.0.1 - - [13/Feb/2025 02:09:07] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:09:07,396 - INFO - 127.0.0.1 - - [13/Feb/2025 02:09:07] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:09:10,321 - INFO - 127.0.0.1 - - [13/Feb/2025 02:09:10] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:10:28,617 - INFO - 127.0.0.1 - - [13/Feb/2025 02:10:28] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:11:57,102 - INFO - 127.0.0.1 - - [13/Feb/2025 02:11:57] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:12:19,295 - INFO - 127.0.0.1 - - [13/Feb/2025 02:12:19] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:12:29,643 - INFO - 127.0.0.1 - - [13/Feb/2025 02:12:29] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:13:17,719 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:17] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:13:17,727 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:17] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:13:20,738 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:20] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:13:20,746 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:20] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:13:28,084 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:28] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:13:34,527 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:34] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:13:52,624 - INFO - 127.0.0.1 - - [13/Feb/2025 02:13:52] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:14:02,100 - INFO - 127.0.0.1 - - [13/Feb/2025 02:14:02] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:15:23,983 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:23] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:15:23,989 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:23] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:15:26,998 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:26] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:15:27,006 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:27] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:15:30,169 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:30] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:15:36,997 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:36] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:15:45,731 - INFO - 127.0.0.1 - - [13/Feb/2025 02:15:45] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:16:34,703 - INFO - 127.0.0.1 - - [13/Feb/2025 02:16:34] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:16:34,720 - INFO - 127.0.0.1 - - [13/Feb/2025 02:16:34] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:16:37,728 - INFO - 127.0.0.1 - - [13/Feb/2025 02:16:37] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:16:37,743 - INFO - 127.0.0.1 - - [13/Feb/2025 02:16:37] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:17:30,926 - INFO - 127.0.0.1 - - [13/Feb/2025 02:17:30] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:17:30,939 - INFO - 127.0.0.1 - - [13/Feb/2025 02:17:30] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:17:33,950 - INFO - 127.0.0.1 - - [13/Feb/2025 02:17:33] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:17:33,964 - INFO - 127.0.0.1 - - [13/Feb/2025 02:17:33] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:20:54,636 - INFO - 127.0.0.1 - - [13/Feb/2025 02:20:54] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:20:54,650 - INFO - 127.0.0.1 - - [13/Feb/2025 02:20:54] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:20:57,659 - INFO - 127.0.0.1 - - [13/Feb/2025 02:20:57] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:20:57,674 - INFO - 127.0.0.1 - - [13/Feb/2025 02:20:57] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:21:01,605 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\discrete\\discrete_model.py', reloading
+2025-02-13 02:21:01,617 - INFO - 127.0.0.1 - - [13/Feb/2025 02:21:01] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 02:21:02,014 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 02:21:04,125 - WARNING -  * Debugger is active!
+2025-02-13 02:21:04,130 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 02:21:56,929 - INFO - 127.0.0.1 - - [13/Feb/2025 02:21:56] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:22:07,129 - INFO - 127.0.0.1 - - [13/Feb/2025 02:22:07] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:22:07,353 - INFO - 127.0.0.1 - - [13/Feb/2025 02:22:07] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 02:22:09,439 - INFO - 127.0.0.1 - - [13/Feb/2025 02:22:09] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:22:14,959 - INFO - 127.0.0.1 - - [13/Feb/2025 02:22:14] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:22:59,306 - INFO - 127.0.0.1 - - [13/Feb/2025 02:22:59] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:27:53,208 - INFO - 127.0.0.1 - - [13/Feb/2025 02:27:53] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:27:57,652 - INFO - 127.0.0.1 - - [13/Feb/2025 02:27:57] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 02:28:26,696 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:26] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:28:26,708 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:26] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:28:29,719 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:29] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:28:29,726 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:29] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:28:43,133 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:43] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:28:43,144 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:43] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:28:46,157 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:46] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:28:46,169 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:46] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:28:51,789 - INFO - 127.0.0.1 - - [13/Feb/2025 02:28:51] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:29:12,168 - INFO - 127.0.0.1 - - [13/Feb/2025 02:29:12] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:29:12,179 - INFO - 127.0.0.1 - - [13/Feb/2025 02:29:12] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:29:15,189 - INFO - 127.0.0.1 - - [13/Feb/2025 02:29:15] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:29:15,202 - INFO - 127.0.0.1 - - [13/Feb/2025 02:29:15] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:29:19,750 - INFO - 127.0.0.1 - - [13/Feb/2025 02:29:19] "[35m[1mPOST /logreg HTTP/1.1[0m" 500 -
+2025-02-13 02:36:22,456 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:22] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:36:22,468 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:22] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:36:25,480 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:25] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:36:25,495 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:25] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:36:31,434 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:31] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:36:52,253 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:52] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:36:52,281 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:52] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 02:36:55,035 - INFO - 127.0.0.1 - - [13/Feb/2025 02:36:55] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:37:00,267 - INFO - 127.0.0.1 - - [13/Feb/2025 02:37:00] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:39:03,237 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:03] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:39:15,128 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:15] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:39:15,146 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:15] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:39:18,158 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:18] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:39:18,176 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:18] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:39:22,311 - INFO - 127.0.0.1 - - [13/Feb/2025 02:39:22] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:41:35,341 - INFO - 127.0.0.1 - - [13/Feb/2025 02:41:35] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:41:35,358 - INFO - 127.0.0.1 - - [13/Feb/2025 02:41:35] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:41:38,366 - INFO - 127.0.0.1 - - [13/Feb/2025 02:41:38] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:41:38,384 - INFO - 127.0.0.1 - - [13/Feb/2025 02:41:38] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:41:42,698 - INFO - 127.0.0.1 - - [13/Feb/2025 02:41:42] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:43:19,985 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:19] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:43:19,998 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:19] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:43:23,010 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:23] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 02:43:23,020 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:23] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:43:27,524 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:27] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:43:49,201 - INFO - 127.0.0.1 - - [13/Feb/2025 02:43:49] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 02:45:22,363 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:22] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:45:22,375 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:22] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:45:25,384 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:25] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:45:25,397 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:25] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:45:27,813 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:27] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:45:45,267 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:45] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:45:45,287 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:45] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 02:45:51,616 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:51] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 02:45:54,513 - INFO - 127.0.0.1 - - [13/Feb/2025 02:45:54] "POST /knn HTTP/1.1" 200 -
+2025-02-13 02:46:55,828 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 02:46:56,587 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 02:46:59,181 - WARNING -  * Debugger is active!
+2025-02-13 02:46:59,186 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 02:47:01,586 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:01] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:47:01,636 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:01] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:47:04,649 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:04] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 02:47:04,659 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:04] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 02:47:14,977 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:14] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:47:38,523 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:38] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:47:38,612 - INFO - 127.0.0.1 - - [13/Feb/2025 02:47:38] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 02:48:01,784 - INFO - 127.0.0.1 - - [13/Feb/2025 02:48:01] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 02:48:17,067 - INFO - 127.0.0.1 - - [13/Feb/2025 02:48:17] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 02:49:35,486 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:35] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:49:35,500 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:35] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 02:49:38,513 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:38] "[31m[1mGET /dtree HTTP/1.1[0m" 405 -
+2025-02-13 02:49:47,273 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:47] "POST /upload HTTP/1.1" 200 -
+2025-02-13 02:49:47,298 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:47] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 02:49:51,343 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:51] "GET /features?m=dtree HTTP/1.1" 200 -
+2025-02-13 02:49:54,318 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-02-13 02:49:54,318 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-02-13 02:49:54,319 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\base.py', reloading
+2025-02-13 02:49:54,320 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\tree\\_classes.py', reloading
+2025-02-13 02:49:54,321 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-13 02:49:54,322 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\_array_api.py', reloading
+2025-02-13 02:49:54,325 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\core\\generic.py', reloading
+2025-02-13 02:49:54,348 - INFO - 127.0.0.1 - - [13/Feb/2025 02:49:54] "[35m[1mPOST /dtree HTTP/1.1[0m" 500 -
+2025-02-13 02:49:54,796 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 02:49:56,879 - WARNING -  * Debugger is active!
+2025-02-13 02:49:56,884 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 02:50:24,062 - INFO - 127.0.0.1 - - [13/Feb/2025 02:50:24] "GET / HTTP/1.1" 200 -
+2025-02-13 02:50:29,746 - INFO - 127.0.0.1 - - [13/Feb/2025 02:50:29] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 02:50:29,748 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-13 02:50:30,502 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 02:50:32,572 - WARNING -  * Debugger is active!
+2025-02-13 02:50:32,577 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 02:50:34,555 - INFO - package: mysql.connector.plugins
+2025-02-13 02:50:34,555 - INFO - plugin_name: mysql_native_password
+2025-02-13 02:50:34,556 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 02:50:34,562 - INFO - 127.0.0.1 - - [13/Feb/2025 02:50:34] "POST /login HTTP/1.1" 200 -
+2025-02-13 02:50:47,654 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\_distutils_hack\\__init__.py', reloading
+2025-02-13 02:50:49,006 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 02:50:51,895 - WARNING -  * Debugger is active!
+2025-02-13 02:50:51,900 - INFO -  * Debugger PIN: 174-844-798
