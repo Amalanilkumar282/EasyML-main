@@ -115,23 +115,45 @@
 
         <!-- Prediction Results -->
         {% if prediction %}
-        <div class="mt-8 bg-green-50 p-6 rounded-lg">
-            <h3 class="text-xl font-bold mb-4">Prediction Result</h3>
-            <div class="space-y-2">
-                <p><span class="font-semibold">Predicted Class:</span> {{ prediction }}</p>
-                <!-- {% if probabilities %}
-                <div class="mt-4">
-                    <p class="font-semibold mb-2">Class Probabilities:</p>
-                    <ul class="list-disc pl-6">
-                        {% for class_name, prob in probabilities.items() %}
-                        <li>{{ class_name }}: {{ prob }}</li>
-                        {% endfor %}
-                    </ul>
+        <!-- Prediction Results -->
+        <div class="mt-8 bg-white rounded-lg shadow-sm p-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Outcome</h4>
+                    <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
                 </div>
-                {% endif %} -->
-                <div class="mt-4">
-                    <p class="font-semibold">Input Values:</p>
-                    <pre class="bg-white p-3 rounded">{{ input_values|tojson(indent=2) }}</pre>
+                
+                <!-- You can uncomment and adapt this section if you want to show probabilities later
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-purple-800 mb-4">Confidence Levels</h4>
+                    <div class="space-y-2">
+                        {% for class_name, prob in probabilities.items() %}
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-purple-800">{{ class_name }}</span>
+                                <span class="text-sm font-medium text-purple-800">{{ prob }}%</span>
+                            </div>
+                            <div class="w-full bg-purple-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: {{ prob }}%;"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                -->
+            </div>
+        
+            <div class="mt-8">
+                <h4 class="text-lg font-medium text-gray-800 mb-4">Input Summary</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {% for feature, value in input_values.items() %}
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-sm text-gray-600">{{ feature }}</p>
+                        <p class="text-lg font-medium text-gray-800">{{ value }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

@@ -4769,3 +4769,421 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-13 02:50:49,006 - INFO -  * Restarting with watchdog (windowsapi)
 2025-02-13 02:50:51,895 - WARNING -  * Debugger is active!
 2025-02-13 02:50:51,900 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 03:02:16,731 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 03:02:16,732 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 03:02:16,741 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 03:02:18,840 - WARNING -  * Debugger is active!
+2025-02-13 03:02:18,845 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 03:02:18,983 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:18] "GET / HTTP/1.1" 200 -
+2025-02-13 03:02:20,637 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:20] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 03:02:24,393 - INFO - package: mysql.connector.plugins
+2025-02-13 03:02:24,393 - INFO - plugin_name: mysql_native_password
+2025-02-13 03:02:24,394 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 03:02:24,399 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:24] "POST /login HTTP/1.1" 200 -
+2025-02-13 03:02:28,966 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:28] "POST /upload HTTP/1.1" 200 -
+2025-02-13 03:02:29,010 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:29] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 03:02:32,021 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:32] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 03:02:32,033 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:32] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 03:02:36,104 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:36] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 03:02:58,758 - INFO - 127.0.0.1 - - [13/Feb/2025 03:02:58] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:03:44,797 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\datastructures\\file_storage.py', reloading
+2025-02-13 03:03:46,243 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 03:03:48,364 - WARNING -  * Debugger is active!
+2025-02-13 03:03:48,369 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 03:09:43,849 - INFO - 127.0.0.1 - - [13/Feb/2025 03:09:43] "POST /upload HTTP/1.1" 200 -
+2025-02-13 03:09:43,888 - INFO - 127.0.0.1 - - [13/Feb/2025 03:09:43] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 03:09:46,900 - INFO - 127.0.0.1 - - [13/Feb/2025 03:09:46] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 03:09:46,917 - INFO - 127.0.0.1 - - [13/Feb/2025 03:09:46] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 03:09:50,427 - INFO - 127.0.0.1 - - [13/Feb/2025 03:09:50] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 03:10:01,124 - INFO - 127.0.0.1 - - [13/Feb/2025 03:10:01] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:13:23,324 - INFO - 127.0.0.1 - - [13/Feb/2025 03:13:23] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:15:07,903 - INFO - 127.0.0.1 - - [13/Feb/2025 03:15:07] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:15:39,986 - INFO - 127.0.0.1 - - [13/Feb/2025 03:15:39] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:15:40,112 - INFO - 127.0.0.1 - - [13/Feb/2025 03:15:40] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 03:15:48,464 - INFO - 127.0.0.1 - - [13/Feb/2025 03:15:48] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:16:01,395 - INFO - 127.0.0.1 - - [13/Feb/2025 03:16:01] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:16:51,558 - INFO - 127.0.0.1 - - [13/Feb/2025 03:16:51] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:19:19,622 - INFO - 127.0.0.1 - - [13/Feb/2025 03:19:19] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:19:40,934 - INFO - 127.0.0.1 - - [13/Feb/2025 03:19:40] "GET /download_model/model_1739396390.pkl HTTP/1.1" 200 -
+2025-02-13 03:20:06,701 - INFO - 127.0.0.1 - - [13/Feb/2025 03:20:06] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:22:36,093 - INFO - 127.0.0.1 - - [13/Feb/2025 03:22:36] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:23:08,463 - INFO - 127.0.0.1 - - [13/Feb/2025 03:23:08] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 03:32:13,817 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 03:32:13,817 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 03:32:13,831 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 03:32:16,698 - WARNING -  * Debugger is active!
+2025-02-13 03:32:16,703 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 03:32:16,851 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:16] "GET / HTTP/1.1" 200 -
+2025-02-13 03:32:17,189 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-13 03:32:18,590 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:18] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 03:32:21,631 - INFO - package: mysql.connector.plugins
+2025-02-13 03:32:21,631 - INFO - plugin_name: mysql_native_password
+2025-02-13 03:32:21,632 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 03:32:21,635 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:21] "POST /login HTTP/1.1" 200 -
+2025-02-13 03:32:32,949 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:32] "POST /upload HTTP/1.1" 200 -
+2025-02-13 03:32:33,102 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:33] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 03:32:45,505 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:45] "POST /login HTTP/1.1" 200 -
+2025-02-13 03:32:49,271 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:49] "POST /upload HTTP/1.1" 200 -
+2025-02-13 03:32:49,315 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:49] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 03:32:52,329 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:52] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 03:32:52,339 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:52] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 03:32:56,364 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-02-13 03:32:56,365 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-02-13 03:32:56,367 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\utils.py', reloading
+2025-02-13 03:32:56,387 - INFO - 127.0.0.1 - - [13/Feb/2025 03:32:56] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-13 03:32:56,815 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 03:32:59,158 - WARNING -  * Debugger is active!
+2025-02-13 03:32:59,164 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 03:33:02,133 - INFO - 127.0.0.1 - - [13/Feb/2025 03:33:02] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-13 03:33:10,588 - INFO - 127.0.0.1 - - [13/Feb/2025 03:33:10] "[35m[1mPOST /multireg HTTP/1.1[0m" 500 -
+2025-02-13 03:33:44,316 - INFO - 127.0.0.1 - - [13/Feb/2025 03:33:44] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 09:30:43,438 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 09:30:43,438 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 09:30:43,458 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:30:45,682 - WARNING -  * Debugger is active!
+2025-02-13 09:30:46,041 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:30:46,956 - INFO - 127.0.0.1 - - [13/Feb/2025 09:30:46] "GET / HTTP/1.1" 200 -
+2025-02-13 09:30:47,231 - INFO - 127.0.0.1 - - [13/Feb/2025 09:30:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-13 09:30:48,786 - INFO - 127.0.0.1 - - [13/Feb/2025 09:30:48] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 09:30:48,788 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-13 09:30:50,060 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:30:52,292 - WARNING -  * Debugger is active!
+2025-02-13 09:30:52,298 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:30:52,875 - INFO - package: mysql.connector.plugins
+2025-02-13 09:30:52,875 - INFO - plugin_name: mysql_native_password
+2025-02-13 09:30:52,877 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 09:30:52,889 - INFO - 127.0.0.1 - - [13/Feb/2025 09:30:52] "POST /login HTTP/1.1" 200 -
+2025-02-13 09:31:00,371 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:00] "POST /upload HTTP/1.1" 200 -
+2025-02-13 09:31:00,537 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:00] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 09:31:02,975 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:02] "GET /reg HTTP/1.1" 200 -
+2025-02-13 09:31:02,993 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:02] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,006 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,008 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,011 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,018 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,023 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,037 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,040 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,050 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,054 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,063 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-13 09:31:03,071 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:03] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 09:31:04,728 - INFO - 127.0.0.1 - - [13/Feb/2025 09:31:04] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-13 09:32:56,227 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-02-13 09:32:56,382 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:32:56,408 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 09:32:57,286 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:33:01,185 - WARNING -  * Debugger is active!
+2025-02-13 09:33:01,194 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:33:01,404 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\base\\model.py', reloading
+2025-02-13 09:33:01,551 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\tools\\tools.py', reloading
+2025-02-13 09:33:01,558 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\tsa\\tsatools.py', reloading
+2025-02-13 09:33:01,573 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\tools\\data.py', reloading
+2025-02-13 09:33:01,578 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\tools\\validation\\__init__.py', reloading
+2025-02-13 09:33:01,581 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\tools\\validation\\validation.py', reloading
+2025-02-13 09:33:01,727 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\compat\\pandas.py', reloading
+2025-02-13 09:33:01,749 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\base\\optimizer.py', reloading
+2025-02-13 09:33:01,769 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\base\\data.py', reloading
+2025-02-13 09:33:01,905 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\compat\\python.py', reloading
+2025-02-13 09:33:02,128 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\regression\\linear_model.py', reloading
+2025-02-13 09:33:02,160 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\statsmodels\\base\\wrapper.py', reloading
+2025-02-13 09:33:02,948 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:33:05,184 - WARNING -  * Debugger is active!
+2025-02-13 09:33:05,189 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:33:16,160 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\io.py', reloading
+2025-02-13 09:33:16,887 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:33:19,146 - WARNING -  * Debugger is active!
+2025-02-13 09:33:19,151 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:41:27,528 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:41:27,530 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:41:28,528 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:41:31,659 - WARNING -  * Debugger is active!
+2025-02-13 09:41:31,667 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:41:34,109 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:41:34,110 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:41:34,730 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:41:37,669 - WARNING -  * Debugger is active!
+2025-02-13 09:41:37,681 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:42:05,365 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:05,367 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:05,368 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:05,898 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:42:08,193 - WARNING -  * Debugger is active!
+2025-02-13 09:42:08,198 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:42:28,632 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:28,632 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:28,633 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 09:42:28,972 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:42:31,339 - WARNING -  * Debugger is active!
+2025-02-13 09:42:31,345 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:47:54,596 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:47:54,597 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:47:55,170 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:49:52,361 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 09:49:52,362 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 09:49:52,372 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:49:54,757 - WARNING -  * Debugger is active!
+2025-02-13 09:49:54,763 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:49:54,896 - INFO - 127.0.0.1 - - [13/Feb/2025 09:49:54] "GET / HTTP/1.1" 200 -
+2025-02-13 09:49:56,431 - INFO - 127.0.0.1 - - [13/Feb/2025 09:49:56] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 09:50:00,081 - INFO - package: mysql.connector.plugins
+2025-02-13 09:50:00,081 - INFO - plugin_name: mysql_native_password
+2025-02-13 09:50:00,082 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 09:50:00,085 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:00] "POST /login HTTP/1.1" 200 -
+2025-02-13 09:50:06,204 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-02-13 09:50:06,233 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:06] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 09:50:07,661 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:50:10,061 - WARNING -  * Debugger is active!
+2025-02-13 09:50:10,067 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:50:10,256 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:10] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 09:50:10,419 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:10] "GET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-13 09:50:10,426 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:10] "GET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-13 09:50:10,436 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:10] "GET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-13 09:50:10,491 - INFO - 127.0.0.1 - - [13/Feb/2025 09:50:10] "[36mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-13 09:58:33,108 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:33,109 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:34,250 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:58:37,161 - WARNING -  * Debugger is active!
+2025-02-13 09:58:37,172 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:58:38,384 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:38,385 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:38,386 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:38,954 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:58:41,601 - WARNING -  * Debugger is active!
+2025-02-13 09:58:41,608 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:58:47,260 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:47,262 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:47,262 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:58:47,807 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 09:58:50,043 - WARNING -  * Debugger is active!
+2025-02-13 09:58:50,048 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 09:59:58,105 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:59:58,106 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:59:58,106 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 09:59:58,926 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:00:01,159 - WARNING -  * Debugger is active!
+2025-02-13 10:00:01,164 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:00:49,159 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:00:49,161 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:00:49,162 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:00:49,732 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:07:45,798 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 10:07:45,799 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 10:07:45,807 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:07:48,108 - WARNING -  * Debugger is active!
+2025-02-13 10:07:48,112 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:07:48,241 - INFO - 127.0.0.1 - - [13/Feb/2025 10:07:48] "GET / HTTP/1.1" 200 -
+2025-02-13 10:07:49,994 - INFO - 127.0.0.1 - - [13/Feb/2025 10:07:49] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:07:53,436 - INFO - package: mysql.connector.plugins
+2025-02-13 10:07:53,437 - INFO - plugin_name: mysql_native_password
+2025-02-13 10:07:53,438 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 10:07:53,441 - INFO - 127.0.0.1 - - [13/Feb/2025 10:07:53] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:07:59,022 - INFO - 127.0.0.1 - - [13/Feb/2025 10:07:59] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 10:08:01,537 - INFO - 127.0.0.1 - - [13/Feb/2025 10:08:01] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 10:08:01,724 - INFO - 127.0.0.1 - - [13/Feb/2025 10:08:01] "[36mGET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-13 10:08:01,724 - INFO - 127.0.0.1 - - [13/Feb/2025 10:08:01] "[36mGET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-13 10:08:01,736 - INFO - 127.0.0.1 - - [13/Feb/2025 10:08:01] "[36mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-13 10:09:55,184 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:09:55,185 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:09:56,671 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:09:59,398 - WARNING -  * Debugger is active!
+2025-02-13 10:09:59,407 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:09:59,770 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:09:59,770 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:09:59,771 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:01,065 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:10:03,939 - WARNING -  * Debugger is active!
+2025-02-13 10:10:03,948 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:10:04,475 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:04,476 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:05,656 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:10:08,365 - WARNING -  * Debugger is active!
+2025-02-13 10:10:08,372 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:10:15,094 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:15,095 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:15,668 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:10:18,406 - WARNING -  * Debugger is active!
+2025-02-13 10:10:18,413 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:10:21,261 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:21,262 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:21,262 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:22,540 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:10:24,679 - WARNING -  * Debugger is active!
+2025-02-13 10:10:24,684 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:10:43,515 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:43,516 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:43,516 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:10:44,107 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:10:46,465 - WARNING -  * Debugger is active!
+2025-02-13 10:10:46,472 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:11:40,398 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 10:11:40,398 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 10:11:40,409 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:11:42,761 - WARNING -  * Debugger is active!
+2025-02-13 10:11:42,789 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:11:42,997 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:42] "GET / HTTP/1.1" 200 -
+2025-02-13 10:11:47,686 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:47] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:11:51,255 - INFO - package: mysql.connector.plugins
+2025-02-13 10:11:51,255 - INFO - plugin_name: mysql_native_password
+2025-02-13 10:11:51,256 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 10:11:51,260 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:51] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:11:55,567 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:55] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 10:11:57,743 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:57] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-02-13 10:11:57,957 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:57] "[36mGET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-13 10:11:57,963 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:57] "[36mGET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-13 10:11:57,976 - INFO - 127.0.0.1 - - [13/Feb/2025 10:11:57] "[36mGET /upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-13 10:14:48,797 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:14:48,797 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:14:49,708 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:14:51,888 - WARNING -  * Debugger is active!
+2025-02-13 10:14:51,893 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:15:51,719 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:15:51,719 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:15:52,398 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:15:54,629 - WARNING -  * Debugger is active!
+2025-02-13 10:15:54,635 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:16:05,337 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:16:05,338 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:16:05,338 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\appv2.py', reloading
+2025-02-13 10:16:06,280 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:16:08,633 - WARNING -  * Debugger is active!
+2025-02-13 10:16:08,645 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:17:33,922 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 10:17:33,922 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 10:17:33,923 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-13 10:17:35,411 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:18:06,288 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-13 10:18:06,288 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-13 10:18:06,300 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:18:08,584 - WARNING -  * Debugger is active!
+2025-02-13 10:18:08,590 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:18:08,721 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:08] "GET / HTTP/1.1" 200 -
+2025-02-13 10:18:10,407 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:10] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:18:13,707 - INFO - package: mysql.connector.plugins
+2025-02-13 10:18:13,707 - INFO - plugin_name: mysql_native_password
+2025-02-13 10:18:13,708 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 10:18:13,712 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:13] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:18:17,143 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:17] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:18:17,302 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:17] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,096 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "GET /reg HTTP/1.1" 200 -
+2025-02-13 10:18:20,116 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,125 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,125 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,126 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,139 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,141 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,152 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,154 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,165 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,166 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,176 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:20,184 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:20] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,686 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "POST /predict_new HTTP/1.1" 200 -
+2025-02-13 10:18:24,708 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,712 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,718 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,723 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,724 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,732 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,742 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,752 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,758 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,766 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,770 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-13 10:18:24,781 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:24] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:18:37,476 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:37] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:18:41,680 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:41] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:18:45,406 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:45] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:18:45,450 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:45] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:18:48,462 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:48] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 10:18:48,478 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:48] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 10:18:53,125 - INFO - 127.0.0.1 - - [13/Feb/2025 10:18:53] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 10:19:01,455 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:01] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:19:01,500 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:01] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:19:04,511 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:04] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 10:19:04,518 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:04] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 10:19:07,803 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:07] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 10:19:30,930 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:30] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:19:30,939 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:30] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:19:33,950 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:33] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 10:19:33,959 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:33] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 10:19:42,509 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:42] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:19:42,517 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:42] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:19:45,528 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:45] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 10:19:45,537 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:45] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 10:19:47,700 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-13 10:19:48,400 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:19:50,594 - WARNING -  * Debugger is active!
+2025-02-13 10:19:50,600 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:19:52,410 - INFO - 127.0.0.1 - - [13/Feb/2025 10:19:52] "POST /knn HTTP/1.1" 200 -
+2025-02-13 10:20:24,781 - INFO - 127.0.0.1 - - [13/Feb/2025 10:20:24] "GET / HTTP/1.1" 200 -
+2025-02-13 10:21:43,223 - INFO - 127.0.0.1 - - [13/Feb/2025 10:21:43] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:21:49,838 - INFO - package: mysql.connector.plugins
+2025-02-13 10:21:49,839 - INFO - plugin_name: mysql_native_password
+2025-02-13 10:21:49,840 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-13 10:21:49,843 - INFO - 127.0.0.1 - - [13/Feb/2025 10:21:49] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:23:45,400 - INFO - 127.0.0.1 - - [13/Feb/2025 10:23:45] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:23:45,419 - INFO - 127.0.0.1 - - [13/Feb/2025 10:23:45] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:23:48,431 - INFO - 127.0.0.1 - - [13/Feb/2025 10:23:48] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 10:23:48,458 - INFO - 127.0.0.1 - - [13/Feb/2025 10:23:48] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 10:23:53,987 - INFO - 127.0.0.1 - - [13/Feb/2025 10:23:53] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 10:24:07,004 - INFO - 127.0.0.1 - - [13/Feb/2025 10:24:07] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 10:24:07,116 - INFO - 127.0.0.1 - - [13/Feb/2025 10:24:07] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:24:10,903 - INFO - 127.0.0.1 - - [13/Feb/2025 10:24:10] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 10:24:21,063 - INFO - 127.0.0.1 - - [13/Feb/2025 10:24:21] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 10:25:14,497 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:14] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:25:14,506 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:14] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:25:17,522 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:17] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-13 10:25:17,531 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:17] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-13 10:25:19,930 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:19] "POST /knn HTTP/1.1" 200 -
+2025-02-13 10:25:30,259 - INFO - 127.0.0.1 - - [13/Feb/2025 10:25:30] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 10:35:00,862 - INFO - 127.0.0.1 - - [13/Feb/2025 10:35:00] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 10:35:44,335 - INFO - 127.0.0.1 - - [13/Feb/2025 10:35:44] "POST /knn HTTP/1.1" 200 -
+2025-02-13 10:35:52,944 - INFO - 127.0.0.1 - - [13/Feb/2025 10:35:52] "POST /predict_knn HTTP/1.1" 200 -
+2025-02-13 10:41:03,824 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:03] "GET / HTTP/1.1" 200 -
+2025-02-13 10:41:05,580 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:05] "GET /sign-in HTTP/1.1" 200 -
+2025-02-13 10:41:08,971 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:08] "POST /login HTTP/1.1" 200 -
+2025-02-13 10:41:20,409 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:20] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:41:20,422 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:20] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:41:23,431 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:23] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-13 10:41:23,445 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:23] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-13 10:41:25,686 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:25] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 10:41:31,789 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:31] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 10:41:31,811 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:31] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-13 10:41:35,566 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:35] "POST /logreg HTTP/1.1" 200 -
+2025-02-13 10:41:40,702 - INFO - 127.0.0.1 - - [13/Feb/2025 10:41:40] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-13 10:42:57,814 - INFO - 127.0.0.1 - - [13/Feb/2025 10:42:57] "POST /upload HTTP/1.1" 200 -
+2025-02-13 10:42:57,850 - INFO - 127.0.0.1 - - [13/Feb/2025 10:42:57] "POST /analysis HTTP/1.1" 200 -
+2025-02-13 10:43:00,860 - INFO - 127.0.0.1 - - [13/Feb/2025 10:43:00] "[32mGET /multireg HTTP/1.1[0m" 302 -
+2025-02-13 10:43:00,871 - INFO - 127.0.0.1 - - [13/Feb/2025 10:43:00] "GET /features?m=multireg HTTP/1.1" 200 -
+2025-02-13 10:43:13,187 - INFO - 127.0.0.1 - - [13/Feb/2025 10:43:13] "POST /multireg HTTP/1.1" 200 -
+2025-02-13 10:43:20,682 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-13 10:43:20,685 - INFO - 127.0.0.1 - - [13/Feb/2025 10:43:20] "POST /predict_multiple HTTP/1.1" 200 -
+2025-02-13 10:43:21,311 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:43:23,469 - WARNING -  * Debugger is active!
+2025-02-13 10:43:23,475 - INFO -  * Debugger PIN: 174-844-798
+2025-02-13 10:45:05,406 - INFO - 127.0.0.1 - - [13/Feb/2025 10:45:05] "GET /download_model/model_1739423593.pkl HTTP/1.1" 200 -
+2025-02-13 10:45:06,317 - INFO - 127.0.0.1 - - [13/Feb/2025 10:45:06] "[33mGET /sourceMap/chrome/css/download_scan_popup.css.map HTTP/1.1[0m" 404 -
+2025-02-13 10:45:06,337 - INFO - 127.0.0.1 - - [13/Feb/2025 10:45:06] "[33mGET /sourceMap/chrome/css/interactive_balloon.css.map HTTP/1.1[0m" 404 -
+2025-02-13 10:45:06,339 - INFO - 127.0.0.1 - - [13/Feb/2025 10:45:06] "[33mGET /sourceMap/chrome/css/download_scan_popup.css.map HTTP/1.1[0m" 404 -
+2025-02-13 10:45:26,863 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\_distutils_hack\\__init__.py', reloading
+2025-02-13 10:45:27,553 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\classification.py', reloading
+2025-02-13 10:45:27,665 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-13 10:45:27,676 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\config.py', reloading
+2025-02-13 10:45:27,677 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\ss.py', reloading
+2025-02-13 10:45:27,679 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\classification.py', reloading
+2025-02-13 10:45:27,693 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\main.py', reloading
+2025-02-13 10:45:27,723 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\test.py', reloading
+2025-02-13 10:45:27,741 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\temp\\test.py', reloading
+2025-02-13 10:45:27,882 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-02-13 10:45:27,888 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-02-13 10:45:28,422 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-13 10:45:32,078 - WARNING -  * Debugger is active!
+2025-02-13 10:45:32,090 - INFO -  * Debugger PIN: 174-844-798
