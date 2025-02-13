@@ -89,7 +89,7 @@
                 <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-bullseye text-blue-600 mr-2"></i>
-                        <h3 class="text-lg font-medium text-gray-800">Training R² Score</h3>
+                        <h3 class="text-lg font-medium text-gray-800">Training Accuracy</h3>
                     </div>
                     <p class="text-3xl font-bold text-blue-600">{{ "%.2f"|format(metrics.train_r2*100) }}%</p>
                     <p class="text-sm text-gray-600 mt-2">How well the model fits the training data</p>
@@ -98,20 +98,20 @@
                 <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-graduation-cap text-green-600 mr-2"></i>
-                        <h3 class="text-lg font-medium text-gray-800">Testing R² Score</h3>
+                        <h3 class="text-lg font-medium text-gray-800">Testing Accuracy</h3>
                     </div>
                     <p class="text-3xl font-bold text-green-600">{{ "%.2f"|format(metrics.test_r2*100) }}%</p>
                     <p class="text-sm text-gray-600 mt-2">How well the model performs on new data</p>
                 </div>
                 
-                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                <!-- <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-chart-line text-purple-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Testing RMSE</h3>
                     </div>
                     <p class="text-3xl font-bold text-purple-600">{{ "%.2f"|format(metrics.test_rmse) }}</p>
                     <p class="text-sm text-gray-600 mt-2">Average error between actual and predicted values for your target</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -121,16 +121,46 @@
                 <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
                 
                 <!-- Visualization Plots -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    {% for plot in plots %}
-                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
-                        <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full">
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Visualization Plots</h4>
+                    <p class="text-gray-600 mb-4">These plots help visualize the relationships and patterns in the data. They include correlation heatmaps, residual plots, and other relevant graphs.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {% for plot in plots %}
+                        <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                            <img src="data:image/png;base64,{{ plot }}" alt="Analysis Plot" class="w-full">
+                        </div>
+                        {% endfor %}
+                        <!-- Correlation Heatmap -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Correlation Heatmap</h4>
+                    <p class="text-gray-600 mb-4">Correlation measures the relationship between two variables:
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>+1 → Strong positive correlation (both increase together).</li>
+                            <li>0 → No correlation (no relationship).</li>
+                            <li>-1 → Strong negative correlation (one increases, the other decreases).</li>
+                        </ul>
+                        Heatmap Visualization:
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>Dark red → Strong positive correlation.</li>
+                            <li>Dark blue → Strong negative correlation.</li>
+                            <li>Light colors → Weak or no correlation.</li>
+                        </ul>
+                    </p>
+                </div>
+                 <!-- Residual Plots -->
+                 <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Residual Plots</h4>
+                    <p class="text-gray-600 mb-4">A residual plot is a graph used to assess the quality of a regression model by visualizing the difference between actual and predicted values. If the regression model fits the data well, the residuals should be randomly distributed without any clear pattern.</p>
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Actual vs Predicted plot</h4>
+                    <p class="text-gray-600 mb-4">An Actual vs. Predicted plot is a graph used to evaluate the performance of a regression model by comparing the true values (actual) with the model's predictions. If the model is highly accurate, the points in the plot should align closely along a 45-degree diagonal line, indicating that predicted values are nearly equal to actual values. Deviations from this line suggest errors in the model's predictions, helping to identify underfitting, overfitting, or systematic biases.</p>
+                </div>
                     </div>
-                    {% endfor %}
                 </div>
 
                 <!-- Coefficients Table -->
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Coefficients Table</h4>
+                    <p class="text-gray-600 mb-4">Coefficients in a regression model represent the strength and direction of the relationship between an independent variable (feature) and the dependent variable (target). They indicate how much the target variable changes for a one-unit change in a specific feature while keeping other features constant.</p>
                     <table class="min-w-full table-auto">
                         <thead>
                             <tr class="bg-gray-50">
@@ -160,34 +190,18 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
 
-        <!-- Prediction Form Section -->
-        <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
-                <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
                 
-                <form action="{{ url_for('predict_multiple') }}" method="post" class="prediction-form space-y-6">
-                    {% for feature in coefficients.keys() %}
-                    <div class="form-group">
-                        <label for="{{ feature }}" class="form-label">{{ feature }}</label>
-                        <input type="number" step="any" class="form-input" id="{{ feature }}" name="{{ feature }}" required
-                               placeholder="Enter value for {{ feature }}">
-                    </div>
-                    {% endfor %}
-                
-                    <input type="hidden" name="model_path" value="{{ model_path }}">
-                    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
-                
-                    <div class="flex justify-center mt-8">
-                        <button type="submit" class="btn btn-primary flex items-center">
-                            <i class="fas fa-calculator mr-2"></i>
-                            Get Prediction
-                        </button>
-                    </div>
-                </form>
+
+               
+
+                <!-- P-values Explanation -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">P-values</h4>
+                    <p class="text-gray-600 mb-4">P-values help determine the statistical significance of each coefficient in a regression model. A small p-value (typically < 0.05) suggests that the corresponding feature is significantly contributing to the model, whereas a high p-value (> 0.05) suggests that the feature might not be strongly influencing the target variable.</p>
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Coefficients</h4>
+                    <p class="text-gray-600 mb-4">Coefficients in a regression model represent the strength and direction of the relationship between an independent variable (feature) and the dependent variable (target). They indicate how much the target variable changes for a one-unit change in a specific feature while keeping other features constant.</p>
+                </div>
             </div>
         </div>
 
@@ -227,6 +241,36 @@
                 Download Trained Model
             </a>
         </div>
+<br>
+        <!-- Prediction Form Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
+                <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
+                
+                <form action="{{ url_for('predict_multiple') }}" method="post" class="prediction-form space-y-6">
+                    {% for feature in coefficients.keys() %}
+                    <div class="form-group">
+                        <label for="{{ feature }}" class="form-label">{{ feature }}</label>
+                        <input type="number" step="any" class="form-input" id="{{ feature }}" name="{{ feature }}" required
+                               placeholder="Enter value for {{ feature }}">
+                    </div>
+                    {% endfor %}
+                
+                    <input type="hidden" name="model_path" value="{{ model_path }}">
+                    <input type="hidden" name="features" value="{{ ','.join(coefficients.keys()) }}">
+                
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" class="btn btn-primary flex items-center">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Get Prediction
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
     </div>
 
     <script>
@@ -245,6 +289,13 @@
                     toggleText.textContent = technicalDetails.classList.contains('open')
                         ? 'Hide Technical Details'
                         : 'Show Technical Details';
+                    
+                    // Ensure the entire content is visible
+                    if (technicalDetails.classList.contains('open')) {
+                        technicalDetails.style.maxHeight = technicalDetails.scrollHeight + 'px';
+                    } else {
+                        technicalDetails.style.maxHeight = '0';
+                    }
                 });
             }
         });
