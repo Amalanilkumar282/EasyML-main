@@ -414,35 +414,118 @@ def perform_dtree(file,target):
 #############################################################################################
 #############################################################################################
 
-def perform_naivebayes(file,target):
-    df = pd.read_csv(file,index_col=False)
-    y=df[target]
-    target=[target]
-    if 'id' in df.columns:
-        target.append('id')
-    X=df.drop(columns=target)
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.35, random_state=42)
-    model=GaussianNB()
-    model.fit(X_train, y_train)
-
-    # Make predictions on the test set
-    predictions = model.predict(X_test)
-
-    # Evaluate the model
-    accuracy = accuracy_score(y_test, predictions)
-
-    conf_matrix = confusion_matrix(y_test, predictions)
-    plt.figure(figsize=(6, 4))
-    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', cbar=False)
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-
-    image_stream = BytesIO()
-    plt.savefig(image_stream, format='png')
-    image_stream.seek(0)
-    img_str = base64.b64encode(image_stream.read()).decode('utf-8')
-    return(accuracy,img_str,conf_matrix)
+def perform_naivebayes(file, target):
+    # Read data
+    df = pd.read_csv(file, index_col=False)
+    
+    # Initialize encoders and scaler
+    feature_encoders = {}
+    target_encoder = None
+    original_target_values = None
+    scaler = StandardScaler()
+    
+    # Handle features
+    X = df.drop(columns=[target])
+    if 'id' in X.columns:
+        X = X.drop(columns=['id'])
+    
+    # Encode categorical features
+    for column in X.columns:
+        if X[column].dtype == 'object':
+            encoder = LabelEncoder()
+            X[column] = encoder.fit_transform(X[column].astype(str))
+            feature_encoders[column] = encoder
+    
+    # Encode target
+    y = df[target]
+    if y.dtype == 'object':
+        target_encoder = LabelEncoder()
+        original_target_values = y.unique()
+        y = target_encoder.fit_transform(y)
+    
+    # Store feature names
+    feature_names = X.columns.tolist()
+    
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(
+        X.values, y, test_size=0.2, random_state=42
+    )
+    
+    # Scale features
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    
+    # Train model
+    model = GaussianNB()
+    model.fit(X_train_scaled, y_train)
+    
+    # Generate metrics
+    y_pred = model.predict(X_test_scaled)
+    accuracy = accuracy_score(y_test, y_pred)
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    class_report = classification_report(y_test, y_pred, output_dict=True)
+    
+    # Generate plots
+    plots = []
+    
+    # 1. Confusion Matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues')
+    plt.title('Confusion Matrix')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plots.append(get_plot_as_base64())
+    
+    # 2. Feature Distributions
+    plt.figure(figsize=(12, 6))
+    for i, feature in enumerate(feature_names):
+        plt.subplot(2, (len(feature_names) + 1) // 2, i + 1)
+        sns.kdeplot(data=df, x=feature, hue=target)
+        plt.title(f'{feature} Distribution')
+    plt.tight_layout()
+    plots.append(get_plot_as_base64())
+    
+    # 3. Class Distribution
+    plt.figure(figsize=(8, 6))
+    class_counts = df[target].value_counts()
+    sns.barplot(x=class_counts.index, y=class_counts.values)
+    plt.title('Class Distribution')
+    plt.xlabel('Class')
+    plt.ylabel('Count')
+    plots.append(get_plot_as_base64())
+    
+    # Save model with all necessary components
+    metrics = {
+        'accuracy': accuracy,
+        'classification_report': {
+            'confusion_matrix': conf_matrix.tolist(),
+            'weighted avg': {
+                'precision': class_report['weighted avg']['precision'],
+                'recall': class_report['weighted avg']['recall']
+            }
+        }
+    }
+    
+    model_path = save_model(
+        model=model,
+        metrics=metrics,
+        coefficients=None,
+        p_values=None,
+        intercept=None,
+        plots=plots,
+        feature_encoders=feature_encoders,
+        target_encoder=target_encoder,
+        original_target_values=original_target_values,
+        scaler=scaler,
+        feature_names=feature_names
+    )
+    
+    return (
+        model_path,
+        plots,
+        metrics,
+        None, None, None
+    )
 
 #############################################################################################
 #############################################################################################

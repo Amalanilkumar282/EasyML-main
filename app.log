@@ -5790,3 +5790,217 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-15 23:45:55,396 - INFO - 127.0.0.1 - - [15/Feb/2025 23:45:55] "POST /svm HTTP/1.1" 200 -
 2025-02-15 23:46:15,173 - INFO - 127.0.0.1 - - [15/Feb/2025 23:46:15] "POST /predict_svm HTTP/1.1" 200 -
 2025-02-15 23:47:10,714 - INFO - 127.0.0.1 - - [15/Feb/2025 23:47:10] "GET /download_model/model_1739643355.pkl HTTP/1.1" 200 -
+2025-02-17 14:07:06,707 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-17 14:07:06,708 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-17 14:07:06,724 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:07:08,732 - WARNING -  * Debugger is active!
+2025-02-17 14:07:08,834 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:07:10,200 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:10] "GET / HTTP/1.1" 200 -
+2025-02-17 14:07:10,459 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-17 14:07:12,266 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:12] "GET /sign-in HTTP/1.1" 200 -
+2025-02-17 14:07:12,267 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-17 14:07:12,695 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:07:15,141 - WARNING -  * Debugger is active!
+2025-02-17 14:07:15,151 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:07:17,784 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\connection.py', reloading
+2025-02-17 14:07:17,786 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\network.py', reloading
+2025-02-17 14:07:17,811 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:17] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-17 14:07:17,975 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:17] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-17 14:07:17,984 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:17] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-17 14:07:18,027 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:18] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-17 14:07:18,058 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:18] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-17 14:07:19,154 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:07:21,814 - WARNING -  * Debugger is active!
+2025-02-17 14:07:21,820 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:07:38,676 - INFO - package: mysql.connector.plugins
+2025-02-17 14:07:38,677 - INFO - plugin_name: mysql_native_password
+2025-02-17 14:07:38,678 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-17 14:07:38,693 - INFO - 127.0.0.1 - - [17/Feb/2025 14:07:38] "POST /login HTTP/1.1" 200 -
+2025-02-17 14:08:00,175 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:00] "POST /upload HTTP/1.1" 200 -
+2025-02-17 14:08:00,332 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:00] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-17 14:08:06,556 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:06] "GET /features?m=analysis HTTP/1.1" 200 -
+2025-02-17 14:08:14,312 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:14] "GET /features?m=analysis HTTP/1.1" 200 -
+2025-02-17 14:08:16,872 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:16] "POST /analysis HTTP/1.1" 200 -
+2025-02-17 14:08:19,883 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:19] "[32mGET /knn HTTP/1.1[0m" 302 -
+2025-02-17 14:08:19,892 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:19] "GET /features?m=knn HTTP/1.1" 200 -
+2025-02-17 14:08:43,257 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\base.py', reloading
+2025-02-17 14:08:43,258 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\linear_model\\_base.py', reloading
+2025-02-17 14:08:43,259 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\utils\\validation.py', reloading
+2025-02-17 14:08:43,284 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:43] "[35m[1mGET /reg HTTP/1.1[0m" 500 -
+2025-02-17 14:08:43,310 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:43] "GET /reg?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-17 14:08:43,312 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:43] "GET /reg?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-17 14:08:43,342 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:43] "GET /reg?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-17 14:08:43,378 - INFO - 127.0.0.1 - - [17/Feb/2025 14:08:43] "[36mGET /reg?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-17 14:08:43,731 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:08:46,027 - WARNING -  * Debugger is active!
+2025-02-17 14:08:46,032 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:35:55,773 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\io.py', reloading
+2025-02-17 14:35:57,221 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:35:59,702 - WARNING -  * Debugger is active!
+2025-02-17 14:35:59,708 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:36:43,882 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\__init__.py', reloading
+2025-02-17 14:36:43,911 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\__init__.py', reloading
+2025-02-17 14:36:43,955 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\numeric.py', reloading
+2025-02-17 14:36:43,987 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\umath.py', reloading
+2025-02-17 14:36:44,052 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\numerictypes.py', reloading
+2025-02-17 14:36:44,059 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\fromnumeric.py', reloading
+2025-02-17 14:36:44,079 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\arrayprint.py', reloading
+2025-02-17 14:36:44,097 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\_asarray.py', reloading
+2025-02-17 14:36:44,101 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\_ufunc_config.py', reloading
+2025-02-17 14:36:44,108 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\memmap.py', reloading
+2025-02-17 14:36:44,113 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\function_base.py', reloading
+2025-02-17 14:36:44,122 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\getlimits.py', reloading
+2025-02-17 14:36:44,134 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\shape_base.py', reloading
+2025-02-17 14:36:44,146 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\core\\einsumfunc.py', reloading
+2025-02-17 14:36:44,156 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\__init__.py', reloading
+2025-02-17 14:36:44,192 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\type_check.py', reloading
+2025-02-17 14:36:44,196 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\index_tricks.py', reloading
+2025-02-17 14:36:44,201 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\function_base.py', reloading
+2025-02-17 14:36:44,231 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\nanfunctions.py', reloading
+2025-02-17 14:36:44,238 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\shape_base.py', reloading
+2025-02-17 14:36:44,250 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\stride_tricks.py', reloading
+2025-02-17 14:36:44,253 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\twodim_base.py', reloading
+2025-02-17 14:36:44,257 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\ufunclike.py', reloading
+2025-02-17 14:36:44,261 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\histograms.py', reloading
+2025-02-17 14:36:44,268 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\polynomial.py', reloading
+2025-02-17 14:36:44,282 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\utils.py', reloading
+2025-02-17 14:36:44,296 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\arraysetops.py', reloading
+2025-02-17 14:36:44,305 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\npyio.py', reloading
+2025-02-17 14:36:44,328 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\arraypad.py', reloading
+2025-02-17 14:36:44,334 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\lib\\_version.py', reloading
+2025-02-17 14:36:44,339 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\matrixlib\\__init__.py', reloading
+2025-02-17 14:36:44,343 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\numpy\\matrixlib\\defmatrix.py', reloading
+2025-02-17 14:36:44,865 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:36:47,058 - WARNING -  * Debugger is active!
+2025-02-17 14:36:47,064 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:54:08,926 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-17 14:54:08,927 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-17 14:54:08,936 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:54:11,153 - WARNING -  * Debugger is active!
+2025-02-17 14:54:11,158 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:54:11,290 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:11] "GET / HTTP/1.1" 200 -
+2025-02-17 14:54:13,450 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:13] "GET /sign-in HTTP/1.1" 200 -
+2025-02-17 14:54:16,395 - INFO - package: mysql.connector.plugins
+2025-02-17 14:54:16,395 - INFO - plugin_name: mysql_native_password
+2025-02-17 14:54:16,396 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-17 14:54:16,400 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:16] "POST /login HTTP/1.1" 200 -
+2025-02-17 14:54:21,576 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:21] "POST /upload HTTP/1.1" 200 -
+2025-02-17 14:54:21,734 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:21] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-17 14:54:24,184 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:24] "GET /features?m=naivebayes HTTP/1.1" 200 -
+2025-02-17 14:54:26,047 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-17 14:54:26,520 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 14:54:28,546 - WARNING -  * Debugger is active!
+2025-02-17 14:54:28,550 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 14:54:29,419 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "POST /naivebayes HTTP/1.1" 200 -
+2025-02-17 14:54:29,613 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 14:54:29,633 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 14:54:29,675 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 14:54:29,716 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 14:54:29,736 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:29] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 14:54:48,572 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:48] "GET /features?m=svm HTTP/1.1" 200 -
+2025-02-17 14:54:50,877 - INFO - 127.0.0.1 - - [17/Feb/2025 14:54:50] "POST /svm HTTP/1.1" 200 -
+2025-02-17 14:55:00,829 - INFO - 127.0.0.1 - - [17/Feb/2025 14:55:00] "POST /predict_svm HTTP/1.1" 200 -
+2025-02-17 15:02:40,894 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:40] "GET /features?m=naivebayes HTTP/1.1" 200 -
+2025-02-17 15:02:42,957 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:42] "POST /naivebayes HTTP/1.1" 200 -
+2025-02-17 15:02:42,966 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:42] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:42,968 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:42] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:42,972 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:42] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:42,973 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:42] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:02:43,010 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:43] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,740 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "POST /predict_naivebayes HTTP/1.1" 200 -
+2025-02-17 15:02:50,765 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,766 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,769 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,775 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,777 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,777 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,794 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,796 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,807 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,812 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,818 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-17 15:02:50,824 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:50] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:02:57,777 - INFO - 127.0.0.1 - - [17/Feb/2025 15:02:57] "GET /download_model/model_1739784762.pkl HTTP/1.1" 200 -
+2025-02-17 15:03:08,710 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "POST /predict_naivebayes HTTP/1.1" 200 -
+2025-02-17 15:03:08,752 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,756 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,762 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,767 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,786 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,795 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,812 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,815 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,826 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,827 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,836 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:08,839 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:08] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,248 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "POST /predict_naivebayes HTTP/1.1" 200 -
+2025-02-17 15:03:14,273 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,277 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,280 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,285 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,288 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,290 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,300 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,305 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,311 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,313 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/plugins/chartjs.min.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,323 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-02-17 15:03:14,324 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:14] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 15:03:16,729 - INFO - 127.0.0.1 - - [17/Feb/2025 15:03:16] "[36mGET /download_model/model_1739784762.pkl HTTP/1.1[0m" 304 -
+2025-02-17 15:08:02,801 - INFO - 127.0.0.1 - - [17/Feb/2025 15:08:02] "POST /predict_naivebayes HTTP/1.1" 200 -
+2025-02-17 15:08:16,704 - INFO - 127.0.0.1 - - [17/Feb/2025 15:08:16] "POST /predict_naivebayes HTTP/1.1" 200 -
+2025-02-17 15:09:30,718 - INFO - 127.0.0.1 - - [17/Feb/2025 15:09:30] "[36mGET /download_model/model_1739784762.pkl HTTP/1.1[0m" 304 -
+2025-02-17 15:09:52,620 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py', reloading
+2025-02-17 15:09:52,622 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\aliases.py', reloading
+2025-02-17 15:09:52,624 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8.py', reloading
+2025-02-17 15:09:52,625 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\cp1252.py', reloading
+2025-02-17 15:09:52,630 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages\\_distutils_hack\\__init__.py', reloading
+2025-02-17 15:09:52,632 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\__init__.py', reloading
+2025-02-17 15:09:52,634 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\decoder.py', reloading
+2025-02-17 15:09:52,636 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py', reloading
+2025-02-17 15:09:52,638 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\enum.py', reloading
+2025-02-17 15:09:52,640 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\types.py', reloading
+2025-02-17 15:09:52,641 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\operator.py', reloading
+2025-02-17 15:09:52,642 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\functools.py', reloading
+2025-02-17 15:09:52,643 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py', reloading
+2025-02-17 15:09:52,644 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py', reloading
+2025-02-17 15:09:52,646 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py', reloading
+2025-02-17 15:09:52,649 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py', reloading
+2025-02-17 15:09:52,649 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py', reloading
+2025-02-17 15:09:52,652 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py', reloading
+2025-02-17 15:09:52,654 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py', reloading
+2025-02-17 15:09:52,655 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py', reloading
+2025-02-17 15:09:52,656 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\scanner.py', reloading
+2025-02-17 15:09:52,658 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\json\\encoder.py', reloading
+2025-02-17 15:09:53,350 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\regression.py', reloading
+2025-02-17 15:09:53,364 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\models\\model_analyzer.py', reloading
+2025-02-17 15:09:53,380 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\config.py', reloading
+2025-02-17 15:09:53,382 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\ss.py', reloading
+2025-02-17 15:09:53,384 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\classification.py', reloading
+2025-02-17 15:09:53,392 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\main.py', reloading
+2025-02-17 15:09:53,419 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\chatbot\\test.py', reloading
+2025-02-17 15:09:53,427 - INFO -  * Detected change in 'd:\\Projects\\Main_Project\\EasyML-main\\Latest\\temp\\test.py', reloading
+2025-02-17 15:09:53,517 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\traceback.py', reloading
+2025-02-17 15:09:53,541 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-02-17 15:09:53,544 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\app.py', reloading
+2025-02-17 15:09:53,577 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\app.py', reloading
+2025-02-17 15:09:53,587 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-02-17 15:09:53,604 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-02-17 15:09:53,607 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-02-17 15:09:53,610 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-02-17 15:09:53,646 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-02-17 15:09:53,651 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-02-17 15:09:53,655 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-02-17 15:09:53,656 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-02-17 15:09:53,676 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-02-17 15:09:53,686 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-02-17 15:09:53,690 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-02-17 15:09:53,703 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-02-17 15:09:53,711 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-02-17 15:09:53,723 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\__init__.py', reloading
+2025-02-17 15:09:54,244 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 15:09:57,330 - WARNING -  * Debugger is active!
+2025-02-17 15:09:57,336 - INFO -  * Debugger PIN: 174-844-798

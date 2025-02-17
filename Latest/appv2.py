@@ -545,20 +545,142 @@ def decision_tree():
     recall=round((confm[0][0]/(confm[0][0]+confm[1][0]))*100,2)
     return render_template('dtree.html',acc=acc,tree=tree, plot=plot, conf=conf,precision=precision,recall=recall)
 
-@app.route('/naivebayes',methods=['POST'])
+@app.route('/naivebayes', methods=['GET', 'POST'])
 def naive_bayes():
+    if request.method == 'POST':
+        file = FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
+        target = request.json.get('variable', '')
+        try:
+            model_path, plots, metrics, _, _, _ = perform_naivebayes(file, target)
+            
+            model_full_path = os.path.join(app.config['MODEL_FOLDER'], model_path)
+            if not os.path.exists(model_full_path):
+                raise FileNotFoundError(f"Model file not found at {model_full_path}")
+            
+            with open(model_full_path, 'rb') as f:
+                saved_data = pickle.load(f)
+                feature_names = saved_data.get('feature_names', [])
+            
+            # Extract confusion matrix directly from metrics
+            conf_matrix = np.array(metrics['classification_report']['confusion_matrix'])
+            
+            # Calculate confusion matrix metrics
+            correct = conf_matrix.diagonal().sum()
+            total = conf_matrix.sum()
+            wrong = total - correct
+            conf = [int(correct), int(wrong), int(total)]
+            
+            # Format metrics
+            formatted_metrics = {
+                'accuracy': metrics['accuracy'],
+                'precision': metrics['classification_report']['weighted avg']['precision'],
+                'recall': metrics['classification_report']['weighted avg']['recall']
+            }
+            
+            return render_template('naivebayes.html',
+                                plots=plots,
+                                metrics=formatted_metrics,
+                                model_path=model_path,
+                                feature_names=feature_names,
+                                conf=conf,
+                                precision=formatted_metrics['precision'] * 100,
+                                recall=formatted_metrics['recall'] * 100,
+                                acc=formatted_metrics['accuracy'] * 100)
+        except Exception as e:
+            app.logger.error(f"Error in Naive Bayes: {str(e)}")
+            return render_template('error.html', error_message=str(e))
+    else:
+        return redirect(url_for('display_features', m='naivebayes'))
 
-    file=FileStorage(filename='f', stream=open('tempsy/f', 'rb'))
-    target = request.json.get('variable', '')
-    acc,plot,confm = perform_naivebayes(file,target)
-    acc=round(acc*100,2)
-    correct=confm.diagonal().sum()
-    total=confm.sum()
-    wrong=total-correct
-    conf=[correct,wrong,total]
-    precision=round((confm[0][0]/(confm[0][0]+confm[0][1]))*100,2)
-    recall=round((confm[0][0]/(confm[0][0]+confm[1][0]))*100,2)
-    return render_template('naivebayes.html',acc=acc, plot=plot, conf=conf,precision=precision,recall=recall)
+@app.route('/predict_naivebayes', methods=['POST'])
+def predict_naivebayes():
+    try:
+        # Load model components
+        model_filename = request.form['model_path']
+        model_path = os.path.join(app.config['MODEL_FOLDER'], model_filename)
+        
+        with open(model_path, 'rb') as f:
+            model_data = pickle.load(f)
+        
+        model = model_data['model']
+        scaler = model_data['scaler']
+        feature_encoders = model_data.get('feature_encoders', {})
+        target_encoder = model_data.get('target_encoder')
+        feature_names = model_data['feature_names']
+        metrics = model_data['metrics']
+        plots = model_data.get('plots', [])
+        
+        # Process input features
+        encoded_features = []
+        input_values = {}
+        
+        for feature in feature_names:
+            raw_value = request.form[feature].strip()
+            input_values[feature] = raw_value
+
+            if feature in feature_encoders:
+                encoder = feature_encoders[feature]
+                try:
+                    encoded_value = encoder.transform([raw_value])[0]
+                except ValueError:
+                    valid_classes = list(encoder.classes_)
+                    raise ValueError(
+                        f"Invalid value '{raw_value}' for {feature}. "
+                        f"Valid options: {', '.join(valid_classes)}"
+                    )
+                encoded_features.append(encoded_value)
+            else:
+                try:
+                    encoded_features.append(float(raw_value))
+                except ValueError:
+                    raise ValueError(f"Invalid number for {feature}: {raw_value}")
+
+        # Scale and predict
+        scaled_input = scaler.transform([encoded_features])
+        prediction = model.predict(scaled_input)[0]
+        probabilities = model.predict_proba(scaled_input)[0]
+        
+        # Decode prediction
+        if target_encoder:
+            class_name = target_encoder.inverse_transform([prediction])[0]
+            prob_dict = {
+                str(cls): f"{prob*100:.1f}%"
+                for cls, prob in zip(model_data['original_target_values'], probabilities)
+            }
+        else:
+            class_name = str(prediction)
+            prob_dict = None
+
+        # Get confusion matrix metrics
+        conf_matrix = np.array(metrics['classification_report']['confusion_matrix'])
+        correct = conf_matrix.diagonal().sum()
+        total = conf_matrix.sum()
+        wrong = total - correct
+        conf = [int(correct), int(wrong), int(total)]
+
+        # Format metrics for display
+        formatted_metrics = {
+            'accuracy': metrics['accuracy'],
+            'precision': metrics['classification_report']['weighted avg']['precision'],
+            'recall': metrics['classification_report']['weighted avg']['recall']
+        }
+
+        return render_template('naivebayes.html',
+                             model_path=model_filename,
+                             prediction=class_name,
+                             probabilities=prob_dict,
+                             input_values=input_values,
+                             feature_names=feature_names,
+                             metrics=formatted_metrics,
+                             plots=plots,
+                             conf=conf,
+                             precision=formatted_metrics['precision'] * 100,
+                             recall=formatted_metrics['recall'] * 100,
+                             acc=formatted_metrics['accuracy'] * 100)
+
+    except Exception as e:
+        return render_template('error.html', 
+                             error_message=f"Prediction Error: {str(e)}")
 
 @app.route('/svm', methods=['GET', 'POST'])
 def svm():

@@ -1,137 +1,255 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicon.png">
-  <link rel="icon" type="image/png" href="../static/img/favicon.png">
-  <link rel="stylesheet" href="../static/css/results.css">
-  <title>
-    Easy ML
-  </title>
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
-  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../static/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <!-- CSS Files -->
-  <link id="pagestyle" href="../static/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
-  <!-- Nepcha Analytics (nepcha.com) -->
-  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Prediction Platform - Naive Bayes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .metric-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .metric-card:hover {
+            border-left-color: currentColor;
+            transform: translateX(5px);
+        }
+        
+        .collapsible-section {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .collapsible-section.open {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
 </head>
-
-<body class="g-sidenav-show  bg-gray-200">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" # " target="_blank">
-        <img src="../static/img/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Easy ML</span>
-      </a>
-    </div>
-    <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="{{ url_for('index') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">book</i>
-            </div>
-            <span class="nav-link-text ms-1">Result</span>
-          </a>
-        </li>
-
-        <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">person</i>
-            </div>
-            <span class="nav-link-text ms-1">Profile</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="{{ url_for('sign_in') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">login</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign In</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="{{ url_for('sign_up') }}">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">assignment</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign Up</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </aside>
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <h6 class="font-weight-bolder mb-0">Naive Bayes Classifier </h6>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item d-flex">
-              <a href="{{ url_for('sign_in') }}" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">Profile</span>
-              </a>
-            </li>
-          </ul>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <div class="mb-12 text-center fade-in">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">NAIVE BAYES CLASSIFIER ANALYSIS</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Make data-driven decisions with our easy-to-use EasyML prediction tool. Simply input your values and get instant insights.</p>
         </div>
-      </div>
-    </nav>
-    
 
-    <!-- End Navbar -->
-    <div class="container">
-    <div class="card">
+        <!-- Quick Stats -->
+        <div class="mb-12 fade-in">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Model Performance Overview</h2>
+                <button id="toggleTechnicalBtn" class="text-blue-600 hover:text-blue-700 flex items-center">
+                    <span id="toggleText">Show Technical Details</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-200" id="toggleIcon"></i>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-bullseye text-blue-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Accuracy</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-600">{{ acc }}%</p>
+                    <p class="text-sm text-gray-600 mt-2">Overall model performance</p>
+                </div>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Precision</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-green-600">{{ precision }}%</p>
+                    <p class="text-sm text-gray-600 mt-2">Accuracy of positive predictions</p>
+                </div>
+                
+                <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-sync text-purple-600 mr-2"></i>
+                        <h3 class="text-lg font-medium text-gray-800">Recall</h3>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-600">{{ recall }}%</p>
+                    <p class="text-sm text-gray-600 mt-2">Proportion of actual positives identified</p>
+                </div>
+            </div>
+        </div>
 
-    {% if plot %}
-        <h2>Confusion Matrix</h2>
-        <!-- Display the scatter plot using base64-encoded image -->
-        <img src="data:image/png;base64,{{ plot }}" alt="Linear Regression Scatter Plot">
-        <h2>Inferences</h2>
+        <!-- Technical Details Section -->
+        <div id="technicalDetails" class="collapsible-section mb-12">
+            <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+                
+                <!-- Visualization Plots -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Confusion Matrix</h4>
+                    <p class="text-gray-600 mb-4">A confusion matrix shows the model's classification performance:
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>True Positives: Correctly predicted positive cases</li>
+                            <li>True Negatives: Correctly predicted negative cases</li>
+                            <li>False Positives: Incorrectly predicted as positive</li>
+                            <li>False Negatives: Incorrectly predicted as negative</li>
+                        </ul>
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plots[0] }}" alt="Confusion Matrix" class="w-full">
+                    </div>
+                </div>
 
-        Correctly Classified = {{conf[0]}} / {{conf[2]}} </br>
-        Incorrectly Classified = {{conf[1]}} / {{conf[2]}} </br>
-        Precision: {{ precision }}%</br>
-        Recall: {{ recall }}%</br>
-        Accuracy: {{ acc }}%
-    {% endif %}
-    
+                <!-- Feature Distribution Plot -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Feature Distributions</h4>
+                    <p class="text-gray-600 mb-4">These plots show how each feature is distributed across different classes, helping us understand the patterns Naive Bayes uses for classification:</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plots[1] }}" alt="Feature Distributions" class="w-full">
+                    </div>
+                </div>
+
+                <!-- Class Distribution -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Class Distribution</h4>
+                    <p class="text-gray-600 mb-4">Shows the balance between different classes in our dataset:</p>
+                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                        <img src="data:image/png;base64,{{ plots[2] }}" alt="Class Distribution" class="w-full">
+                    </div>
+                </div>
+
+                <!-- Classification Results -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Classification Summary</h4>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm font-medium text-gray-600">Correctly Classified</p>
+                                <p class="text-lg font-bold text-green-600">{{conf[0]}} / {{conf[2]}}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-600">Incorrectly Classified</p>
+                                <p class="text-lg font-bold text-red-600">{{conf[1]}} / {{conf[2]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prediction Results Section -->
+        {% if prediction %}
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Class</h4>
+                        <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
+                        {% if probabilities %}
+                        <div class="mt-4">
+                            <h5 class="text-sm font-medium text-blue-800 mb-2">Class Probabilities:</h5>
+                            {% for class, prob in probabilities.items() %}
+                            <div class="flex justify-between text-sm">
+                                <span class="text-blue-800">{{ class }}</span>
+                                <span class="text-blue-600 font-medium">{{ prob }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-medium text-purple-800 mb-4">Input Summary</h4>
+                        <div class="space-y-2">
+                            {% for feature, value in input_values.items() %}
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-purple-800">{{ feature }}</span>
+                                    <span class="text-sm font-medium text-purple-800">{{ value }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Download Model Section -->
+        <div class="mt-8 text-center fade-in">
+            <a href="{{ url_for('download_model', filename=model_path) }}" 
+               class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                <i class="fas fa-download mr-2"></i>
+                Download Trained Model
+            </a>
+        </div>
+
+        <!-- Prediction Form Section -->
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
+                <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
+                
+                <form action="{{ url_for('predict_naivebayes') }}" method="post" class="space-y-6">
+                    <input type="hidden" name="model_path" value="{{ model_path }}">
+                    {% for feature in feature_names %}
+                    <div class="form-group">
+                        <label for="{{ feature }}" class="block text-sm font-medium text-gray-700 mb-1">{{ feature }}</label>
+                        <input type="number" step="any" id="{{ feature }}" name="{{ feature }}" required
+                               class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                               placeholder="Enter value for {{ feature }}">
+                    </div>
+                    {% endfor %}
+                
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Get Prediction
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
 
-</main>
-  <!--   Core JS Files   -->
-  <script src="../static/js/core/popper.min.js"></script>
-  <script src="../static/js/core/bootstrap.min.js"></script>
-  <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../static/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../static/js/plugins/chartjs.min.js"></script>
-  <script src="../static/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleTechnicalBtn');
+            const technicalDetails = document.getElementById('technicalDetails');
+            const toggleIcon = document.getElementById('toggleIcon');
+            const toggleText = document.getElementById('toggleText');
 
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../static/js/material-dashboard.min.js?v=3.1.0"></script>
+            if (toggleBtn && technicalDetails) {
+                toggleBtn.addEventListener('click', function() {
+                    technicalDetails.classList.toggle('open');
+                    toggleIcon.style.transform = technicalDetails.classList.contains('open') 
+                        ? 'rotate(180deg)' 
+                        : 'rotate(0)';
+                    toggleText.textContent = technicalDetails.classList.contains('open')
+                        ? 'Hide Technical Details'
+                        : 'Show Technical Details';
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
