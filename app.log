@@ -6004,3 +6004,43 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-17 15:09:54,244 - INFO -  * Restarting with watchdog (windowsapi)
 2025-02-17 15:09:57,330 - WARNING -  * Debugger is active!
 2025-02-17 15:09:57,336 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 16:18:23,072 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-17 16:18:23,072 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-17 16:18:23,083 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 16:18:25,280 - WARNING -  * Debugger is active!
+2025-02-17 16:18:25,284 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 16:18:25,418 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:25] "GET / HTTP/1.1" 200 -
+2025-02-17 16:18:26,986 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:26] "GET /sign-in HTTP/1.1" 200 -
+2025-02-17 16:18:26,988 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-02-17 16:18:28,078 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 16:18:30,206 - WARNING -  * Debugger is active!
+2025-02-17 16:18:30,211 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 16:18:30,468 - INFO - package: mysql.connector.plugins
+2025-02-17 16:18:30,468 - INFO - plugin_name: mysql_native_password
+2025-02-17 16:18:30,469 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-17 16:18:30,476 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:30] "POST /login HTTP/1.1" 200 -
+2025-02-17 16:18:35,559 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:35] "POST /upload HTTP/1.1" 200 -
+2025-02-17 16:18:35,698 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:35] "[36mGET /static/img/chatbot.png HTTP/1.1[0m" 304 -
+2025-02-17 16:18:39,108 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:39] "GET /features?m=dtree HTTP/1.1" 200 -
+2025-02-17 16:18:40,723 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-17 16:18:41,472 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "POST /dtree HTTP/1.1" 200 -
+2025-02-17 16:18:41,482 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 16:18:41,483 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 16:18:41,487 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 16:18:41,493 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
+2025-02-17 16:18:41,495 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:41] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 16:18:41,885 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-17 16:18:44,062 - WARNING -  * Debugger is active!
+2025-02-17 16:18:44,069 - INFO -  * Debugger PIN: 174-844-798
+2025-02-17 16:18:49,490 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "POST /predict_dtree HTTP/1.1" 200 -
+2025-02-17 16:18:49,727 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/css/nucleo-svg.css HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,756 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,775 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/css/nucleo-icons.css HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,811 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/js/core/popper.min.js HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,817 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/js/core/bootstrap.min.js HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,824 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/js/plugins/perfect-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,831 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/js/plugins/smooth-scrollbar.min.js HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,838 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/js/material-dashboard.min.js?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,882 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/img/favicon.png HTTP/1.1[0m" 304 -
+2025-02-17 16:18:49,887 - INFO - 127.0.0.1 - - [17/Feb/2025 16:18:49] "[36mGET /static/css/results.css HTTP/1.1[0m" 304 -
