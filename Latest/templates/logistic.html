@@ -94,7 +94,7 @@
         }
         
         .collapsible-section.open {
-            max-height: 2000px;
+            max-height: 5000px;
             transition: max-height 0.5s ease-in;
         }
     </style>
@@ -152,6 +152,148 @@
         <div id="technicalDetails" class="collapsible-section mb-12">
             <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
                 <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+
+                <!-- What is Logistic Regression -->
+                <div class="mb-8 bg-blue-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-blue-800 mb-3">What is Logistic Regression?</h4>
+                    <p class="text-gray-700 mb-4">Logistic Regression is a statistical method used to predict binary outcomes (yes/no, true/false, 0/1). It's like having an intelligent decision-maker that learns from past data to make future predictions. For example:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Will a customer buy a product? (Yes/No)</li>
+                        <li>Is an email spam? (True/False)</li>
+                        <li>Will a student pass the exam? (Pass/Fail)</li>
+                    </ul>
+                </div>
+
+                <!-- Understanding the Visualizations -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Understanding the Visualizations</h4>
+                    <div class="grid grid-cols-1 gap-6">
+                        <!-- ROC Curve Explanation -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h5 class="text-md font-medium text-gray-800 mb-2">ROC Curve</h5>
+                            <p class="text-gray-600 mb-3">The ROC (Receiver Operating Characteristic) curve shows how well our model can distinguish between classes. Think of it as a detector's effectiveness:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>The closer the curve is to the top-left corner, the better the model</li>
+                                <li>A perfect model would have a curve reaching the top-left corner</li>
+                                <li>The diagonal line represents random guessing</li>
+                            </ul>
+                        </div>
+
+                        <!-- Confusion Matrix Explanation -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h5 class="text-md font-medium text-gray-800 mb-2">Confusion Matrix</h5>
+                            <p class="text-gray-600 mb-3">The Confusion Matrix shows how accurate our predictions are:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>True Positives: Correctly predicted "yes"</li>
+                                <li>True Negatives: Correctly predicted "no"</li>
+                                <li>False Positives: Incorrectly predicted "yes"</li>
+                                <li>False Negatives: Incorrectly predicted "no"</li>
+                            </ul>
+                        </div>
+
+                        <!-- Correlation Heatmap Explanation -->
+                        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                            <h5 class="text-md font-medium text-gray-800 mb-2">Correlation Heatmap</h5>
+                            <p class="text-gray-600 mb-3">The Correlation Heatmap shows how different features are related to each other:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li><span class="text-red-600 font-medium">Red colors</span>: Features move together (positive correlation)
+                                    <ul class="ml-6 text-sm">
+                                        <li>Example: As age increases, income might increase</li>
+                                    </ul>
+                                </li>
+                                <li><span class="text-blue-600 font-medium">Blue colors</span>: Features move in opposite directions (negative correlation)
+                                    <ul class="ml-6 text-sm">
+                                        <li>Example: As price increases, sales might decrease</li>
+                                    </ul>
+                                </li>
+                                <li><span class="text-gray-600 font-medium">Light colors</span>: Features have little or no relationship
+                                    <ul class="ml-6 text-sm">
+                                        <li>Example: Hair color might not relate to height</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="bg-yellow-50 p-3 rounded-lg mt-3">
+                                <p class="text-sm text-yellow-800">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    The darker the color, the stronger the relationship between features
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Importance Visualization Explanation -->
+                        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                            <h5 class="text-md font-medium text-gray-800 mb-2">Feature Importance Bar Graph</h5>
+                            <p class="text-gray-600 mb-3">This graph shows which features matter most in making predictions:</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>Longer bars = More important features
+                                    <ul class="ml-6 text-sm">
+                                        <li>These features have the biggest impact on the final prediction</li>
+                                    </ul>
+                                </li>
+                                <li>Shorter bars = Less important features
+                                    <ul class="ml-6 text-sm">
+                                        <li>These features have minimal impact on the prediction</li>
+                                    </ul>
+                                </li>
+                                <li>Bar colors indicate importance level:
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-2 ml-6">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-4 h-4 bg-green-500 rounded"></div>
+                                            <span>High importance</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-4 h-4 bg-blue-500 rounded"></div>
+                                            <span>Medium importance</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-4 h-4 bg-gray-300 rounded"></div>
+                                            <span>Low importance</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="bg-blue-50 p-3 rounded-lg mt-3">
+                                <p class="text-sm text-blue-800">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    Focus on features with longer bars when making decisions - they have the most influence on the outcome
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Importance Understanding -->
+                <div class="mb-8 bg-gray-50 p-6 rounded-lg">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Understanding Feature Importance</h4>
+                    <p class="text-gray-600 mb-4">The table below shows how each feature influences the final prediction:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-medium text-gray-800 mb-2">Impact Score</h5>
+                            <p class="text-gray-600">Shows how strongly each feature affects the prediction. A higher absolute value means stronger influence.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h5 class="font-medium text-gray-800 mb-2">Confidence</h5>
+                            <p class="text-gray-600">Indicates how certain we are about the feature's impact. Lower values mean higher confidence.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h5 class="font-medium text-gray-800 mb-2">Importance Levels Explained:</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">High Impact</span>
+                                <span class="text-gray-600">Very strong influence</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Moderate Impact</span>
+                                <span class="text-gray-600">Notable influence</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Low Impact</span>
+                                <span class="text-gray-600">Minor influence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Visualization Plots -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

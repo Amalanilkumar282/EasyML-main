@@ -6455,3 +6455,27 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-21 15:25:13,590 - INFO - 127.0.0.1 - - [21/Feb/2025 15:25:13] "POST /predict_logistic HTTP/1.1" 200 -
 2025-02-21 15:25:24,694 - INFO - 127.0.0.1 - - [21/Feb/2025 15:25:24] "POST /predict_logistic HTTP/1.1" 200 -
 2025-02-21 15:25:35,838 - INFO - 127.0.0.1 - - [21/Feb/2025 15:25:35] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 15:27:30,745 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pandas\\io\\parsers\\readers.py', reloading
+2025-02-21 15:27:32,104 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-21 15:27:34,597 - WARNING -  * Debugger is active!
+2025-02-21 15:27:34,618 - INFO -  * Debugger PIN: 174-844-798
+2025-02-21 15:40:03,861 - INFO - 127.0.0.1 - - [21/Feb/2025 15:40:03] "GET / HTTP/1.1" 200 -
+2025-02-21 15:41:59,864 - INFO - 127.0.0.1 - - [21/Feb/2025 15:41:59] "GET /sign-in HTTP/1.1" 200 -
+2025-02-21 15:42:03,475 - INFO - package: mysql.connector.plugins
+2025-02-21 15:42:03,475 - INFO - plugin_name: mysql_native_password
+2025-02-21 15:42:03,477 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-21 15:42:03,481 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:03] "POST /login HTTP/1.1" 200 -
+2025-02-21 15:42:07,732 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:07] "POST /upload HTTP/1.1" 200 -
+2025-02-21 15:42:07,760 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:07] "POST /analysis HTTP/1.1" 200 -
+2025-02-21 15:42:10,776 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:10] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-21 15:42:10,790 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:10] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-21 15:42:12,630 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\metrics\\_classification.py', reloading
+2025-02-21 15:42:13,399 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-21 15:42:15,527 - WARNING -  * Debugger is active!
+2025-02-21 15:42:15,532 - INFO -  * Debugger PIN: 174-844-798
+2025-02-21 15:42:17,307 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:17] "POST /logreg HTTP/1.1" 200 -
+2025-02-21 15:42:30,527 - INFO - 127.0.0.1 - - [21/Feb/2025 15:42:30] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 15:45:39,936 - INFO - 127.0.0.1 - - [21/Feb/2025 15:45:39] "GET /download_model/model_1740132737.pkl HTTP/1.1" 200 -
+2025-02-21 15:52:44,758 - INFO - 127.0.0.1 - - [21/Feb/2025 15:52:44] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 15:53:27,934 - INFO - 127.0.0.1 - - [21/Feb/2025 15:53:27] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 15:59:29,675 - INFO - 127.0.0.1 - - [21/Feb/2025 15:59:29] "POST /predict_logistic HTTP/1.1" 200 -
