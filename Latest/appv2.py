@@ -265,8 +265,8 @@ def logistic():
             
             # Format metrics for display
             formatted_metrics = {
-                'accuracy': f"{metrics['test_accuracy'] * 100:.2f}%",
-                'train_accuracy': f"{metrics['train_accuracy'] * 100:.2f}%",
+                'accuracy': f"{metrics['test_accuracy']*100:.2f}%",
+                'train_accuracy': f"{metrics['train_accuracy']*100:.2f}%",
                 'roc_auc': f"{metrics['roc_auc']:.2f}"
             }
             
@@ -380,19 +380,28 @@ def predict_logistic():
                 for i, prob in enumerate(prediction_proba)
             }
 
+        # Format metrics properly
+        formatted_metrics = {
+            'accuracy': f"{saved_data['metrics']['test_accuracy']*100:.2f}%",
+            'train_accuracy': f"{saved_data['metrics']['train_accuracy']*100:.2f}%",
+            'roc_auc': f"{saved_data['metrics']['roc_auc']:.2f}"
+        }
+
         # Re-render the results page with the prediction
         return render_template(
             'logistic.html',
             model_path=model_filename,
-            metrics=saved_data['metrics'],
+            metrics=formatted_metrics,
             coefficients=saved_data['coefficients'],
+            p_values=saved_data['p_values'],
             plots=saved_data.get('plots', []),
             prediction=actual_class_name,
             final_class_name=actual_class_name,
             probability=max(prediction_proba) * 100,
             probabilities=probabilities,
-            input_values=raw_values,  # Use raw values for display
-            class_mapping=original_target_values
+            input_values=raw_values,
+            class_mapping=original_target_values,
+            feature_names=features  # Pass feature names for table
         )
         
     except Exception as e:

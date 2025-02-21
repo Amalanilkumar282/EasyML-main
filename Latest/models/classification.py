@@ -237,33 +237,32 @@ def perform_logistic_regression(file, target):
     coefficients = dict(zip(feature_names, model.coef_[0]))
     p_values_dict = dict(zip(feature_names, p_values))
     
-    # Save model with encoders
+    # Format metrics properly
+    metrics = {
+        'train_accuracy': train_accuracy,
+        'test_accuracy': test_accuracy,
+        'roc_auc': roc_auc
+    }
+    
+    # Save model with all necessary data
     model_path = save_model(
         model=model,
-        metrics={
-            'train_accuracy': train_accuracy,
-            'test_accuracy': test_accuracy,
-            'roc_auc': roc_auc,
-            'classification_report': classification_report
-        },
+        metrics=metrics,
         coefficients=coefficients,
         p_values=p_values_dict,
         intercept=model.intercept_[0],
         plots=plots,
         feature_encoders=feature_encoders,
         target_encoder=target_encoder,
-        original_target_values=original_target_values  # Add this line
+        original_target_values=original_target_values,
+        scaler=scaler,
+        feature_names=feature_names
     )
     
     return (
         model_path,
         plots,
-        {
-            'train_accuracy': train_accuracy,
-            'test_accuracy': test_accuracy,
-            'roc_auc': roc_auc,
-            'classification_report': classification_report
-        },
+        metrics,  # Return raw metrics
         coefficients,
         p_values_dict,
         model.intercept_[0]
