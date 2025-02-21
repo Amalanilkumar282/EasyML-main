@@ -6479,3 +6479,57 @@ KNeighborsClassifier does not accept missing values encoded as NaN natively. For
 2025-02-21 15:52:44,758 - INFO - 127.0.0.1 - - [21/Feb/2025 15:52:44] "POST /predict_logistic HTTP/1.1" 200 -
 2025-02-21 15:53:27,934 - INFO - 127.0.0.1 - - [21/Feb/2025 15:53:27] "POST /predict_logistic HTTP/1.1" 200 -
 2025-02-21 15:59:29,675 - INFO - 127.0.0.1 - - [21/Feb/2025 15:59:29] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:04:09,123 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5004
+2025-02-21 16:04:09,124 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 16:04:09,135 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-21 16:04:11,318 - WARNING -  * Debugger is active!
+2025-02-21 16:04:11,324 - INFO -  * Debugger PIN: 174-844-798
+2025-02-21 16:04:11,462 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:11] "GET / HTTP/1.1" 200 -
+2025-02-21 16:04:12,864 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:12] "GET /sign-in HTTP/1.1" 200 -
+2025-02-21 16:04:16,266 - INFO - package: mysql.connector.plugins
+2025-02-21 16:04:16,267 - INFO - plugin_name: mysql_native_password
+2025-02-21 16:04:16,268 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-21 16:04:16,273 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:16] "POST /login HTTP/1.1" 200 -
+2025-02-21 16:04:22,166 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:22] "POST /upload HTTP/1.1" 200 -
+2025-02-21 16:04:22,184 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:22] "POST /analysis HTTP/1.1" 200 -
+2025-02-21 16:04:25,198 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:25] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-21 16:04:25,212 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:25] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-21 16:04:27,624 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:27] "POST /logreg HTTP/1.1" 200 -
+2025-02-21 16:04:34,675 - INFO - 127.0.0.1 - - [21/Feb/2025 16:04:34] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:09:51,997 - INFO - 127.0.0.1 - - [21/Feb/2025 16:09:51] "POST /upload HTTP/1.1" 200 -
+2025-02-21 16:09:52,010 - INFO - 127.0.0.1 - - [21/Feb/2025 16:09:52] "POST /analysis HTTP/1.1" 200 -
+2025-02-21 16:09:55,023 - INFO - 127.0.0.1 - - [21/Feb/2025 16:09:55] "[32mGET /logreg HTTP/1.1[0m" 302 -
+2025-02-21 16:09:55,037 - INFO - 127.0.0.1 - - [21/Feb/2025 16:09:55] "GET /features?m=logreg HTTP/1.1" 200 -
+2025-02-21 16:09:57,438 - INFO - 127.0.0.1 - - [21/Feb/2025 16:09:57] "POST /logreg HTTP/1.1" 200 -
+2025-02-21 16:10:06,586 - INFO - 127.0.0.1 - - [21/Feb/2025 16:10:06] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:11:02,392 - INFO - 127.0.0.1 - - [21/Feb/2025 16:11:02] "GET /download_model/model_1740134397.pkl HTTP/1.1" 200 -
+2025-02-21 16:13:37,288 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-02-21 16:13:37,289 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-02-21 16:13:37,291 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\jinja2\\loaders.py', reloading
+2025-02-21 16:13:37,298 - INFO - 127.0.0.1 - - [21/Feb/2025 16:13:37] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:13:37,436 - INFO - 127.0.0.1 - - [21/Feb/2025 16:13:37] "[36mGET /static/css/material-dashboard.css?v=3.1.0 HTTP/1.1[0m" 304 -
+2025-02-21 16:13:38,176 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-21 16:13:40,271 - WARNING -  * Debugger is active!
+2025-02-21 16:13:40,275 - INFO -  * Debugger PIN: 174-844-798
+2025-02-21 16:13:53,948 - INFO - 127.0.0.1 - - [21/Feb/2025 16:13:53] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:14:09,025 - INFO - 127.0.0.1 - - [21/Feb/2025 16:14:09] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:17:33,244 - INFO - 127.0.0.1 - - [21/Feb/2025 16:17:33] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:20:31,885 - INFO - 127.0.0.1 - - [21/Feb/2025 16:20:31] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:20:35,355 - INFO - 127.0.0.1 - - [21/Feb/2025 16:20:35] "GET / HTTP/1.1" 200 -
+2025-02-21 16:21:29,411 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:29] "POST /predict_logistic HTTP/1.1" 200 -
+2025-02-21 16:21:30,680 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:30] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2025-02-21 16:21:33,069 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:33] "[33mGET /landing HTTP/1.1[0m" 404 -
+2025-02-21 16:21:34,806 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:34] "GET / HTTP/1.1" 200 -
+2025-02-21 16:21:38,900 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:38] "GET /sign-in HTTP/1.1" 200 -
+2025-02-21 16:21:46,168 - INFO - package: mysql.connector.plugins
+2025-02-21 16:21:46,168 - INFO - plugin_name: mysql_native_password
+2025-02-21 16:21:46,169 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+2025-02-21 16:21:46,174 - INFO - 127.0.0.1 - - [21/Feb/2025 16:21:46] "POST /login HTTP/1.1" 200 -
+2025-02-21 16:22:09,853 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\__init__.py', reloading
+2025-02-21 16:22:09,857 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\pooling.py', reloading
+2025-02-21 16:22:09,874 - INFO -  * Detected change in 'C:\\Users\\amala\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\mysql\\connector\\abstracts.py', reloading
+2025-02-21 16:22:11,113 - INFO -  * Restarting with watchdog (windowsapi)
+2025-02-21 16:22:13,271 - WARNING -  * Debugger is active!
+2025-02-21 16:22:13,277 - INFO -  * Debugger PIN: 174-844-798
+2025-02-21 16:23:08,754 - INFO - 127.0.0.1 - - [21/Feb/2025 16:23:08] "GET / HTTP/1.1" 200 -
