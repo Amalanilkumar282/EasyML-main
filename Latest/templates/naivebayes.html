@@ -42,13 +42,13 @@
         }
         
         .collapsible-section.open {
-            max-height: 2000px;
-            transition: max-height 0.5s ease-in;
+            max-height: 5000px; /* Increased from 2000px */
+            transition: max-height 0.8s ease-in; /* Slightly increased transition time */
         }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Header -->
         <div class="mb-12 text-center fade-in">
             <h1 class="text-4xl font-bold text-gray-800 mb-4">NAIVE BAYES CLASSIFIER ANALYSIS</h1>
@@ -66,96 +66,147 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Accuracy card -->
                 <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-bullseye text-blue-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Accuracy</h3>
                     </div>
-                    <p class="text-3xl font-bold text-blue-600">{{ acc }}%</p>
-                    <p class="text-sm text-gray-600 mt-2">Overall model performance</p>
+                    <p class="text-3xl font-bold text-blue-600">{{ "%.2f"|format(acc) }}%</p>
+                    <div class="text-sm text-gray-600 mt-2">
+                        <p class="mb-1">Overall percentage of correct predictions made by the model</p>
+                        <button class="text-blue-600 hover:text-blue-700 text-xs" 
+                                onclick="alert('Accuracy shows how often the model is correct overall.\n\nFor example, if the model makes 100 predictions and gets 85 right, the accuracy is 85%.\n\nHigher accuracy means better overall performance.')"
+                                type="button">
+                            <i class="fas fa-info-circle mr-1"></i>Learn more
+                        </button>
+                    </div>
                 </div>
-                
+
+                <!-- Precision card (already updated)
                 <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-check-circle text-green-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Precision</h3>
                     </div>
-                    <p class="text-3xl font-bold text-green-600">{{ precision }}%</p>
-                    <p class="text-sm text-gray-600 mt-2">Accuracy of positive predictions</p>
-                </div>
-                
+                    <p class="text-3xl font-bold text-green-600">{{ "%.2f"|format(precision) }}%</p>
+                    <div class="text-sm text-gray-600 mt-2">
+                        <p class="mb-1">Out of all positive predictions, the percentage that were correctly identified</p>
+                        <button class="text-blue-600 hover:text-blue-700 text-xs" 
+                                onclick="alert('Precision measures how accurate our positive predictions are.\n\nFor example, if our model predicts 100 cases as positive and 90 of them are actually positive, the precision is 90%.\n\nHigh precision means fewer false alarms.')"
+                                type="button">
+                            <i class="fas fa-info-circle mr-1"></i>Learn more
+                        </button>
+                    </div>
+                </div> -->
+
+                <!-- Recall card
                 <div class="metric-card bg-white p-6 rounded-lg shadow-sm hover-scale">
                     <div class="flex items-center mb-2">
                         <i class="fas fa-sync text-purple-600 mr-2"></i>
                         <h3 class="text-lg font-medium text-gray-800">Recall</h3>
                     </div>
-                    <p class="text-3xl font-bold text-purple-600">{{ recall }}%</p>
-                    <p class="text-sm text-gray-600 mt-2">Proportion of actual positives identified</p>
+                    <p class="text-3xl font-bold text-purple-600">{{ "%.2f"|format(recall) }}%</p>
+                    <div class="text-sm text-gray-600 mt-2">
+                        <p class="mb-1">Percentage of actual positive cases that were correctly identified</p>
+                        <button class="text-blue-600 hover:text-blue-700 text-xs" 
+                                onclick="alert('Recall measures how well we find all positive cases.\n\nFor example, if there are 100 actual positive cases and we correctly identify 80 of them, the recall is 80%.\n\nHigh recall means fewer missed positive cases.')"
+                                type="button">
+                            <i class="fas fa-info-circle mr-1"></i>Learn more
+                        </button>
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <!-- Technical Details Section -->
         <div id="technicalDetails" class="collapsible-section mb-12">
-            <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
-                <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
-                
-                <!-- Visualization Plots -->
-                <div class="mb-8">
-                    <h4 class="text-lg font-medium text-gray-800 mb-4">Confusion Matrix</h4>
-                    <p class="text-gray-600 mb-4">A confusion matrix shows the model's classification performance:
-                        <ul class="list-disc list-inside text-gray-600">
-                            <li>True Positives: Correctly predicted positive cases</li>
-                            <li>True Negatives: Correctly predicted negative cases</li>
-                            <li>False Positives: Incorrectly predicted as positive</li>
-                            <li>False Negatives: Incorrectly predicted as negative</li>
-                        </ul>
-                    </p>
-                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
-                        <img src="data:image/png;base64,{{ plots[0] }}" alt="Confusion Matrix" class="w-full">
-                    </div>
-                </div>
+    <div class="bg-white rounded-lg shadow-sm p-6 fade-in max-w-4xl mx-auto">
+        <h3 class="text-xl font-semibold mb-6">Technical Analysis</h3>
+        
+        <!-- Add Naive Bayes Description -->
+        <div class="mb-8">
+            <h4 class="text-lg font-medium text-gray-800 mb-4">About Naive Bayes Classifier</h4>
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <p class="text-gray-700 mb-4">The Naive Bayes Classifier is like a smart decision-making tool that learns from past data to make predictions about new situations. Here's how it works:</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>It looks at your CSV dataset to learn patterns from previous examples</li>
+                    <li>For each feature (column) in your data, it calculates the probability of different outcomes</li>
+                    <li>When making predictions, it combines these probabilities to make an educated guess</li>
+                    <li>It's called "Naive" because it assumes each feature independently contributes to the prediction</li>
+                </ul>
+                <p class="text-gray-700 mt-4">Think of it like a weather predictor: if it sees dark clouds (feature 1) and high humidity (feature 2), it calculates the probability of rain based on past patterns.</p>
+            </div>
+        </div>
 
-                <!-- Feature Distribution Plot -->
-                <div class="mb-8">
-                    <h4 class="text-lg font-medium text-gray-800 mb-4">Feature Distributions</h4>
-                    <p class="text-gray-600 mb-4">These plots show how each feature is distributed across different classes, helping us understand the patterns Naive Bayes uses for classification:</p>
-                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
-                        <img src="data:image/png;base64,{{ plots[1] }}" alt="Feature Distributions" class="w-full">
-                    </div>
-                </div>
+        <!-- Visualization Plots with Enhanced Descriptions -->
+        <div class="mb-8">
+            <h4 class="text-lg font-medium text-gray-800 mb-4">Confusion Matrix</h4>
+            <p class="text-gray-600 mb-4">A confusion matrix helps us understand how well our model is performing. Think of it as a report card showing:</p>
+            <ul class="list-disc list-inside text-gray-600 mb-4">
+                <li><span class="font-medium">True Positives:</span> When the model correctly predicts a positive case (got it right!)</li>
+                <li><span class="font-medium">True Negatives:</span> When the model correctly predicts a negative case (also got it right!)</li>
+                <li><span class="font-medium">False Positives:</span> When the model predicts positive but it's actually negative (false alarm)</li>
+                <li><span class="font-medium">False Negatives:</span> When the model predicts negative but it's actually positive (missed it)</li>
+            </ul>
+            <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                <img src="data:image/png;base64,{{ plots[0] }}" alt="Confusion Matrix" class="w-full max-w-2xl mx-auto">
+            </div>
+        </div>
 
-                <!-- Class Distribution -->
-                <div class="mb-8">
-                    <h4 class="text-lg font-medium text-gray-800 mb-4">Class Distribution</h4>
-                    <p class="text-gray-600 mb-4">Shows the balance between different classes in our dataset:</p>
-                    <div class="bg-gray-50 p-4 rounded-lg hover-scale">
-                        <img src="data:image/png;base64,{{ plots[2] }}" alt="Class Distribution" class="w-full">
-                    </div>
-                </div>
+        <!-- Feature Distribution Plot -->
+        <div class="mb-8">
+            <h4 class="text-lg font-medium text-gray-800 mb-4">Feature Distributions</h4>
+            <p class="text-gray-600 mb-4">These graphs show how different features in your data are spread across different classes. It helps us understand:</p>
+            <ul class="list-disc list-inside text-gray-600 mb-4">
+                <li>How each feature varies between different classes</li>
+                <li>Which features are most helpful in distinguishing between classes</li>
+                <li>Potential overlaps that might make classification challenging</li>
+            </ul>
+            <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                <img src="data:image/png;base64,{{ plots[1] }}" alt="Feature Distributions" class="w-full">
+            </div>
+        </div>
 
-                <!-- Classification Results -->
-                <div class="mb-8">
-                    <h4 class="text-lg font-medium text-gray-800 mb-4">Classification Summary</h4>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <p class="text-sm font-medium text-gray-600">Correctly Classified</p>
-                                <p class="text-lg font-bold text-green-600">{{conf[0]}} / {{conf[2]}}</p>
-                            </div>
-                            <div>
-                                <p class="text-sm font-medium text-gray-600">Incorrectly Classified</p>
-                                <p class="text-lg font-bold text-red-600">{{conf[1]}} / {{conf[2]}}</p>
-                            </div>
-                        </div>
+        <!-- Class Distribution -->
+        <div class="mb-8">
+            <h4 class="text-lg font-medium text-gray-800 mb-4">Class Distribution</h4>
+            <p class="text-gray-600 mb-4">This chart shows how balanced your dataset is across different classes. Understanding this is important because:</p>
+            <ul class="list-disc list-inside text-gray-600 mb-4">
+                <li>It helps identify if some classes have more examples than others</li>
+                <li>Unbalanced classes might affect the model's learning ability</li>
+                <li>It guides us in interpreting the model's performance metrics</li>
+            </ul>
+            <div class="bg-gray-50 p-4 rounded-lg hover-scale">
+                <img src="data:image/png;base64,{{ plots[2] }}" alt="Class Distribution" class="w-full max-w-xl mx-auto">
+            </div>
+        </div>
+
+        <!-- Classification Results -->
+        <div class="mb-8">
+            <h4 class="text-lg font-medium text-gray-800 mb-4">Classification Summary</h4>
+            <p class="text-gray-600 mb-4">A simple breakdown of how well our model performed on the test data:</p>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">Correctly Classified</p>
+                        <p class="text-lg font-bold text-green-600">{{conf[0]}} / {{conf[2]}}</p>
+                        <p class="text-xs text-gray-500 mt-1">Cases where our model got it right</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-600">Incorrectly Classified</p>
+                        <p class="text-lg font-bold text-red-600">{{conf[1]}} / {{conf[2]}}</p>
+                        <p class="text-xs text-gray-500 mt-1">Cases where our model made mistakes</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
         <!-- Prediction Results Section -->
         {% if prediction %}
-        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8">
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8 max-w-4xl mx-auto">
             <div class="max-w-2xl mx-auto">
                 <h3 class="text-2xl font-semibold mb-6 text-center">Your Prediction Results</h3>
                 
@@ -163,7 +214,7 @@
                     <div class="bg-blue-50 p-6 rounded-lg">
                         <h4 class="text-lg font-medium text-blue-800 mb-4">Predicted Class</h4>
                         <p class="text-3xl font-bold text-blue-600">{{ prediction }}</p>
-                        {% if probabilities %}
+                        <!-- {% if probabilities %}
                         <div class="mt-4">
                             <h5 class="text-sm font-medium text-blue-800 mb-2">Class Probabilities:</h5>
                             {% for class, prob in probabilities.items() %}
@@ -173,7 +224,7 @@
                             </div>
                             {% endfor %}
                         </div>
-                        {% endif %}
+                        {% endif %} -->
                     </div>
                     
                     <div class="bg-purple-50 p-6 rounded-lg">
@@ -204,7 +255,7 @@
         </div>
 
         <!-- Prediction Form Section -->
-        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8">
+        <div class="bg-white rounded-lg shadow-sm p-8 fade-in mt-8 max-w-4xl mx-auto">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-2xl font-semibold mb-6 text-center">Make a Prediction</h2>
                 <p class="text-gray-600 mb-8 text-center">Enter your data points below to get instant predictions from our trained model.</p>
